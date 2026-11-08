@@ -1,0 +1,43 @@
+'use strict';
+
+const { contextBridge, ipcRenderer } = require('electron');
+
+contextBridge.exposeInMainWorld('grimorio', {
+  getContent: () => ipcRenderer.invoke('content:get'),
+  appInfo: () => ipcRenderer.invoke('app:info'),
+  getFeedCache: () => ipcRenderer.invoke('feeds:cache'),
+  refreshFeeds: () => ipcRenderer.invoke('feeds:refresh'),
+  getCommunity: () => ipcRenderer.invoke('community:cache'),
+  refreshCommunity: () => ipcRenderer.invoke('community:refresh'),
+  refreshArmory: () => ipcRenderer.invoke('armory:refresh'),
+  getSettings: () => ipcRenderer.invoke('settings:get'),
+  saveSettings: (patch) => ipcRenderer.invoke('settings:save', patch),
+  testAI: () => ipcRenderer.invoke('ai:test'),
+  translate: (texts) => ipcRenderer.invoke('translate:texts', texts),
+  getArticle: (id) => ipcRenderer.invoke('article:get', id),
+  getGuide: () => ipcRenderer.invoke('guide:get'),
+  refreshGuide: () => ipcRenderer.invoke('guide:refresh'),
+  guideSeen: (id) => ipcRenderer.invoke('guide:seen', id),
+  pickGuide: (slug) => ipcRenderer.invoke('guide:pick', slug),
+  getItems: () => ipcRenderer.invoke('items:get'),
+  checkUpdate: () => ipcRenderer.invoke('update:check'),
+  lastUpdate: () => ipcRenderer.invoke('update:last'),
+  applyUpdate: () => ipcRenderer.invoke('update:apply'),
+  feedbackInfo: () => ipcRenderer.invoke('feedback:info'),
+  getAutostart: () => ipcRenderer.invoke('autostart:get'),
+  setAutostart: (on) => ipcRenderer.invoke('autostart:set', !!on),
+  sendFeedback: (payload) => ipcRenderer.invoke('feedback:send', payload),
+  onUpdateStatus: (cb) => ipcRenderer.on('update:status', (_e, data) => cb(data)),
+  getCharacter: () => ipcRenderer.invoke('character:get'),
+  saveCharacter: (patch) => ipcRenderer.invoke('character:save', patch),
+  notify: (cat, body) => ipcRenderer.invoke('notify:show', { cat, body }),
+  copy: (text) => ipcRenderer.invoke('clipboard:write', text),
+  open: (url) => ipcRenderer.invoke('shell:open', url),
+  openFolder: (dir) => ipcRenderer.invoke('shell:folder', dir),
+  onFeedsUpdated: (cb) => ipcRenderer.on('feeds:updated', (_e, data) => cb(data)),
+  onCommunityUpdated: (cb) => ipcRenderer.on('community:updated', (_e, data) => cb(data)),
+  onArmoryUpdated: (cb) => ipcRenderer.on('armory:updated', (_e, data) => cb(data)),
+  onArticleReady: (cb) => ipcRenderer.on('article:ready', (_e, data) => cb(data)),
+  onGuideUpdated: (cb) => ipcRenderer.on('guide:updated', (_e, data) => cb(data)),
+  platform: process.platform
+});

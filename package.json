@@ -1,0 +1,36 @@
+{
+  "name": "grimorio-hunter",
+  "productName": "Grimorio Hunter",
+  "version": "3.0.0",
+  "description": "Grimório do Aventureiro com visual hunter",
+  "author": "Grimório do Aventureiro",
+  "main": "main/main.js",
+  "private": true,
+  "dependencies": {
+    "fast-xml-parser": "^5.3.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.felipy.grimoriohunter",
+    "productName": "Grimorio Hunter",
+    "win": {
+      "target": "nsis"
+    },
+    "files": [
+      "main/**/*",
+      "src/**/*",
+      "build/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "build"
+    }
+  }
+}

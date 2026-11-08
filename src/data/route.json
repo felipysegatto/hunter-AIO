@@ -1,0 +1,1401 @@
+{
+ "version": "2026-11-01",
+ "faction": "Aliança",
+ "notes": "Rota curada para bruxo gnomo. Missões de classe conferidas no guia de Forever do ConquestCapped; masmorras e faixas do Warcraft Tavern; recompensas e atributos do banco de itens do WoWSims Forever.",
+ "entries": [
+  {
+   "id": "c-imp",
+   "type": "classe",
+   "min": 1,
+   "max": 4,
+   "zone": "Dun Morogh",
+   "title": "Beginnings",
+   "pt": "Missão do Imp",
+   "where": "Tainted Memorandum (Sten Stoutarm) → Alamar Grimm, Coldridge Valley",
+   "steps": [
+    "Pegue 3 Feather Charms dos Frostmane Novice na caverna a sudoeste de Anvilmar."
+   ],
+   "reward": {
+    "text": "Summon Imp"
+   },
+   "why": "No Forever o Imp virou missão: sem ela você começa sem demônio.",
+   "src": "https://conquestcapped.com/guides/wow-forever/wow-forever-warlock-quests/"
+  },
+  {
+   "id": "c-void",
+   "type": "classe",
+   "min": 10,
+   "max": 12,
+   "zone": "Ironforge → Ventobravo",
+   "title": "Gakin's Summons",
+   "pt": "Missão do Voidwalker",
+   "where": "Lago Blackwrench (Ironforge) → Gakin the Darkbinder, porão do Slaughtered Lamb",
+   "steps": [
+    "Surena Caledon: mate-a no Brackwell Pumpkin Patch (Elwynn, 70.8 80.2). Nível 9, com dois guardas.",
+    "The Binding: use o Bloodstone Choker no círculo abaixo da sala do Gakin e derrote o Voidwalker."
+   ],
+   "reward": {
+    "text": "Summon Voidwalker"
+   },
+   "why": "Tanque para pulls perigosos. No Forever o colar é loot de grupo: dois bruxos saem com um cada.",
+   "src": "https://conquestcapped.com/guides/wow-forever/wow-forever-warlock-quests/"
+  },
+  {
+   "id": "c-sayaad",
+   "type": "classe",
+   "min": 20,
+   "max": 24,
+   "zone": "Barrens → Ashenvale → Ventobravo",
+   "title": "Devourer of Souls",
+   "pt": "Succubus ou Incubus",
+   "where": "Gakin (Ventobravo) → Takar the Seer, The Barrens (49.2 57.0)",
+   "steps": [
+    "Succubus: pegue o Heartswood nas raízes em Ordil'Aran, Ashenvale (31.4 31.5).",
+    "Incubus: \"What Is Love?\" — roube a Wooden Figurine numa casa em Ashenvale (26.0 22.0).",
+    "The Binding: no círculo do Slaughtered Lamb (39.0 84.5), derrote o demônio."
+   ],
+   "reward": {
+    "text": "Succubus ou Incubus + Small Soul Pouch"
+   },
+   "why": "O demônio de maior dano. Os grimórios de um não servem no outro.",
+   "src": "https://conquestcapped.com/guides/wow-forever/wow-forever-warlock-quests/"
+  },
+  {
+   "id": "c-soranruk",
+   "type": "classe",
+   "min": 20,
+   "max": 26,
+   "zone": "The Barrens",
+   "title": "The Orb of Soran'ruk",
+   "pt": "Cajado de Soran'ruk",
+   "where": "Doan Karhan, The Barrens (49.2 57.2), ao lado do Takar",
+   "steps": [
+    "3 Soran'ruk Fragments dos Twilight Acolytes em Blackfathom Deeps.",
+    "1 Large Soran'ruk Fragment do Shadowfang Darksoul em Shadowfang Keep (imune a Sombra: use Immolate e varinha)."
+   ],
+   "reward": {
+    "item": {
+     "id": 15109,
+     "name": "Staff of Soran'ruk",
+     "icon": "inv_staff_09",
+     "quality": 3,
+     "ilvl": 25,
+     "stats": {
+      "sta": 14,
+      "fire": 34,
+      "shadow": 34
+     }
+    }
+   },
+   "why": "Arma exclusiva de bruxo, agora rara: +34 Fogo/Sombra e +14 Stamina. Fragmentos com loot progressivo.",
+   "src": "https://conquestcapped.com/guides/wow-forever/wow-forever-warlock-quests/"
+  },
+  {
+   "id": "c-felhunter",
+   "type": "classe",
+   "min": 30,
+   "max": 34,
+   "zone": "Ratchet → Ironforge → Hillsbrad/Needles/Wetlands",
+   "title": "Tome of the Cabal",
+   "pt": "Missão do Felhunter",
+   "where": "Strahad Farsan, torre em Ratchet (62.6 35.4) → Krom Stoutarm, Ironforge (74.2 9.8)",
+   "steps": [
+    "Moldy Tome: acampamento murloc em Hillsbrad (27.7 72.8).",
+    "Tattered Manuscript: baú em Splithoof Hold, Thousand Needles (43.4 32.7).",
+    "3 Rods of Channeling: casters Dragonmaw no Angerfang Encampment, Wetlands.",
+    "The Binding: use o Tome of the Cabal no círculo da torre do Strahad."
+   ],
+   "reward": {
+    "text": "Summon Felhunter + Box of Souls (bolsa de 16)"
+   },
+   "why": "Spell Lock e Devour Magic: o demônio de PvP e de masmorra com casters.",
+   "src": "https://conquestcapped.com/guides/wow-forever/wow-forever-warlock-quests/"
+  },
+  {
+   "id": "c-felsteed",
+   "type": "classe",
+   "min": 40,
+   "max": 42,
+   "zone": "Ventobravo → Ratchet",
+   "title": "Summon Felsteed",
+   "pt": "Montaria de bruxo",
+   "where": "Demisette Cloyce (Ventobravo) ou Briarthorn (Ironforge) → Strahad Farsan",
+   "steps": [
+    "Fale com o NPC da capital e depois com o Strahad, que ensina o feitiço."
+   ],
+   "reward": {
+    "text": "Summon Felsteed"
+   },
+   "why": "No Forever é uma montaria própria. Guarde ~100 de ouro: o guia não confirma se o Riding é cobrado.",
+   "src": "https://conquestcapped.com/guides/wow-forever/wow-forever-warlock-quests/"
+  },
+  {
+   "id": "c-inferno",
+   "type": "classe",
+   "min": 50,
+   "max": 55,
+   "zone": "Felwood · Azshara · Blasted Lands",
+   "title": "Kroshius' Infernal Core",
+   "pt": "Inferno",
+   "where": "Niby the Almighty, Felwood (41.4 44.8) → Impsy",
+   "steps": [
+    "3 Flawless Fel Essence: Jaedenar (Felwood), satyrs Legashi (Azshara) e Felguard Sentries (Blasted Lands).",
+    "Use Fel Fire nos restos do Kroshius em Shatter Scar Vale (45.4 35.4). Elite 55; leve amigos."
+   ],
+   "reward": {
+    "text": "Inferno + trinket Shard of the Green Flame"
+   },
+   "why": "Infernal para emergências e um trinket de bruxo.",
+   "src": "https://conquestcapped.com/guides/wow-forever/wow-forever-warlock-quests/"
+  },
+  {
+   "id": "c-doom",
+   "type": "classe",
+   "min": 60,
+   "max": 60,
+   "zone": "Blasted Lands · Dire Maul · Winterspring",
+   "title": "Ritual of Doom",
+   "pt": "Doomguard",
+   "where": "Daio the Decrepit, Tainted Scar (34.0 50.2)",
+   "steps": [
+    "15 Satyr Blood dos Wildspawn em Dire Maul (Warpwood Quarter).",
+    "5 Tears of the Hederine em Darkwhisper Gorge, Winterspring.",
+    "Suppression: use o Glowing Crystal Prison num Doomguard Commander sozinho."
+   ],
+   "reward": {
+    "item": {
+     "id": 18602,
+     "name": "Tome of Sacrifice",
+     "icon": "inv_misc_book_06",
+     "quality": 3,
+     "ilvl": 60,
+     "stats": {
+      "sta": 12,
+      "shadow": 13
+     }
+    },
+    "text": "Ritual of Doom + Tome of Sacrifice"
+   },
+   "why": "Off-hand de bruxo com +13 de Sombra.",
+   "src": "https://conquestcapped.com/guides/wow-forever/wow-forever-warlock-quests/"
+  },
+  {
+   "id": "c-dreadsteed",
+   "type": "classe",
+   "min": 60,
+   "max": 60,
+   "zone": "Burning Steppes · Winterspring · Dire Maul",
+   "title": "Dreadsteed of Xoroth",
+   "pt": "Dreadsteed",
+   "where": "Mor'zul Bloodbringer, Altar of Storms (12.6 31.6) — começa com Spackle Thornberry em Ventobravo",
+   "steps": [
+    "30 Raging Beast's Blood (owlbeasts, Winterspring).",
+    "Materiais do Gorzeeki: 10 Elixir of Shadow Power, 6 Large Brilliant Shard + 25 Dark Iron Ore, 35 Black Dragonscale, 3 Arcanite Bar.",
+    "Shadow Hold (Felwood), Ulathek, Imp in a Jar (Scholomance) e ritual com 5 pessoas em Dire Maul West."
+   ],
+   "reward": {
+    "text": "Summon Dreadsteed"
+   },
+   "why": "A montaria épica de bruxo. Comece a juntar os materiais cedo.",
+   "src": "https://conquestcapped.com/guides/wow-forever/wow-forever-warlock-quests/"
+  },
+  {
+   "id": "q-vagash",
+   "type": "missao",
+   "min": 10,
+   "max": 12,
+   "zone": "Dun Morogh",
+   "title": "Protecting the Herd",
+   "pt": "Mate o Vagash",
+   "where": "Rudra Amberstill, Amberstill Ranch",
+   "reward": {
+    "item": {
+     "id": 10549,
+     "name": "Rancher's Trousers",
+     "icon": "inv_pants_13",
+     "quality": 2,
+     "ilvl": 12,
+     "stats": {
+      "sp": 1,
+      "spi": 1
+     }
+    }
+   },
+   "why": "Calça de pano com dano mágico antes de sair de Dun Morogh.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-choksul",
+   "type": "missao",
+   "min": 18,
+   "max": 22,
+   "zone": "Loch Modan",
+   "title": "WANTED: Chok'sul",
+   "pt": "Cartaz de Thelsamar",
+   "where": "Cartaz em Thelsamar",
+   "reward": {
+    "item": {
+     "id": 1449,
+     "name": "Minor Channeling Ring",
+     "icon": "inv_jewelry_ring_13",
+     "quality": 2,
+     "ilvl": 24,
+     "stats": {
+      "int": 2,
+      "sp": 5
+     }
+    },
+    "alt": {
+     "id": 6191,
+     "name": "Kimbra Boots",
+     "icon": "inv_boots_05",
+     "quality": 2,
+     "ilvl": 24,
+     "stats": {
+      "int": 4,
+      "spi": 3
+     }
+    }
+   },
+   "why": "Anel com dano mágico. Ogro elite: chame ajuda.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-militia",
+   "type": "missao",
+   "min": 14,
+   "max": 18,
+   "zone": "Westfall",
+   "title": "The People's Militia",
+   "pt": "Corrente da Milícia",
+   "where": "Gryan Stoutmantle, Sentinel Hill",
+   "reward": {
+    "item": {
+     "id": 12296,
+     "name": "Spark of the People's Militia",
+     "icon": "inv_staff_02",
+     "quality": 2,
+     "ilvl": 17,
+     "stats": {
+      "sp": 1
+     }
+    }
+   },
+   "why": "Varinha da corrente principal de Westfall.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-bandanas",
+   "type": "missao",
+   "min": 14,
+   "max": 17,
+   "zone": "Westfall",
+   "title": "Red Leather Bandanas",
+   "pt": "Bandanas dos Defias",
+   "where": "Scout Galiaan, Sentinel Hill",
+   "reward": {
+    "item": {
+     "id": 12295,
+     "name": "Leggings of the People's Militia",
+     "icon": "inv_pants_06",
+     "quality": 2,
+     "ilvl": 15,
+     "stats": {
+      "sp": 2
+     }
+    }
+   },
+   "why": "Calça com dano mágico.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-killing",
+   "type": "missao",
+   "min": 14,
+   "max": 18,
+   "zone": "Westfall",
+   "title": "The Killing Fields",
+   "pt": "Golems colhedores",
+   "where": "Farmer Saldean",
+   "reward": {
+    "item": {
+     "id": 1561,
+     "name": "Harvester's Robe",
+     "icon": "inv_chest_cloth_13",
+     "quality": 2,
+     "ilvl": 15,
+     "stats": {
+      "sp": 2,
+      "spi": 2
+     }
+    }
+   },
+   "why": "Robe com dano mágico e Espírito.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-sander",
+   "type": "missao",
+   "min": 15,
+   "max": 18,
+   "zone": "Westfall",
+   "title": "Captain Sander's Hidden Treasure",
+   "pt": "Caça ao tesouro",
+   "where": "Mapa dropado pelos murlocs da costa",
+   "reward": {
+    "item": {
+     "id": 3344,
+     "name": "Captain Sander's Sash",
+     "icon": "inv_misc_bandana_03",
+     "quality": 2,
+     "ilvl": 15,
+     "stats": {
+      "sta": 2,
+      "spi": 2
+     }
+    }
+   },
+   "why": "Cinto fácil de pegar no caminho.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-prospector",
+   "type": "missao",
+   "min": 17,
+   "max": 21,
+   "zone": "Darkshore",
+   "title": "The Absent Minded Prospector",
+   "pt": "Escolte o Remtravel",
+   "where": "Prospector Remtravel, Darkshore",
+   "reward": {
+    "item": {
+     "id": 270022,
+     "name": "Archaeologist's Gown",
+     "icon": "inv_shirt_08",
+     "quality": 2,
+     "ilvl": 20,
+     "stats": {
+      "sp": 2,
+      "spi": 5
+     }
+    },
+    "alt": {
+     "id": 11936,
+     "name": "Relic Hunter Belt",
+     "icon": "inv_belt_23",
+     "quality": 2,
+     "ilvl": 20,
+     "stats": {
+      "int": 4,
+      "spi": 2
+     }
+    }
+   },
+   "why": "Peito de pano para a faixa dos 20.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-althalaxx",
+   "type": "missao",
+   "min": 18,
+   "max": 28,
+   "zone": "Darkshore → Ashenvale",
+   "title": "The Tower of Althalaxx",
+   "pt": "Corrente de Althalaxx",
+   "where": "Balthule Shadowstrike, Darkshore",
+   "reward": {
+    "item": {
+     "id": 5613,
+     "name": "Staff of the Purifier",
+     "icon": "inv_staff_23",
+     "quality": 2,
+     "ilvl": 23,
+     "stats": {
+      "sp": 16,
+      "spi": 8
+     }
+    },
+    "alt": {
+     "id": 10043,
+     "name": "Pious Legwraps",
+     "icon": "inv_pants_11",
+     "quality": 2,
+     "ilvl": 31,
+     "stats": {
+      "sta": 8,
+      "spi": 7
+     }
+    }
+   },
+   "why": "Cajado com +16 de dano mágico no meio da corrente; a calça vem no fim.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-sleeper",
+   "type": "missao",
+   "min": 20,
+   "max": 24,
+   "zone": "Ashenvale",
+   "title": "The Sleeper Has Awakened",
+   "pt": "Escolte o Therylune",
+   "where": "Ashenvale",
+   "reward": {
+    "item": {
+     "id": 15206,
+     "name": "Jadefinger Baton",
+     "icon": "inv_wand_04",
+     "quality": 2,
+     "ilvl": 20,
+     "stats": {
+      "sta": 2,
+      "spi": 2
+     }
+    }
+   },
+   "why": "Off-hand rápido enquanto você faz a missão do Succubus.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-raene",
+   "type": "missao",
+   "min": 22,
+   "max": 26,
+   "zone": "Ashenvale",
+   "title": "Raene's Cleansing",
+   "pt": "Corrente da Raene",
+   "where": "Raene Wolfrunner, Astranaar",
+   "reward": {
+    "item": {
+     "id": 1116,
+     "name": "Ring of Pure Silver",
+     "icon": "inv_jewelry_ring_01",
+     "quality": 2,
+     "ilvl": 31,
+     "stats": {
+      "sta": 1,
+      "spi": 6
+     }
+    }
+   },
+   "why": "Anel de Espírito, que no Forever escala o Life Tap.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-keeshan",
+   "type": "missao",
+   "min": 21,
+   "max": 25,
+   "zone": "Redridge",
+   "title": "Missing In Action",
+   "pt": "Resgate o Keeshan",
+   "where": "Corporal Keeshan, Redridge",
+   "reward": {
+    "item": {
+     "id": 3555,
+     "name": "Robe of Solomon",
+     "icon": "inv_chest_cloth_40",
+     "quality": 2,
+     "ilvl": 25,
+     "stats": {
+      "sta": 7,
+      "spi": 3
+     }
+    }
+   },
+   "why": "Peito com Stamina para o drain tank.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-everstill",
+   "type": "missao",
+   "min": 20,
+   "max": 24,
+   "zone": "Redridge",
+   "title": "The Everstill Bridge",
+   "pt": "A ponte de Lakeshire",
+   "where": "Foreman Oslow, Lakeshire",
+   "reward": {
+    "item": {
+     "id": 1304,
+     "name": "Riding Gloves",
+     "icon": "inv_gauntlets_05",
+     "quality": 2,
+     "ilvl": 20,
+     "stats": {
+      "int": 3
+     }
+    }
+   },
+   "why": "Luvas com Intelecto, a caminho de Duskwood.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-stalvan",
+   "type": "missao",
+   "min": 25,
+   "max": 34,
+   "zone": "Duskwood · Westfall · Elwynn",
+   "title": "The Legend of Stalvan",
+   "pt": "Corrente do Stalvan",
+   "where": "Madame Eva, Darkshire",
+   "reward": {
+    "item": {
+     "id": 2043,
+     "name": "Ring of Forlorn Spirits",
+     "icon": "inv_jewelry_ring_01",
+     "quality": 2,
+     "ilvl": 35,
+     "stats": {
+      "sta": 2,
+      "sp": 8
+     }
+    }
+   },
+   "why": "Anel com +8 de dano mágico no fim de uma corrente longa.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-worgen",
+   "type": "missao",
+   "min": 24,
+   "max": 28,
+   "zone": "Duskwood",
+   "title": "Worgen in the Woods",
+   "pt": "Worgens de Duskwood",
+   "where": "Calor, Darkshire",
+   "reward": {
+    "item": {
+     "id": 5244,
+     "name": "Consecrated Wand",
+     "icon": "inv_wand_02",
+     "quality": 2,
+     "ilvl": 30,
+     "stats": {
+      "int": 2,
+      "spi": 2
+     }
+    },
+    "alt": {
+     "id": 2902,
+     "name": "Cloak of the Faith",
+     "icon": "inv_misc_cape_06",
+     "quality": 2,
+     "ilvl": 30,
+     "stats": {
+      "sta": 4,
+      "spi": 4
+     }
+    }
+   },
+   "why": "Varinha nova para a faixa dos 25.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-skull",
+   "type": "missao",
+   "min": 26,
+   "max": 30,
+   "zone": "Duskwood",
+   "title": "Souvenirs of Death",
+   "pt": "Raven Hill",
+   "where": "Jitters, Raven Hill",
+   "reward": {
+    "item": {
+     "id": 3739,
+     "name": "Skull Ring",
+     "icon": "inv_belt_12",
+     "quality": 2,
+     "ilvl": 25,
+     "stats": {
+      "sta": 3,
+      "int": 3
+     }
+    }
+   },
+   "why": "Anel de Stamina e Intelecto.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-stars",
+   "type": "missao",
+   "min": 28,
+   "max": 32,
+   "zone": "Duskwood",
+   "title": "Look To The Stars",
+   "pt": "Corrente do astrólogo",
+   "where": "Viktori Prism'Antras, Darkshire",
+   "reward": {
+    "item": {
+     "id": 7106,
+     "name": "Zodiac Gloves",
+     "icon": "inv_gauntlets_20",
+     "quality": 2,
+     "ilvl": 33,
+     "stats": {
+      "int": 4,
+      "spi": 7
+     }
+    }
+   },
+   "why": "Luvas de pano para os 30.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-morbent",
+   "type": "missao",
+   "min": 30,
+   "max": 34,
+   "zone": "Duskwood",
+   "title": "Morbent Fel",
+   "pt": "Derrote o Morbent Fel",
+   "where": "Sven Yorgen, Raven Hill",
+   "reward": {
+    "item": {
+     "id": 2954,
+     "name": "Night Watch Pantaloons",
+     "icon": "inv_pants_08",
+     "quality": 2,
+     "ilvl": 33,
+     "stats": {
+      "sta": 9,
+      "int": 8
+     }
+    }
+   },
+   "why": "Calça de Stamina e Intelecto.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-gerenzo",
+   "type": "missao",
+   "min": 25,
+   "max": 29,
+   "zone": "Stonetalon",
+   "title": "Gerenzo Wrenchwhistle",
+   "pt": "Venture Co. em Stonetalon",
+   "where": "Stonetalon Peak",
+   "reward": {
+    "item": {
+     "id": 6667,
+     "name": "Engineer's Cloak",
+     "icon": "inv_misc_cape_13",
+     "quality": 2,
+     "ilvl": 27,
+     "stats": {
+      "sta": 5,
+      "int": 2
+     }
+    }
+   },
+   "why": "Capa de Stamina para quem passa por Stonetalon.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-syndicate",
+   "type": "missao",
+   "min": 30,
+   "max": 34,
+   "zone": "Hillsbrad (Southshore)",
+   "title": "Syndicate Assassins",
+   "pt": "Assassinos do Syndicate",
+   "where": "Southshore",
+   "reward": {
+    "item": {
+     "id": 3759,
+     "name": "Insulated Sage Gloves",
+     "icon": "inv_gauntlets_06",
+     "quality": 2,
+     "ilvl": 33,
+     "stats": {
+      "sta": 7,
+      "int": 6
+     }
+    }
+   },
+   "why": "Luvas de pano no caminho da missão do Felhunter.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-thandol",
+   "type": "missao",
+   "min": 28,
+   "max": 32,
+   "zone": "Wetlands → Arathi",
+   "title": "The Thandol Span",
+   "pt": "A ponte de Thandol",
+   "where": "Captain Stoutfist, Menethil Harbor",
+   "reward": {
+    "item": {
+     "id": 4505,
+     "name": "Swampland Trousers",
+     "icon": "inv_pants_10",
+     "quality": 2,
+     "ilvl": 31,
+     "stats": {
+      "sta": 11,
+      "int": 4
+     }
+    }
+   },
+   "why": "Calça de Stamina para o drain tank.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-hyper",
+   "type": "missao",
+   "min": 31,
+   "max": 35,
+   "zone": "Thousand Needles (Shimmering Flats)",
+   "title": "Hypercapacitor Gizmo",
+   "pt": "Corrida dos gnomos",
+   "where": "Equipe gnoma de corrida, Shimmering Flats",
+   "reward": {
+    "item": {
+     "id": 15467,
+     "name": "Inventor's League Ring",
+     "icon": "inv_jewelry_ring_22",
+     "quality": 2,
+     "ilvl": 31,
+     "stats": {
+      "sta": 4,
+      "spi": 4
+     }
+    }
+   },
+   "why": "Feita junto com a parte do Felhunter em Splithoof Hold.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-vahlarriel",
+   "type": "missao",
+   "min": 33,
+   "max": 37,
+   "zone": "Desolace",
+   "title": "Return to Vahlarriel",
+   "pt": "Escolte a Dalinda",
+   "where": "Corporal Melkins / Vahlarriel Demonslayer, Nijel's Point",
+   "reward": {
+    "item": {
+     "id": 11884,
+     "name": "Moonlit Amice",
+     "icon": "inv_shoulder_02",
+     "quality": 2,
+     "ilvl": 33,
+     "stats": {
+      "sta": 7,
+      "sp": 7
+     }
+    }
+   },
+   "why": "Ombreira com dano mágico.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-kodo",
+   "type": "missao",
+   "min": 34,
+   "max": 38,
+   "zone": "Desolace",
+   "title": "Kodo Roundup",
+   "pt": "Laço de kodos",
+   "where": "Smeed Scrabblescrew, Kodo Graveyard",
+   "reward": {
+    "item": {
+     "id": 15697,
+     "name": "Kodo Rustler Boots",
+     "icon": "inv_boots_09",
+     "quality": 2,
+     "ilvl": 38,
+     "stats": {
+      "sta": 3,
+      "int": 8,
+      "spi": 5
+     }
+    }
+   },
+   "why": "Botas de Intelecto, missão neutra e rápida.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-caravan",
+   "type": "missao",
+   "min": 34,
+   "max": 38,
+   "zone": "Desolace",
+   "title": "Gizelton Caravan",
+   "pt": "Escolte a caravana",
+   "where": "Rendow, Kormek's Hut",
+   "reward": {
+    "item": {
+     "id": 15692,
+     "name": "Kodo Brander",
+     "icon": "inv_wand_07",
+     "quality": 2,
+     "ilvl": 38,
+     "stats": {
+      "sta": 3,
+      "sp": 4
+     }
+    }
+   },
+   "why": "Varinha com dano mágico.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-tides",
+   "type": "missao",
+   "min": 38,
+   "max": 42,
+   "zone": "Dustwallow (Theramore)",
+   "title": "The Curse of the Tides",
+   "pt": "A maldição das marés",
+   "where": "Theramore",
+   "reward": {
+    "item": {
+     "id": 4120,
+     "name": "Robe of Crystal Waters",
+     "icon": "inv_chest_cloth_19",
+     "quality": 2,
+     "ilvl": 40,
+     "stats": {
+      "sta": 8,
+      "int": 10,
+      "spi": 9
+     }
+    }
+   },
+   "why": "Robe de Stamina, Intelecto e Espírito.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "q-falrin",
+   "type": "missao",
+   "min": 56,
+   "max": 60,
+   "zone": "Dire Maul",
+   "title": "Falrin's Vendetta",
+   "pt": "Pré-raid: colar",
+   "where": "Dire Maul",
+   "reward": {
+    "item": {
+     "id": 22149,
+     "name": "Beads of Ogre Mojo",
+     "icon": "inv_jewelry_amulet_05",
+     "quality": 3,
+     "ilvl": 63,
+     "stats": {
+      "sta": 7,
+      "int": 12,
+      "sp": 13
+     }
+    }
+   },
+   "why": "O colar da lista pré-raid do WoWSims.",
+   "src": "https://www.wowsims.com/forever/warlock/dps/"
+  },
+  {
+   "id": "q-poison",
+   "type": "missao",
+   "min": 58,
+   "max": 60,
+   "zone": "Silithus",
+   "title": "The Perfect Poison",
+   "pt": "Pré-raid: arma",
+   "where": "Cenarion Hold",
+   "reward": {
+    "item": {
+     "id": 22379,
+     "name": "Shivsprocket's Shiv",
+     "icon": "inv_sword_21",
+     "quality": 3,
+     "ilvl": 65,
+     "stats": {
+      "sta": 13,
+      "sp": 74
+     }
+    }
+   },
+   "why": "A arma pré-raid do WoWSims: +74 de dano mágico.",
+   "src": "https://www.wowsims.com/forever/warlock/dps/"
+  },
+  {
+   "id": "d-thanes",
+   "type": "masmorra",
+   "min": 13,
+   "max": 18,
+   "zone": "Ironforge",
+   "title": "Hall of Thanes",
+   "pt": "Masmorra nova do Forever",
+   "where": "Ironforge",
+   "reward": {
+    "text": "XP e equipamento verde/azul"
+   },
+   "why": "Nova no Forever e na porta de casa para um gnomo.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-dm",
+   "type": "masmorra",
+   "min": 15,
+   "max": 22,
+   "zone": "Westfall",
+   "title": "The Deadmines",
+   "pt": "Masmorra",
+   "where": "Moonbrook, Westfall",
+   "reward": {
+    "text": "Fecha a corrente dos Defias"
+   },
+   "why": "Junte as missões de Westfall antes de entrar.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-sfk",
+   "type": "masmorra",
+   "min": 20,
+   "max": 26,
+   "zone": "Silverpine",
+   "title": "Shadowfang Keep",
+   "pt": "Fragmento grande de Soran'ruk",
+   "where": "Silverpine Forest",
+   "reward": {
+    "text": "Large Soran'ruk Fragment"
+   },
+   "why": "Shadowfang Darksoul dropa a peça do cajado.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-bfd",
+   "type": "masmorra",
+   "min": 22,
+   "max": 28,
+   "zone": "Ashenvale",
+   "title": "Blackfathom Deeps",
+   "pt": "Fragmentos de Soran'ruk + varinha",
+   "where": "Zoram Strand, Ashenvale",
+   "reward": {
+    "item": {
+     "name": "Gravestone Scepter"
+    },
+    "text": "Soran'ruk Fragments + Gravestone Scepter"
+   },
+   "why": "Missão \"Blackfathom Villainy\" dá a melhor varinha antes do 30.",
+   "src": "https://www.warcrafttavern.com/forever/guides/warlock-leveling/"
+  },
+  {
+   "id": "d-excavation",
+   "type": "masmorra",
+   "min": 24,
+   "max": 29,
+   "zone": "Wetlands",
+   "title": "Excavation Site: Wetlands",
+   "pt": "Masmorra nova do Forever",
+   "where": "Wetlands",
+   "reward": {
+    "text": "XP e equipamento"
+   },
+   "why": "Nova no Forever, perto de Menethil.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-stocks",
+   "type": "masmorra",
+   "min": 25,
+   "max": 29,
+   "zone": "Ventobravo",
+   "title": "The Stockade",
+   "pt": "Masmorra",
+   "where": "Ventobravo",
+   "reward": {
+    "text": "Missões rápidas de Ventobravo e Redridge"
+   },
+   "why": "Curta e cheia de missões da Aliança.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-dalaran",
+   "type": "masmorra",
+   "min": 28,
+   "max": 33,
+   "zone": "Alterac Mountains",
+   "title": "City of Dalaran",
+   "pt": "Masmorra nova do Forever",
+   "where": "Alterac Mountains",
+   "reward": {
+    "text": "XP e equipamento de caster"
+   },
+   "why": "Nova no Forever; tema arcano, boa para casters.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-gnomer",
+   "type": "masmorra",
+   "min": 29,
+   "max": 38,
+   "zone": "Dun Morogh",
+   "title": "Gnomeregan",
+   "pt": "A casa dos gnomos",
+   "where": "Dun Morogh",
+   "reward": {
+    "text": "Missões gnomas"
+   },
+   "why": "Várias missões da Aliança começam com gnomos em Ironforge.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-sm",
+   "type": "masmorra",
+   "min": 30,
+   "max": 46,
+   "zone": "Tirisfal",
+   "title": "Scarlet Monastery",
+   "pt": "GY → Library → Armory → Cathedral",
+   "where": "Tirisfal Glades",
+   "reward": {
+    "text": "Equipamento de caster na Library"
+   },
+   "why": "O caminho clássico dos 30 aos 40 em grupo.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-drowned",
+   "type": "masmorra",
+   "min": 35,
+   "max": 40,
+   "zone": "Stranglethorn",
+   "title": "The Drowned City",
+   "pt": "Masmorra nova do Forever",
+   "where": "Stranglethorn Vale",
+   "reward": {
+    "text": "XP e equipamento"
+   },
+   "why": "Nova no Forever.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-uld",
+   "type": "masmorra",
+   "min": 36,
+   "max": 45,
+   "zone": "Badlands",
+   "title": "Uldaman",
+   "pt": "Masmorra",
+   "where": "Badlands",
+   "reward": {
+    "text": "Missões da Liga dos Exploradores"
+   },
+   "why": "Ironforge dá várias missões para ela.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-kroldok",
+   "type": "masmorra",
+   "min": 40,
+   "max": 45,
+   "zone": "Riverglades",
+   "title": "Krol'Dok Stronghold",
+   "pt": "Masmorra nova do Forever",
+   "where": "Riverglades",
+   "reward": {
+    "text": "XP e equipamento"
+   },
+   "why": "Fica na zona nova dos 35–45.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-zf",
+   "type": "masmorra",
+   "min": 40,
+   "max": 47,
+   "zone": "Tanaris",
+   "title": "Zul'Farrak",
+   "pt": "Masmorra",
+   "where": "Tanaris",
+   "reward": {
+    "text": "Equipamento e missões de Gadgetzan"
+   },
+   "why": "Ótima faixa de XP em grupo.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-mara",
+   "type": "masmorra",
+   "min": 45,
+   "max": 51,
+   "zone": "Desolace",
+   "title": "Maraudon",
+   "pt": "Masmorra",
+   "where": "Desolace",
+   "reward": {
+    "text": "Equipamento de caster"
+   },
+   "why": "Longa e cheia de drops de pano.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-alcaz",
+   "type": "masmorra",
+   "min": 48,
+   "max": 53,
+   "zone": "Dustwallow",
+   "title": "Alcaz Island Prison",
+   "pt": "Masmorra nova do Forever",
+   "where": "Dustwallow Marsh",
+   "reward": {
+    "text": "XP e equipamento"
+   },
+   "why": "Nova no Forever, perto de Theramore.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-st",
+   "type": "masmorra",
+   "min": 50,
+   "max": 55,
+   "zone": "Swamp of Sorrows",
+   "title": "Temple of Atal'Hakkar",
+   "pt": "Sunken Temple",
+   "where": "Swamp of Sorrows",
+   "reward": {
+    "text": "Missão de classe do bruxo no Classic"
+   },
+   "why": "Bom XP antes de Blackrock.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-brd",
+   "type": "masmorra",
+   "min": 52,
+   "max": 60,
+   "zone": "Blackrock Mountain",
+   "title": "Blackrock Depths",
+   "pt": "Attunement da Onyxia",
+   "where": "Blackrock Mountain",
+   "reward": {
+    "text": "Parte da corrente da Onyxia"
+   },
+   "why": "Obrigatória para a raid de 9 de dezembro.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-blackmaw",
+   "type": "masmorra",
+   "min": 55,
+   "max": 60,
+   "zone": "Azshara",
+   "title": "Blackmaw Hold",
+   "pt": "Masmorra nova do Forever",
+   "where": "Azshara",
+   "reward": {
+    "text": "XP e equipamento"
+   },
+   "why": "Nova no Forever.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "d-scholo",
+   "type": "masmorra",
+   "min": 58,
+   "max": 60,
+   "zone": "Western Plaguelands",
+   "title": "Scholomance",
+   "pt": "Set Dreadmist",
+   "where": "Western Plaguelands",
+   "reward": {
+    "item": {
+     "id": 16698,
+     "name": "Dreadmist Mask",
+     "icon": "inv_helmet_29",
+     "quality": 3,
+     "ilvl": 62,
+     "stats": {
+      "sta": 15,
+      "int": 23,
+      "sp": 14,
+      "spi": 12
+     }
+    },
+    "text": "Dreadmist Mask, Mantle, Wraps e Belt"
+   },
+   "why": "Metade do set pré-raid de bruxo cai aqui.",
+   "src": "https://www.wowsims.com/forever/warlock/dps/"
+  },
+  {
+   "id": "d-strat",
+   "type": "masmorra",
+   "min": 58,
+   "max": 60,
+   "zone": "Eastern Plaguelands",
+   "title": "Stratholme",
+   "pt": "Set Dreadmist",
+   "where": "Eastern Plaguelands",
+   "reward": {
+    "item": {
+     "id": 16699,
+     "name": "Dreadmist Leggings",
+     "icon": "inv_pants_08",
+     "quality": 3,
+     "ilvl": 61,
+     "stats": {
+      "sta": 15,
+      "int": 14,
+      "sp": 12,
+      "spi": 21
+     }
+    },
+    "text": "Dreadmist Leggings e Sandals"
+   },
+   "why": "Baron Rivendare e Baroness Anastari.",
+   "src": "https://www.wowsims.com/forever/warlock/dps/"
+  },
+  {
+   "id": "d-shaper",
+   "type": "masmorra",
+   "min": 58,
+   "max": 60,
+   "zone": "Un'Goro",
+   "title": "Shaper's Terrace",
+   "pt": "Masmorra nova do Forever",
+   "where": "Un'Goro Crater",
+   "reward": {
+    "text": "Equipamento de nível 60"
+   },
+   "why": "Nova no Forever.",
+   "src": "https://www.warcrafttavern.com/forever/guides/dungeons/"
+  },
+  {
+   "id": "z-dun",
+   "type": "zona",
+   "min": 1,
+   "max": 10,
+   "zone": "Dun Morogh",
+   "title": "Dun Morogh",
+   "pt": "Zona inicial do gnomo",
+   "where": "Coldridge Valley → Kharanos",
+   "reward": {
+    "text": "Treinador de bruxo em Kharanos"
+   },
+   "why": "Faça tudo: as missões de Kharanos rendem bastante XP.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "z-loch",
+   "type": "zona",
+   "min": 10,
+   "max": 20,
+   "zone": "Loch Modan",
+   "title": "Loch Modan",
+   "pt": "Zona dos 10–20",
+   "where": "Thelsamar",
+   "reward": {
+    "text": "Missões de Thelsamar"
+   },
+   "why": "Caminho natural do gnomo; Westfall é a alternativa.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "z-wetlands",
+   "type": "zona",
+   "min": 20,
+   "max": 30,
+   "zone": "Redridge · Duskwood · Wetlands",
+   "title": "Redridge, Duskwood e Wetlands",
+   "pt": "Zonas dos 20–30",
+   "where": "Lakeshire, Darkshire, Menethil",
+   "reward": {
+    "text": "Muitas correntes com recompensa de pano"
+   },
+   "why": "Duskwood tem a maior parte das recompensas de caster da Aliança.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "z-stv",
+   "type": "zona",
+   "min": 30,
+   "max": 35,
+   "zone": "Stranglethorn · Arathi · Thousand Needles",
+   "title": "STV, Arathi e Thousand Needles",
+   "pt": "Zonas dos 30–35",
+   "where": "Rebel Camp, Refuge Pointe, Shimmering Flats",
+   "reward": {
+    "text": "Combina com a missão do Felhunter"
+   },
+   "why": "Junte as partes do Tome of the Cabal enquanto upa.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "z-riverglades",
+   "type": "zona",
+   "min": 35,
+   "max": 45,
+   "zone": "Riverglades",
+   "title": "Riverglades",
+   "pt": "Zona nova do Forever",
+   "where": "Riverglades",
+   "reward": {
+    "text": "Mais de 150 missões"
+   },
+   "why": "A grande zona nova do meio do leveling.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "z-tanaris",
+   "type": "zona",
+   "min": 45,
+   "max": 50,
+   "zone": "Tanaris · Feralas · Hinterlands",
+   "title": "Tanaris, Feralas e Hinterlands",
+   "pt": "Zonas dos 45–50",
+   "where": "Gadgetzan, Feathermoon, Aerie Peak",
+   "reward": {
+    "text": "Missões e ZF"
+   },
+   "why": "Feralas dá acesso a Dire Maul mais tarde.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "z-ungoro",
+   "type": "zona",
+   "min": 50,
+   "max": 55,
+   "zone": "Un'Goro · Felwood · Western Plaguelands",
+   "title": "Un'Goro, Felwood e WPL",
+   "pt": "Zonas dos 50–55",
+   "where": "Marshal's Refuge, Emerald Sanctuary, Chillwind Camp",
+   "reward": {
+    "text": "Missão do Inferno em Felwood"
+   },
+   "why": "Faça a corrente do Inferno no caminho.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "z-winter",
+   "type": "zona",
+   "min": 55,
+   "max": 60,
+   "zone": "Winterspring · EPL · Burning Steppes",
+   "title": "Winterspring, EPL e Burning Steppes",
+   "pt": "Zonas dos 55–60",
+   "where": "Everlook, Light's Hope, Morgan's Vigil",
+   "reward": {
+    "text": "Attunement da Onyxia começa em Burning Steppes"
+   },
+   "why": "Comece \"Dragonkin Menace\" antes de bater o 60.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  },
+  {
+   "id": "z-hyjal",
+   "type": "zona",
+   "min": 60,
+   "max": 60,
+   "zone": "Mount Hyjal",
+   "title": "Mount Hyjal",
+   "pt": "Zona de endgame do Forever",
+   "where": "Mount Hyjal",
+   "reward": {
+    "text": "Missões de nível 60"
+   },
+   "why": "Zona nova de endgame; Hyjal Summit abre em 9 de dezembro.",
+   "src": "https://boostroom.com/blog/wow-forever-best-leveling-zones-where-to-quest-at-every-level"
+  }
+ ]
+}

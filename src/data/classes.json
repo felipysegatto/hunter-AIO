@@ -1,0 +1,119 @@
+{
+  "note": "Classes, races, gear proficiency and leveling stat weights. Weights are the Grimório's own estimates for leveling (damage first, then survival, then mana), not taken from any addon.",
+  "order": ["warrior", "paladin", "hunter", "rogue", "priest", "shaman", "mage", "warlock", "druid"],
+  "classes": {
+    "warrior": {
+      "id": 1, "name": "Guerreiro", "en": "Warrior", "color": "#c69b6d", "icon": "classicon_warrior",
+      "armor": [[1, 3], [40, 4]], "weapons": [1, 2, 3, 4, 6, 8, 9], "twoHand": [1, 4, 6, 8, 9], "shield": true, "held": false, "dual": true, "ranged": [1, 2, 3, 4],
+      "specs": [
+        { "id": "arms", "en": "Arms", "pt": "Armas", "role": "melee" },
+        { "id": "fury", "en": "Fury", "pt": "Fúria", "role": "melee" },
+        { "id": "protection", "en": "Protection", "pt": "Proteção", "role": "tank" }
+      ]
+    },
+    "paladin": {
+      "id": 2, "name": "Paladino", "en": "Paladin", "color": "#f48cba", "icon": "classicon_paladin",
+      "armor": [[1, 3], [40, 4]], "weapons": [1, 4, 6, 9], "twoHand": [1, 4, 6, 9], "shield": true, "held": false, "dual": false, "ranged": [7],
+      "specs": [
+        { "id": "holy", "en": "Holy", "pt": "Sagrado", "role": "healer" },
+        { "id": "protection", "en": "Protection", "pt": "Proteção", "role": "tank" },
+        { "id": "retribution", "en": "Retribution", "pt": "Retribuição", "role": "melee", "extra": { "int": 0.2, "sp": 0.25, "holy": 0.2 } }
+      ]
+    },
+    "hunter": {
+      "id": 3, "name": "Caçador", "en": "Hunter", "color": "#aad372", "icon": "classicon_hunter",
+      "armor": [[1, 2], [40, 3]], "weapons": [1, 2, 3, 6, 8, 9], "twoHand": [1, 6, 8, 9], "shield": false, "held": false, "dual": true, "ranged": [1, 2, 3, 4],
+      "specs": [
+        { "id": "beast-mastery", "en": "Beast Mastery", "pt": "Domínio das Feras", "role": "hunter" },
+        { "id": "marksmanship", "en": "Marksmanship", "pt": "Precisão", "role": "hunter" },
+        { "id": "survival", "en": "Survival", "pt": "Sobrevivência", "role": "hunter" }
+      ]
+    },
+    "rogue": {
+      "id": 4, "name": "Ladino", "en": "Rogue", "color": "#fff468", "icon": "classicon_rogue",
+      "armor": [[1, 2]], "weapons": [2, 3, 4, 9], "twoHand": [], "shield": false, "held": false, "dual": true, "ranged": [1, 2, 3, 4],
+      "specs": [
+        { "id": "assassination", "en": "Assassination", "pt": "Assassinato", "role": "agile" },
+        { "id": "combat", "en": "Combat", "pt": "Combate", "role": "agile" },
+        { "id": "subtlety", "en": "Subtlety", "pt": "Subterfúgio", "role": "agile" }
+      ]
+    },
+    "priest": {
+      "id": 5, "name": "Sacerdote", "en": "Priest", "color": "#f0f0f0", "icon": "classicon_priest",
+      "armor": [[1, 1]], "weapons": [2, 4, 8], "twoHand": [8], "shield": false, "held": true, "dual": false, "ranged": [5],
+      "specs": [
+        { "id": "discipline", "en": "Discipline", "pt": "Disciplina", "role": "healer" },
+        { "id": "holy", "en": "Holy", "pt": "Sagrado", "role": "healer" },
+        { "id": "shadow", "en": "Shadow", "pt": "Sombra", "role": "caster", "school": ["shadow"] }
+      ]
+    },
+    "shaman": {
+      "id": 7, "name": "Xamã", "en": "Shaman", "color": "#0070dd", "icon": "classicon_shaman",
+      "armor": [[1, 2], [40, 3]], "weapons": [1, 2, 3, 4, 8], "twoHand": [1, 4, 8], "shield": true, "held": false, "dual": false, "ranged": [8],
+      "specs": [
+        { "id": "elemental", "en": "Elemental", "pt": "Elemental", "role": "caster", "school": ["nature", "fire"] },
+        { "id": "enhancement", "en": "Enhancement", "pt": "Aperfeiçoamento", "role": "melee", "extra": { "int": 0.25, "sp": 0.15 } },
+        { "id": "restoration", "en": "Restoration", "pt": "Restauração", "role": "healer" }
+      ]
+    },
+    "mage": {
+      "id": 8, "name": "Mago", "en": "Mage", "color": "#3fc7eb", "icon": "classicon_mage",
+      "armor": [[1, 1]], "weapons": [2, 8, 9], "twoHand": [8], "shield": false, "held": true, "dual": false, "ranged": [5],
+      "specs": [
+        { "id": "arcane", "en": "Arcane", "pt": "Arcano", "role": "caster", "school": ["arcane"] },
+        { "id": "fire", "en": "Fire", "pt": "Fogo", "role": "caster", "school": ["fire"] },
+        { "id": "frost", "en": "Frost", "pt": "Gélido", "role": "caster", "school": ["frost"] }
+      ]
+    },
+    "warlock": {
+      "id": 9, "name": "Bruxo", "en": "Warlock", "color": "#8788ee", "icon": "classicon_warlock",
+      "armor": [[1, 1]], "weapons": [2, 8, 9], "twoHand": [8], "shield": false, "held": true, "dual": false, "ranged": [5],
+      "specs": [
+        { "id": "affliction", "en": "Affliction", "pt": "Suplício", "role": "caster", "school": ["shadow"] },
+        { "id": "demonology", "en": "Demonology", "pt": "Demonologia", "role": "caster", "school": ["shadow"] },
+        { "id": "destruction", "en": "Destruction", "pt": "Destruição", "role": "caster", "school": ["fire", "shadow"] }
+      ]
+    },
+    "druid": {
+      "id": 11, "name": "Druida", "en": "Druid", "color": "#ff7c0a", "icon": "classicon_druid",
+      "armor": [[1, 2]], "weapons": [2, 3, 4, 8], "twoHand": [4, 8], "shield": false, "held": true, "dual": false, "ranged": [6],
+      "specs": [
+        { "id": "balance", "en": "Balance", "pt": "Equilíbrio", "role": "caster", "school": ["arcane", "nature"] },
+        { "id": "feral", "en": "Feral", "pt": "Combate Feral", "role": "agile", "extra": { "fap": 0.5, "str": 0.9 }, "noWeaponDps": true },
+        { "id": "restoration", "en": "Restoration", "pt": "Restauração", "role": "healer" }
+      ]
+    }
+  },
+  "roles": {
+    "caster": { "label": "Dano mágico", "w": { "sp": 1, "int": 0.4, "sta": 0.4, "spi": 0.3, "crit": 0.8, "hit": 0.9, "haste": 0.8, "mp5": 0.6, "pen": 0.2, "rdps": 2.5, "armor": 0.004 } },
+    "healer": { "label": "Cura (upando)", "w": { "sp": 0.8, "heal": 0.55, "int": 0.55, "sta": 0.4, "spi": 0.45, "crit": 0.6, "hit": 0.5, "haste": 0.6, "mp5": 0.9, "rdps": 2, "armor": 0.004 } },
+    "melee": { "label": "Corpo a corpo (força)", "w": { "str": 1, "agi": 0.65, "ap": 0.5, "sta": 0.45, "hit": 1, "crit": 0.9, "haste": 0.7, "arp": 0.4, "exp": 0.8, "dps": 6, "odps": 2, "armor": 0.006 } },
+    "agile": { "label": "Corpo a corpo (agilidade)", "w": { "agi": 1, "str": 0.55, "ap": 0.5, "sta": 0.4, "hit": 1, "crit": 0.9, "haste": 0.7, "arp": 0.4, "exp": 0.8, "dps": 4, "odps": 2.5, "armor": 0.005 } },
+    "hunter": { "label": "Ataque à distância", "w": { "agi": 1, "rap": 0.45, "ap": 0.3, "int": 0.25, "sta": 0.4, "hit": 1, "crit": 0.85, "haste": 0.6, "spi": 0.1, "arp": 0.3, "rdps": 5, "dps": 0.8, "armor": 0.005 } },
+    "tank": { "label": "Tanque", "w": { "sta": 1, "def": 1, "dodge": 0.9, "parry": 0.8, "block": 0.6, "blockv": 0.4, "str": 0.6, "agi": 0.6, "hit": 0.5, "exp": 0.5, "armor": 0.025, "barmor": 0.03, "dps": 3 } }
+  },
+  "statRows": {
+    "caster": [["stamina", "Stamina"], ["intellect", "Intelecto"], ["spirit", "Espírito"], ["spellPower", "Poder mágico"], ["hit", "Acerto", "%"], ["crit", "Crítico", "%"]],
+    "healer": [["stamina", "Stamina"], ["intellect", "Intelecto"], ["spirit", "Espírito"], ["spellPower", "Poder mágico"], ["mp5", "Mana a cada 5 s"], ["crit", "Crítico", "%"]],
+    "melee": [["stamina", "Stamina"], ["strength", "Força"], ["agility", "Agilidade"], ["attackPower", "Poder de ataque"], ["hit", "Acerto", "%"], ["crit", "Crítico", "%"]],
+    "agile": [["stamina", "Stamina"], ["agility", "Agilidade"], ["strength", "Força"], ["attackPower", "Poder de ataque"], ["hit", "Acerto", "%"], ["crit", "Crítico", "%"]],
+    "hunter": [["stamina", "Stamina"], ["agility", "Agilidade"], ["intellect", "Intelecto"], ["attackPower", "Poder de ataque"], ["hit", "Acerto", "%"], ["crit", "Crítico", "%"]],
+    "tank": [["stamina", "Stamina"], ["armor", "Armadura"], ["strength", "Força"], ["agility", "Agilidade"], ["dodge", "Esquiva", "%"], ["parry", "Aparo", "%"]]
+  },
+  "races": {
+    "human": { "name": "Humano", "faction": "ALLIANCE" },
+    "dwarf": { "name": "Anão", "faction": "ALLIANCE" },
+    "night-elf": { "name": "Elfo Noturno", "faction": "ALLIANCE" },
+    "gnome": { "name": "Gnomo", "faction": "ALLIANCE" },
+    "orc": { "name": "Orc", "faction": "HORDE" },
+    "undead": { "name": "Morto-vivo", "faction": "HORDE" },
+    "tauren": { "name": "Tauren", "faction": "HORDE" },
+    "troll": { "name": "Troll", "faction": "HORDE" },
+    "skyborne": { "name": "Celeste", "faction": null }
+  },
+  "githubGuides": [
+    { "name": "Polestar", "repo": "fitzforge/polestar", "url": "https://github.com/fitzforge/polestar", "what": "Addon de guia 1–60 para as duas facções, com seta de direção e planejador de viagem; rotas simuladas para cada raça e classe.", "license": "GPL-3.0", "status": "beta · rotas compiladas e simuladas, ainda sem teste em jogo" },
+    { "name": "Ding!", "repo": "moust4ki/DingGuideWoWForever", "url": "https://github.com/moust4ki/DingGuideWoWForever", "what": "Addon de guia 1–60 com seta própria, rotas das duas facções, missões automáticas e suporte a controle; tem português do Brasil.", "license": "GPL-3.0", "status": "1–30 testado em jogo; 30–60 conferido só por ferramentas" },
+    { "name": "RestedXP · pacote Forever", "repo": "craigory1591/wow-forever-guide", "url": "https://github.com/craigory1591/wow-forever-guide", "what": "110 guias para o addon RestedXP: 1–60 por raça e classe, com missões de classe nos níveis certos.", "license": "não informada", "status": "precisa do addon RestedXP; pontos de rota aproximados" }
+  ]
+}

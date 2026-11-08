@@ -1,0 +1,7 @@
+/* ===== Tema Hunter: marcas de cacador ao fundo, paineis levemente translucidos ===== */
+.arte { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.frame {
+  background:
+    var(--noise),
+    linear-gradient(180deg, rgba(27, 39, 17, 0.84) 0%, rgba(20, 29, 12, 0.84) 38%, rgba(10, 15, 6, 0.88) 100%);
+}

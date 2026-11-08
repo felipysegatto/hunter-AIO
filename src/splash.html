@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'none'">
+  <title>Grimório do Aventureiro</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; }
+    body {
+      font-family: var(--f-body); color: var(--text); user-select: none; -webkit-app-region: drag;
+      background: radial-gradient(ellipse at 50% 28%, #3f5e24 0%, #202f13 46%, #0d1209 100%);
+    }
+    .frame {
+      position: absolute; inset: 8px; border-radius: 10px; padding: 22px 26px 18px;
+      box-shadow: inset 0 0 0 1px rgba(201, 162, 75, 0.55), inset 0 0 0 4px rgba(0, 0, 0, 0.6), inset 0 0 0 5px rgba(201, 162, 75, 0.22), inset 0 0 40px rgba(0, 0, 0, 0.6);
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+    .sigil { width: 76px; height: 76px; filter: drop-shadow(0 0 14px rgba(163, 197, 134, 0.55)); animation: float 3.2s ease-in-out infinite; }
+    @keyframes float { 50% { transform: translateY(-3px); } }
+    h1 { margin: 10px 0 0; font-family: var(--f-display); font-weight: 400; font-size: 25px; letter-spacing: 0.02em; color: var(--gold-hi, #f0d68c); text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); }
+    .ver { margin-top: 3px; font-size: 13px; color: var(--text-dim); }
+    .ver b { color: var(--quest, #ffd100); font-weight: 600; }
+    .status { margin-top: auto; padding-top: 12px; display: flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--text-dim); min-height: 22px; }
+    .status.ok { color: #9be27a; }
+    .status.warn { color: #e8b86a; }
+    .spin { width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(201, 162, 75, 0.25); border-top-color: var(--gold-hi, #f0d68c); animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .bar { width: 100%; height: 7px; margin-top: 10px; border-radius: 4px; background: rgba(0, 0, 0, 0.55); box-shadow: inset 0 0 0 1px rgba(201, 162, 75, 0.25); overflow: hidden; }
+    .bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #7d5a20, #c9a24b, #f0d68c); transition: width 0.15s; }
+    .news { width: 100%; margin-top: 14px; text-align: left; -webkit-app-region: no-drag; }
+    .news h2 { margin: 0 0 6px; font-family: var(--f-display); font-weight: 400; font-size: 17px; color: var(--quest, #ffd100); }
+    .news h2 small { font-family: var(--f-body); font-size: 12px; color: var(--text-faint); margin-left: 6px; }
+    .news ul { margin: 0; padding: 8px 10px 8px 26px; max-height: 214px; overflow-y: auto; border-radius: 6px; background: rgba(0, 0, 0, 0.35); box-shadow: inset 0 0 0 1px rgba(201, 162, 75, 0.18); }
+    .news ul::-webkit-scrollbar { width: 9px; }
+    .news ul::-webkit-scrollbar-track { background: transparent; margin: 6px 0; }
+    .news ul::-webkit-scrollbar-thumb { border-radius: 6px; background: linear-gradient(90deg, #7d5a20, #c9a24b, #7d5a20); border: 2px solid rgba(13, 18, 9, 0.85); }
+    .news ul::-webkit-scrollbar-thumb:hover { background: linear-gradient(90deg, #a07a32, #f0d68c, #a07a32); }
+    ::-webkit-scrollbar-corner { background: transparent; }
+    .news li { font-size: 13px; line-height: 1.4; color: var(--text); margin: 2px 0 6px; }
+    .news li::marker { color: var(--gold, #c9a24b); }
+    .actions { display: flex; gap: 10px; justify-content: center; margin-top: 12px; -webkit-app-region: no-drag; }
+    button {
+      font: inherit; font-size: 14px; cursor: pointer; border-radius: 5px; padding: 6px 16px;
+      color: #fff2c9; background: linear-gradient(180deg, #9b2a1f, #5e130c); border: 1px solid #000;
+      box-shadow: inset 0 1px 0 rgba(255, 220, 160, 0.25), 0 0 0 1px rgba(201, 162, 75, 0.7);
+    }
+    button:hover { filter: brightness(1.15); }
+    button.quiet { color: var(--text-dim); background: rgba(0, 0, 0, 0.35); box-shadow: 0 0 0 1px rgba(201, 162, 75, 0.35); }
+    button:disabled { opacity: 0.5; cursor: default; }
+    .err { margin-top: 8px; font-size: 12.5px; color: #ff8a7a; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <svg class="sigil" viewBox="200 200 624 560" aria-hidden="true">
+      <defs>
+        <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e2a0"/><stop offset=".5" stop-color="#c9a24b"/><stop offset="1" stop-color="#e8c873"/></linearGradient>
+        <linearGradient id="sc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a2f1c"/><stop offset="1" stop-color="#2d150c"/></linearGradient>
+        <linearGradient id="sp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e9c8"/><stop offset="1" stop-color="#d9c08c"/></linearGradient>
+        <radialGradient id="sgem" cx=".38" cy=".35" r=".7"><stop offset="0" stop-color="#f1ffd6"/><stop offset=".35" stop-color="#a8e865"/><stop offset=".8" stop-color="#3d8a18"/><stop offset="1" stop-color="#1f4d0b"/></radialGradient>
+      </defs>
+      <path d="M232 370c90-38 190-40 280 8 90-48 190-46 280-8v300c-90-38-190-40-280 8-90-48-190-46-280-8z" fill="url(#sc)" stroke="#0d1209" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M256 362c82-30 172-30 256 14v286c-84-44-174-44-256-14z" fill="url(#sp)" stroke="#7d5a20" stroke-width="6"/>
+      <path d="M768 362c-82-30-172-30-256 14v286c84-44 174-44 256-14z" fill="url(#sp)" stroke="#7d5a20" stroke-width="6"/>
+      <g fill="none" stroke="#8a6a3a" stroke-width="8" stroke-linecap="round" opacity=".75">
+        <path d="M300 430c50-14 110-14 160 6M300 480c50-14 110-14 160 6M300 530c50-14 110-14 160 6"/>
+        <path d="M724 430c-50-14-110-14-160 6M724 480c-50-14-110-14-160 6M724 530c-50-14-110-14-160 6"/>
+      </g>
+      <path d="M232 670c90-38 190-40 280 8 90-48 190-46 280-8" fill="none" stroke="url(#sg)" stroke-width="14" stroke-linecap="round"/>
+      <path d="M512 232l58 68-58 68-58-68z" fill="url(#sgem)" stroke="#0d1209" stroke-width="9" stroke-linejoin="round"/>
+    </svg>
+    <h1>Grimório do Aventureiro</h1>
+    <div class="ver" id="ver">versão …</div>
+
+    <div class="news" id="news" hidden>
+      <h2 id="news-title">Nova versão</h2>
+      <ul id="news-list"></ul>
+    </div>
+
+    <div class="status" id="status"><span class="spin" id="spin"></span><span id="status-text">Procurando atualizações…</span></div>
+    <div class="bar" id="bar" hidden><i id="bar-fill"></i></div>
+    <div class="err" id="err" hidden></div>
+    <div class="actions" id="actions" hidden>
+      <button id="btn-update">Atualizar agora</button>
+      <button class="quiet" id="btn-browser" hidden>Baixar pelo navegador</button>
+      <button class="quiet" id="btn-later">Agora não</button>
+    </div>
+  </div>
+  <script src="app/splash.js"></script>
+</body>
+</html>

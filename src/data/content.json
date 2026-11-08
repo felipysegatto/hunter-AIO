@@ -1,0 +1,784 @@
+{
+  "meta": {
+    "version": "2.2.3",
+    "contentDate": "2026-11-07",
+    "curator": "Resumos gerados por IA (Claude) a partir das fontes citadas em cada item",
+    "updates": {
+      "repo": "teixeira-ux/grimorio-do-aventureiro-releases",
+      "page": "https://github.com/teixeira-ux/grimorio-do-aventureiro-releases"
+    },
+    "feedback": {
+      "form": "https://docs.google.com/forms/d/e/1FAIpQLSc2hCZeGPmuWQ45Ky57Ft5vc-r_KJoU2jw7xXcqTh31E5oEEQ/formResponse",
+      "view": "https://docs.google.com/forms/d/e/1FAIpQLSc2hCZeGPmuWQ45Ky57Ft5vc-r_KJoU2jw7xXcqTh31E5oEEQ/viewform",
+      "fields": {
+        "type": "entry.579852312",
+        "message": "entry.66367547",
+        "contact": "entry.579407465",
+        "character": "entry.1574849091",
+        "version": "entry.25839538",
+        "details": "entry.1548540332"
+      }
+    }
+  },
+  "milestones": [
+    {
+      "id": "launch",
+      "label": "Abertura do WoW Forever",
+      "date": "2026-11-04T23:00:00Z",
+      "detail": "Quarta, 4 de novembro, 20h de Brasília (15h PST)"
+    },
+    {
+      "id": "raids",
+      "label": "Raids liberadas",
+      "date": "2026-12-09T18:00:00Z",
+      "detail": "Barrow Deeps, Hyjal Summit e Onyxia's Lair · 9 de dezembro (horário ainda não divulgado)"
+    }
+  ],
+  "news": [
+    {
+      "id": "g-launch",
+      "category": "geral",
+      "impact": "alto",
+      "date": "2026-10-30",
+      "title": "Abertura confirmada: quarta, 4/11, às 20h de Brasília",
+      "summary": "A Blizzard confirmou a abertura global do WoW Forever em 4 de novembro às 15h PST, que dá 20h no horário de Brasília. O acesso vem incluso na assinatura ou no Game Time; os pacotes Skyborne são opcionais.",
+      "bullets": [
+        "Nível máximo 60 e sem voo; o mundo cresce com conteúdo novo em vez de expansões.",
+        "Regras de servidor: Normal, PvP, RP e RP-PvP (este último confirmado em 22/out). Hardcore vem depois, sem data.",
+        "A raça Skyborne exige o Skyborne Heroic Pack; Gnomo Bruxo não depende de nenhuma compra extra."
+      ],
+      "sources": [
+        {
+          "name": "Blizzard",
+          "kind": "blizzard",
+          "url": "https://news.blizzard.com/en-us/article/24315820/world-of-warcraft-forever-goes-live-globally-november-4"
+        },
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/forever/news/roleplay-pvp-ruleset-coming-to-wow-forever-at-launch/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Launch confirmed: Wednesday, November 4, at 3 PM PST",
+        "summary": "Blizzard confirmed WoW Forever's global launch on November 4 at 3 PM PST (8 PM in Brasília). Access is included with a subscription or Game Time; Skyborne packs are optional.",
+        "bullets": [
+          "Level cap 60 and no flying; the world grows with new content instead of expansions.",
+          "Realm rules: Normal, PvP, RP and RP-PvP (the last one confirmed on Oct 22). Hardcore comes later, no date yet.",
+          "The Skyborne race requires the Skyborne Heroic Pack; a Gnome Warlock needs no extra purchase."
+        ]
+      }
+    },
+    {
+      "id": "g-content",
+      "category": "geral",
+      "impact": "medio",
+      "date": "2026-10-20",
+      "title": "O que chega no lançamento: zonas novas, +1.000 missões e 9 masmorras",
+      "summary": "O Forever começa com mais de mil missões novas, zonas inéditas e nove masmorras novas espalhadas pela jornada do 1 ao 60, além do conteúdo original do Classic revisado.",
+      "bullets": [
+        "Zonas novas: Zephras Isle (início dos Skyborne), Riverglades (35+), Shen'dralas (40+) e Mount Hyjal (60, endgame).",
+        "Masmorras novas: Hall of Thanes, Ruins of Lordaeron, Excavation Site: Wetlands, City of Dalaran, The Drowned City, Krol'Dok Stronghold, Alcaz Island Prison, Blackmaw Hold e Shaper's Terrace.",
+        "Sistemas novos: Camping (acampamentos com buffs de profissão), Legacy (talentos até 5 níveis antes com 'Talented') e profissões revisadas."
+      ],
+      "sources": [
+        {
+          "name": "Blizzard Watch",
+          "kind": "news",
+          "url": "https://blizzardwatch.com/2026/09/13/know-world-warcraft-forevers-new-zones-quests-dungeons-raids/"
+        },
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/news/nine-new-dungeons-coming-to-world-of-warcraft-forever/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "What launches: new zones, 1,000+ quests and 9 dungeons",
+        "summary": "Forever launches with more than a thousand new quests, brand-new zones and nine new dungeons spread across the 1-60 journey, on top of the revised original Classic content.",
+        "bullets": [
+          "New zones: Zephras Isle (Skyborne start), Riverglades (35+), Shen'dralas (40+) and Mount Hyjal (60, endgame).",
+          "New dungeons: Hall of Thanes, Ruins of Lordaeron, Excavation Site: Wetlands, City of Dalaran, The Drowned City, Krol'Dok Stronghold, Alcaz Island Prison, Blackmaw Hold and Shaper's Terrace.",
+          "New systems: Camping (camps with profession buffs), Legacy (talents up to 5 levels early with 'Talented') and revised professions."
+        ]
+      }
+    },
+    {
+      "id": "g-raids",
+      "category": "geral",
+      "impact": "alto",
+      "date": "2026-10-20",
+      "title": "Raids em 9 de dezembro: Barrow Deeps, Hyjal Summit e Onyxia",
+      "summary": "Três raids de nível 60 abrem juntas em 9 de dezembro, com tamanhos diferentes para cada tipo de grupo. Todas reiniciam semanalmente.",
+      "bullets": [
+        "The Barrow Deeps: 10 jogadores, 8 chefes, a antiga prisão de Illidan sob Mount Hyjal.",
+        "Hyjal Summit: 20 jogadores, 13 chefes e rotas escolhidas pelo grupo.",
+        "Onyxia's Lair: 40 jogadores; o attunement (Drakefire Amulet) é igual ao do Classic e a Blizzard recomenda resistência a fogo."
+      ],
+      "why": "Você tem cerca de 5 semanas para chegar ao 60. Pela Aliança, a corrente da Onyxia começa em Burning Steppes com 'Dragonkin Menace' e passa por Blackrock Depths.",
+      "sources": [
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/forever/news/three-new-raids-coming-to-world-of-warcraft-forever/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Raids on December 9: Barrow Deeps, Hyjal Summit and Onyxia",
+        "summary": "Three level-60 raids open together on December 9, each sized for a different kind of group. All of them reset weekly.",
+        "bullets": [
+          "The Barrow Deeps: 10 players, 8 bosses, Illidan's old prison beneath Mount Hyjal.",
+          "Hyjal Summit: 20 players, 13 bosses and routes chosen by the group.",
+          "Onyxia's Lair: 40 players; the attunement (Drakefire Amulet) matches Classic and Blizzard recommends fire resistance."
+        ]
+      }
+    },
+    {
+      "id": "g-dualspec",
+      "category": "geral",
+      "impact": "medio",
+      "date": "2026-10-10",
+      "title": "Dual spec no nível 40 e o fim do summon pela Meeting Stone",
+      "summary": "A especialização dupla fica disponível no nível 40, no treinador de classe. As Meeting Stones deixaram de invocar jogadores, então o Ritual of Summoning do bruxo passa a ser a única forma de summon.",
+      "bullets": [
+        "Dual spec no 40 junto com Apprentice Riding e Howl of Terror.",
+        "Ritual of Summoning precisa de mais dois jogadores e de um Soul Shard.",
+        "Guarde sempre alguns Soul Shards extras para o grupo."
+      ],
+      "sources": [
+        {
+          "name": "BuyBoost News",
+          "kind": "news",
+          "url": "https://buyboost.com/news/wow-forever/wow-forever-dual-spec"
+        },
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/forever/guides/warlock-leveling/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Dual spec at level 40 and the end of Meeting Stone summons",
+        "summary": "Dual specialization is available at level 40 from your class trainer. Meeting Stones no longer summon players, so the Warlock's Ritual of Summoning becomes the only way to summon.",
+        "bullets": [
+          "Dual spec at 40 alongside Apprentice Riding and Howl of Terror.",
+          "Ritual of Summoning needs two more players and a Soul Shard.",
+          "Always keep a few spare Soul Shards for your group."
+        ]
+      }
+    },
+    {
+      "id": "g-systems",
+      "category": "geral",
+      "impact": "medio",
+      "date": "2026-10-15",
+      "title": "Regras de combate que mudaram para todo mundo",
+      "summary": "O Forever unificou atributos e trouxe ajustes de combate que afetam casters. Varinhas voltaram a exigir que você fique parado antes de atirar.",
+      "bullets": [
+        "Crítico e Acerto agora valem para todos os tipos de ataque; Haste existe como atributo secundário.",
+        "Não há mais limite de debuffs no alvo: todos os seus DoTs cabem, mesmo em raid.",
+        "Varinhas exigem 0,5 s parado antes do disparo (mudança de 15/out)."
+      ],
+      "sources": [
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/forever/news/racial-class-ability-changes-in-the-wow-forever-beta/"
+        },
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/forever/guides/stats/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Combat rules that changed for everyone",
+        "summary": "Forever unified stats and brought combat changes that affect casters. Wands once again require you to stand still before firing.",
+        "bullets": [
+          "Crit and Hit now apply to every type of attack; Haste exists as a secondary stat.",
+          "There is no debuff limit on targets anymore: all of your DoTs fit, even in raids.",
+          "Wands require 0.5 s standing still before the shot (Oct 15 change)."
+        ]
+      }
+    },
+    {
+      "id": "g-names",
+      "category": "geral",
+      "impact": "baixo",
+      "date": "2026-10-27",
+      "title": "Reserva de nomes aberta para quem comprou upgrade",
+      "summary": "Desde 27 de outubro, quem pré-comprou um pacote do Forever já pode criar personagens e reservar nomes antes da abertura.",
+      "bullets": [
+        "A criação de personagem já está liberada para pré-compra.",
+        "Alguns nomes estão sendo recusados por engano; a Blizzard prometeu correção (veja em Atenção)."
+      ],
+      "sources": [
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/forever/news/character-creation-is-now-open-for-name-reservations-in-wow-forever/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Name reservations open for upgrade owners",
+        "summary": "Since October 27, players who pre-purchased a Forever pack can create characters and reserve names before launch.",
+        "bullets": [
+          "Character creation is already open for pre-purchasers.",
+          "Some names are being rejected by mistake; Blizzard promised a fix."
+        ]
+      }
+    },
+    {
+      "id": "a-namebans",
+      "category": "atencao",
+      "impact": "medio",
+      "date": "2026-09-28",
+      "title": "Polêmica dos banimentos por nome virou ameaça a desenvolvedor",
+      "summary": "A Blizzard tirou do beta jogadores com nomes ofensivos (cerca de 0,18% dos nomes, segundo o produtor Tom Ellis). A reação passou do ponto: Ellis recebeu ameaças e teve dados expostos.",
+      "bullets": [
+        "As remoções foram revisadas manualmente pelo time de desenvolvimento, segundo a Blizzard.",
+        "Parte da comunidade achou a regra ampla demais; a Blizzard manteve a posição.",
+        "A fala de Ellis pedindo que os jogadores 'fossem melhores' gerou nova onda de críticas."
+      ],
+      "sources": [
+        {
+          "name": "GamingHQ",
+          "kind": "news",
+          "url": "https://gaminghq.eu/2026/09/28/wow-forever-name-ban-developer-threats/"
+        },
+        {
+          "name": "Dexerto",
+          "kind": "news",
+          "url": "https://www.dexerto.com/world-of-warcraft/blizzard-pulls-wow-forever-beta-access-from-players-with-offensive-character-names-3412554/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Name-ban controversy escalated into threats against a developer",
+        "summary": "Blizzard removed beta players with offensive names (about 0.18% of names, according to producer Tom Ellis). The backlash went too far: Ellis received threats and had personal data exposed.",
+        "bullets": [
+          "The removals were reviewed manually by the development team, according to Blizzard.",
+          "Part of the community found the rule too broad; Blizzard held its position.",
+          "Ellis asking players to 'be better' sparked a new wave of criticism."
+        ]
+      }
+    },
+    {
+      "id": "a-restricted",
+      "category": "atencao",
+      "impact": "medio",
+      "date": "2026-10-28",
+      "title": "Nomes recusados na reserva: correção a caminho",
+      "summary": "Jogadores relataram que não conseguiam reservar nomes que deveriam estar livres. A Blizzard reconheceu o problema e anunciou correção.",
+      "bullets": [
+        "O erro afeta a reserva antecipada aberta em 27/out.",
+        "A correção foi anunciada, sem horário exato."
+      ],
+      "sources": [
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/forever/news/fix-coming-for-restricted-names-in-wow-forever/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Names rejected during reservations: fix incoming",
+        "summary": "Players reported they couldn't reserve names that should be available. Blizzard acknowledged the issue and announced a fix.",
+        "bullets": [
+          "The bug affects the early reservation that opened on Oct 27.",
+          "A fix was announced, with no exact time."
+        ]
+      }
+    },
+    {
+      "id": "a-racials",
+      "category": "atencao",
+      "impact": "alto",
+      "date": "2026-10-27",
+      "title": "Racials refeitas na última hora, a 9 dias do lançamento",
+      "summary": "Depois de críticas de que as racials novas eram genéricas, a Blizzard refez várias em 26 e 27 de outubro, priorizando identidade de raça sobre equilíbrio perfeito.",
+      "bullets": [
+        "Especializações de arma (Sword/Axe/Mace Specialization) saíram de vez para não 'obrigar' tipos de arma no loot.",
+        "Orc recuperou Command (+5% de dano de pet para bruxo e caçador) e perdeu crítico; Humano perdeu metade do crítico.",
+        "Troll: Berserking dura 15 s. Morto-vivo: Touch of the Grave com recarga interna de 15 s."
+      ],
+      "why": "Qualquer guia de raça publicado antes de 26/out pode estar errado. O app já usa os valores novos.",
+      "sources": [
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/forever/news/changes-to-racial-abilities-in-wow-forever-ahead-of-name-reservations/"
+        },
+        {
+          "name": "Warcraft Tavern",
+          "kind": "warcrafttavern",
+          "url": "https://www.warcrafttavern.com/forever/news/more-racial-ability-changes-for-wow-forever/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Racials reworked at the last minute, 9 days before launch",
+        "summary": "After criticism that the new racials were generic, Blizzard reworked several of them on October 26 and 27, prioritizing racial identity over perfect balance.",
+        "bullets": [
+          "Weapon specializations (Sword/Axe/Mace Specialization) were removed so loot doesn't 'force' weapon types.",
+          "Orc got Command back (+5% pet damage for Warlocks and Hunters) and lost crit; Human lost half of its crit.",
+          "Troll: Berserking lasts 15 s. Undead: Touch of the Grave has a 15 s internal cooldown."
+        ]
+      }
+    },
+    {
+      "id": "a-talents17",
+      "category": "atencao",
+      "impact": "medio",
+      "date": "2026-10-08",
+      "title": "Bruxo perdeu 17 talentos do Classic",
+      "summary": "Com as árvores finais publicadas, o bruxo foi das classes que mais perderam talentos antigos, enquanto o Mago não perdeu nenhum. A troca foi por talentos ativos.",
+      "bullets": [
+        "Saíram passivos 'obrigatórios' como Fel Intellect, Fel Stamina, Devastation e Emberstorm.",
+        "Curse of Shadow também foi removida.",
+        "Em troca vieram 17 talentos novos e 30 alterados nas três árvores."
+      ],
+      "sources": [
+        {
+          "name": "HostedGG",
+          "kind": "news",
+          "url": "https://hostedgg.com/blog/wow-forever-mage-shaman-rogue-warlock-kits"
+        },
+        {
+          "name": "WoW Forever Talent",
+          "kind": "news",
+          "url": "https://wowforevertalent.com/warlock/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Warlocks lost 17 Classic talents",
+        "summary": "With the final trees published, Warlock was among the classes that lost the most old talents, while Mage lost none. They were traded for active talents.",
+        "bullets": [
+          "'Mandatory' passives such as Fel Intellect, Fel Stamina, Devastation and Emberstorm are gone.",
+          "Curse of Shadow was also removed.",
+          "In exchange, 17 new talents arrived and 30 were changed across the three trees."
+        ]
+      }
+    },
+    {
+      "id": "a-queues",
+      "category": "atencao",
+      "impact": "medio",
+      "date": "2026-09-25",
+      "title": "Beta: filas enormes, 'fácil demais' e travamentos de GPU",
+      "summary": "O beta teve demanda muito acima do esperado. A Blizzard ampliou a capacidade dos servidores várias vezes e admitiu que não estava pronta para tanto engajamento.",
+      "bullets": [
+        "Queixas comuns: lag, sensação de jogo fácil demais e crashes ligados a placas de vídeo específicas.",
+        "A Blizzard respondeu rápido a parte do feedback, como efeitos de clima mais intensos.",
+        "Houve teste de estresse em 21/out para simular o dia do lançamento."
+      ],
+      "sources": [
+        {
+          "name": "Massively OP",
+          "kind": "news",
+          "url": "https://massivelyop.com/2026/09/18/world-of-warcraft-forevers-first-day-of-beta-sees-massive-queues-and-plenty-of-early-opinions/"
+        },
+        {
+          "name": "FRVR",
+          "kind": "news",
+          "url": "https://frvr.com/blog/news/world-of-warcraft-forever-lead-says-theres-been-no-beta-bigger-than-this-as-they-admit-they-werent-ready-for-this-kind-of-engagement/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Beta: huge queues, 'too easy' and GPU crashes",
+        "summary": "Beta demand was far above expectations. Blizzard expanded server capacity several times and admitted it wasn't ready for that much engagement.",
+        "bullets": [
+          "Common complaints: lag, the game feeling too easy and crashes tied to specific graphics cards.",
+          "Blizzard responded quickly to part of the feedback, such as stronger weather effects.",
+          "A stress test on Oct 21 simulated launch day."
+        ]
+      }
+    },
+    {
+      "id": "a-olympus",
+      "category": "atencao",
+      "impact": "baixo",
+      "date": "2026-09-26",
+      "title": "Mega-guilda Olympus, do Asmongold, gerou reclamações",
+      "summary": "Milhares de jogadores entraram na guilda Olympus no beta, e centenas seguiam o streamer pelo mapa, o que irritou quem não fazia parte.",
+      "bullets": [
+        "Jogadores pediram punição; o streamer respondeu às críticas.",
+        "Espere áreas de missão lotadas em servidores populares."
+      ],
+      "why": "No lançamento, evite o servidor da Olympus se quiser upar com menos disputa por mobs.",
+      "sources": [
+        {
+          "name": "Dexerto",
+          "kind": "news",
+          "url": "https://www.dexerto.com/world-of-warcraft/asmongold-responds-as-wow-forever-players-want-him-banned-over-massive-olympus-guild-3411199/"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Asmongold's mega-guild Olympus drew complaints",
+        "summary": "Thousands of players joined the Olympus guild during the beta, and hundreds followed the streamer around the map, annoying people outside it.",
+        "bullets": [
+          "Players asked for punishment; the streamer responded to the criticism.",
+          "Expect crowded quest areas on popular realms."
+        ]
+      }
+    },
+    {
+      "id": "a-addons",
+      "category": "atencao",
+      "impact": "baixo",
+      "date": "2026-10-23",
+      "title": "Política de addons de leveling ainda sem resposta",
+      "summary": "A comunidade cobra da Blizzard uma posição sobre addons de guia de leveling, inclusive os pagos, que estariam explorando uma brecha nas regras.",
+      "bullets": [
+        "O tema apareceu no tópico oficial de encerramento do beta.",
+        "Nenhuma regra nova foi anunciada até agora."
+      ],
+      "why": "Se pretende usar addon de guia, tenha um plano B: ele pode ser limitado depois do lançamento.",
+      "sources": [
+        {
+          "name": "Fórum Blizzard EU",
+          "kind": "community",
+          "url": "https://eu.forums.blizzard.com/en/wow/t/637228/1"
+        }
+      ],
+      "orig": {
+        "lang": "en",
+        "title": "Leveling addon policy still unanswered",
+        "summary": "The community is pressing Blizzard for a position on leveling guide addons, including paid ones that allegedly exploit a loophole in the rules.",
+        "bullets": [
+          "The topic came up in the official beta wrap-up thread.",
+          "No new rule has been announced so far."
+        ]
+      }
+    }
+  ],
+  "gearSlots": [
+    {
+      "id": "head",
+      "label": "Cabeça",
+      "side": "left",
+      "weight": 0.85
+    },
+    {
+      "id": "neck",
+      "label": "Pescoço",
+      "side": "left",
+      "weight": 0.55
+    },
+    {
+      "id": "shoulder",
+      "label": "Ombros",
+      "side": "left",
+      "weight": 0.7
+    },
+    {
+      "id": "back",
+      "label": "Costas",
+      "side": "left",
+      "weight": 0.5
+    },
+    {
+      "id": "chest",
+      "label": "Peito",
+      "side": "left",
+      "weight": 0.9
+    },
+    {
+      "id": "shirt",
+      "label": "Camisa",
+      "side": "left",
+      "weight": 0
+    },
+    {
+      "id": "tabard",
+      "label": "Tabardo",
+      "side": "left",
+      "weight": 0
+    },
+    {
+      "id": "wrist",
+      "label": "Pulsos",
+      "side": "left",
+      "weight": 0.5
+    },
+    {
+      "id": "hands",
+      "label": "Mãos",
+      "side": "right",
+      "weight": 0.7
+    },
+    {
+      "id": "waist",
+      "label": "Cintura",
+      "side": "right",
+      "weight": 0.6
+    },
+    {
+      "id": "legs",
+      "label": "Pernas",
+      "side": "right",
+      "weight": 0.9
+    },
+    {
+      "id": "feet",
+      "label": "Pés",
+      "side": "right",
+      "weight": 0.6
+    },
+    {
+      "id": "finger1",
+      "label": "Anel",
+      "side": "right",
+      "weight": 0.5
+    },
+    {
+      "id": "finger2",
+      "label": "Anel",
+      "side": "right",
+      "weight": 0.5
+    },
+    {
+      "id": "trinket1",
+      "label": "Berloque",
+      "side": "right",
+      "weight": 0.6
+    },
+    {
+      "id": "trinket2",
+      "label": "Berloque",
+      "side": "right",
+      "weight": 0.6
+    },
+    {
+      "id": "mainhand",
+      "label": "Mão principal",
+      "side": "bottom",
+      "weight": 1.0
+    },
+    {
+      "id": "offhand",
+      "label": "Mão secundária",
+      "side": "bottom",
+      "weight": 0.6
+    },
+    {
+      "id": "ranged",
+      "label": "Varinha",
+      "side": "bottom",
+      "weight": 0.8
+    }
+  ],
+  "feeds": {
+    "keepDays": 45,
+    "sources": [
+      {
+        "name": "Wowhead",
+        "kind": "wowhead",
+        "url": "https://www.wowhead.com/news/rss/all"
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "version": "2.2.3",
+      "date": "2026-11-07",
+      "notes": [
+        "Quem já usou o app neste PC continua com o personagem salvo, inclusive quem vem das versões antigas e depois de cada atualização. Num PC novo, o app continua abrindo sem personagem.",
+        "A lista de novidades da janelinha inicial ganhou uma barra de rolagem no estilo do app.",
+        "Tradução: Ajustes deixa claro que não precisa de chave nenhuma (o Google Tradutor já traduz tudo) e o topo da janela não mostra mais \"IA desligada\"."
+      ]
+    },
+    {
+      "version": "2.2.2",
+      "date": "2026-11-07",
+      "notes": [
+        "Ajustes → Versão: botão para copiar o link de download e mandar para os amigos.",
+        "Atualização: se o antivírus do Windows bloquear o instalador baixado, a janelinha avisa e oferece baixar pelo navegador, em vez de fechar o app."
+      ]
+    },
+    {
+      "version": "2.2.1",
+      "date": "2026-11-07",
+      "notes": [
+        "Primeira abertura sem personagem: o app começa vazio, o tutorial pede o seu personagem e, depois disso, tudo fica salvo. Os dados da versão antiga (Grimório do BruxoMagic) não são mais reaproveitados."
+      ]
+    },
+    {
+      "version": "2.2.0",
+      "date": "2026-11-07",
+      "notes": [
+        "Instalador: o app agora se instala como um programa (sem pedir administrador), com atalho no menu Iniciar e na área de trabalho, e aparece em Aplicativos instalados do Windows. Não precisa mais de Google Drive.",
+        "Launcher: ao abrir, uma janelinha mostra a versão e confere se saiu versão nova. Se saiu, mostra as novidades e atualiza com um clique: baixa, confere o arquivo, instala e abre a versão nova.",
+        "Depois de cada atualização, o app mostra o que mudou.",
+        "Boas-vindas: um tutorial rápido apresenta o app, conecta o seu personagem e pergunta quais avisos devem tocar som. Dá para pular e rever em Ajustes.",
+        "Armory: busque o personagem pelo nome ou cole o link, e desconecte quando quiser.",
+        "O app abre junto com o Windows (dá para desligar em Ajustes → Versão).",
+        "Ícone de Ajustes virou uma engrenagem.",
+        "Correção: escolher entre personagens com o mesmo nome voltou a funcionar."
+      ]
+    },
+    {
+      "version": "2.1.0",
+      "date": "2026-11-07",
+      "notes": [
+        "Personagem maior: o app mede onde o personagem está na foto do Armory e aproxima a imagem, então gnomos e taurens aparecem do mesmo tamanho no círculo.",
+        "Guia: antes de carregar, o app pergunta qual guia de leveling da Mobalytics você quer seguir (o mais favoritado vem marcado). Dá para trocar depois.",
+        "Novo botão de dicas, ideias e erros (balão no topo e em Ajustes → Versão): a mensagem vai direto para o autor, sem conta nem e-mail.",
+        "Equipamento: o cálculo é refeito quando o Armory traz detalhes novos dos mesmos itens (DPS da arma, dano de Sombra/Fogo); ganhos muito grandes aparecem como \"muito melhor\".",
+        "Correções: estrela de favoritos legível; mensagens de \"sem conexão\" mais claras."
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-11-06",
+      "notes": [
+        "Novo nome: Grimório do Aventureiro. O app agora serve para qualquer classe e raça do WoW Forever.",
+        "Ao conectar o Armory, o app identifica raça, classe e especialização e carrega o guia de leveling mais favoritado daquela classe na Mobalytics (dá para trocar pelos outros guias da lista).",
+        "Nova aba Equipamento: as 3 melhores trocas para cada espaço no seu nível, com onde conseguir (missão, masmorra, profissão, vendedor, reputação ou leilão), filtros por fonte e o que chega nos próximos níveis. Os números nos espaços do personagem mostram as trocas mais importantes.",
+        "Atributos por papel (dano mágico, corpo a corpo, caçador, tanque, cura) e a coluna 'Com melhorias', que mostra quanto cada atributo sobe com as trocas sugeridas.",
+        "Notícias numa gaveta escondida (aba Notícias, à esquerda), só com Wowhead e Reddit. Saíram a aba Bruxo & Gnomo, o Discord e o Kalamazi.",
+        "O app confere sozinho no GitHub se há versão nova e avisa no topo da janela, com o link para baixar.",
+        "Guias de leveling do GitHub recomendados (Polestar, Ding! e o pacote RestedXP) aparecem no guia completo, para quem quer o passo a passo dentro do jogo."
+      ]
+    },
+    {
+      "version": "1.2.8",
+      "date": "2026-11-06",
+      "notes": [
+        "Armory oficial do WoW Forever: o Grimório lê o link da busca (…/forever/us/armory?q=Bruxo+Magic), a página do personagem ou só o nome com sobrenome (Bruxo Magic). O Forever não tem reino no link, e o nome vem com sobrenome.",
+        "Com o personagem do Forever conectado, nível, itens, atributos, foto, talentos e profissões vêm do Armory, e o aviso de 'Retail · teste' some.",
+        "Novo cartão 'Para o seu nível' no Guia do Crix: o que treinar no instrutor no seu nível, o que ficou do nível anterior, o que dá para pular e economizar ouro, o próximo treino e as masmorras da sua faixa (só as da Aliança).",
+        "Talentos: o Grimório compara os pontos que você tem no Armory com o que o guia manda ter no seu nível.",
+        "Quando o Armory mostra que você subiu de nível, o aviso do Windows já diz o que treinar no instrutor.",
+        "A Rota de poder mostra o treino do instrutor junto da dica do guia."
+      ]
+    },
+    {
+      "version": "1.2.7",
+      "date": "2026-11-03",
+      "notes": [
+        "O painel da direita agora é o Guia do Crix (Mobalytics) no lugar do antigo Grimório de Talentos: medalhões das builds do guia (Affliction, Demonology e o respec), pontos da build no nível 60, mini árvores de talentos, os próximos talentos para o seu nível, a rotação do Crix e os prós e contras.",
+        "Copiar código: copia o código da build completa do nível 60, e 'Código até o nível N' copia só os pontos até o seu nível atual.",
+        "Guia completo abre o pergaminho com o guia inteiro; a aba Guia saiu do painel do meio, que fica com Rota de poder e as outras abas.",
+        "Avisos de atualização do guia aparecem no topo do painel, com o botão Atualizar sempre à mão.",
+        "Tradução: 'classificação' virou 'rank' (Rank 4, os ranks mais altos), como se fala no jogo."
+      ]
+    },
+    {
+      "version": "1.2.6",
+      "date": "2026-11-03",
+      "notes": [
+        "Nova aba Guia: as dicas de leveling agora vêm do guia de bruxo da Mobalytics (por Crix), traduzido para o português: talentos nível a nível, passo a passo por faixa de nível, rotação, atributos, consumíveis, profissões, raças, demônios, varinhas e dicas.",
+        "O Grimório confere o guia sozinho a cada hora. Quando ele muda, avisa no Windows (com som) e mostra um resumo curto do que mudou: notas do autor, talentos que trocaram de nível e seções revisadas.",
+        "Botão Atualizar na aba Guia (e em Ajustes → Fontes) para conferir na hora.",
+        "A Rota de poder ganhou um cartão com a dica do guia para a sua faixa de nível e o talento do nível atual.",
+        "Ajustes → Sons: nova categoria 'Guia de leveling' para escolher aviso e som."
+      ]
+    },
+    {
+      "version": "1.2.5",
+      "date": "2026-11-03",
+      "notes": [
+        "Matéria completa mais legível: quando o Wowhead não libera a página da matéria, o Grimório usa o texto completo que o próprio Wowhead publica no feed e recupera os títulos das seções (Correções de bugs, Classes, cada classe e especialização, Raças…).",
+        "Espaço entre os parágrafos da matéria, como numa página de verdade.",
+        "Nomes de especializações ficam em inglês nos títulos (Affliction, Demonology, Destruction…), e títulos que o tradutor errava (Aulas, Corridas) saem corretos."
+      ]
+    },
+    {
+      "version": "1.2.4",
+      "date": "2026-11-03",
+      "notes": [
+        "Pergaminho da notícia com rolagem própria: role com a roda do mouse, as setas, Page Down ou Espaço, sem precisar clicar antes.",
+        "Barra dourada no topo do pergaminho mostra quanto falta para terminar a matéria, e o botão Início volta ao começo.",
+        "Pergaminho um pouco maior (até 90% da altura da tela) para ler matérias longas com conforto."
+      ]
+    },
+    {
+      "version": "1.2.3",
+      "date": "2026-11-03",
+      "notes": [
+        "Notícias completas: as matérias do Wowhead abrem inteiras dentro do Grimório, traduzidas para o português, com títulos, listas, citações da Blizzard, imagens, tabelas e vídeos. Não precisa mais ir ao site para continuar lendo.",
+        "Feitiços, itens e NPCs citados na matéria aparecem com o ícone do jogo e o nome em inglês; passe o mouse para ver a descrição.",
+        "O botão EN mostra a matéria original completa em inglês.",
+        "As matérias mais recentes já chegam baixadas e traduzidas em segundo plano, então abrem na hora; as outras carregam ao abrir (as bem longas, como notas de patch, levam alguns segundos na primeira vez).",
+        "Outras fontes que publicam o texto inteiro no feed também abrem completas."
+      ]
+    },
+    {
+      "version": "1.2.2",
+      "date": "2026-11-03",
+      "notes": [
+        "Foto do personagem: o retrato mostra a imagem do Armory (corpo inteiro no Retail; nos servidores Classic, que só publicam o retrato pequeno, ele vira um medalhão no centro do círculo). Clique na foto para abrir o personagem no Armory.",
+        "Armory aceita o link de uma busca (…/armory?q=Nome) ou só o nome, com ou sem reino (Berkz ou Berkz-Stormrage). Se houver um único bruxo com esse nome, ele conecta sozinho; se houver vários, Ajustes → Armory lista todos para escolher, bruxos primeiro.",
+        "Ajustes → Armory mostra o personagem conectado (retrato, nível, raça, classe, especialização, reino e guilda) e os outros com o mesmo nome.",
+        "Mensagens mais claras quando o link não é reconhecido ou o personagem não existe.",
+        "Kalamazi volta a aparecer: o feed de vídeos do YouTube saiu do ar, então o Grimório lê a página de vídeos do canal.",
+        "Reddit: as buscas agora vão uma de cada vez, com pausa, para não receber 'muitas consultas'."
+      ]
+    },
+    {
+      "version": "1.2.1",
+      "date": "2026-11-03",
+      "notes": [
+        "Armory: aceita o formato novo de link da Blizzard (…/worldsoul/us/armory/character/reino/nome) e lê a página em português.",
+        "Personagem acima do nível 60 (ou do Retail) entra em modo de teste: mostra os dados, sem metas nem dicas.",
+        "Leitura do Armory com mais tempo de espera (a página do Retail tem cerca de 2 MB)."
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-11-03",
+      "notes": [
+        "Novidades separadas por fonte: Wowhead, Reddit e Bruxo & Gnomo. As abas Atenção e Comunidade saíram; os anúncios do Discord aparecem em Bruxo & Gnomo.",
+        "Armory aceita qualquer link de personagem. Personagens do Retail funcionam para teste, com aviso, e sem metas nem dicas.",
+        "Atributos mostram só o valor atual e a meta para o seu nível.",
+        "Nomes das especializações em inglês (Affliction, Demonology, Destruction)."
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-11-01",
+      "notes": [
+        "Notícias sempre em português, com botão para ver o original em inglês.",
+        "Nova aba Comunidade: fórum oficial do Forever, Reddit e Discord (pelo seu bot), tudo traduzido.",
+        "Sons e notificações por tipo de novidade.",
+        "Atributos zerados até o Armory responder; leitura automática do Armory (página pública ou API da Battle.net).",
+        "Rota de poder com missões da Aliança por nível, marcar como feita e sugestões vindas das notícias.",
+        "Grimório completo no estilo WoWSims: árvores de talentos, presets simulados, rotação, consumíveis e equipamento pré-raid."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-10-31",
+      "notes": [
+        "Primeira versão do Grimório: notícias curadas, builds das três especializações, atributos, rota de poder e painel do personagem.",
+        "Feeds ao vivo com resumo por IA (opcional, com sua chave da API)."
+      ]
+    }
+  ],
+  "communityFeeds": {
+    "keepDays": 21,
+    "sources": [
+      {
+        "name": "r/classicwow · Forever",
+        "kind": "reddit",
+        "url": "https://www.reddit.com/r/classicwow/search.rss?q=forever&restrict_sr=1&sort=new"
+      },
+      {
+        "name": "r/wow · Forever",
+        "kind": "reddit",
+        "url": "https://www.reddit.com/r/wow/search.rss?q=%22wow%20forever%22&restrict_sr=1&sort=new"
+      }
+    ]
+  }
+}

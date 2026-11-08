@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://wow.zamimg.com https://render.worldofwarcraft.com https://i.ytimg.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grimório do Aventureiro</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/frame.css">
+  <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" href="styles/features.css">
+  <link rel="stylesheet" href="styles/hunter.css">
+</head>
+<body>
+  <svg class="arte" viewBox="0 0 1500 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <g id="alvo" fill="none">
+        <circle r="72" stroke-width="7"/><circle r="48" stroke-width="7"/><circle r="24" stroke-width="7"/><circle r="6" fill="currentColor"/>
+        <path d="M-40,66 L-58,150 M40,66 L58,150 M-30,110 L30,110" stroke-width="7" stroke-linecap="round"/>
+      </g>
+      <g id="boneco">
+        <rect x="-26" y="-60" width="52" height="96" rx="14"/>
+        <circle cy="-86" r="20"/>
+        <path d="M-52,-36 L52,-36 M0,36 L0,130 M-38,130 L38,130" stroke-width="9" stroke-linecap="round"/>
+      </g>
+      <g id="aguia">
+        <path d="M0,-6 C-30,-36 -84,-46 -140,-22 C-104,-12 -84,4 -62,34 C-46,16 -26,10 0,20 C26,10 46,16 62,34 C84,4 104,-12 140,-22 C84,-46 30,-36 0,-6Z"/>
+        <circle cy="-12" r="9"/>
+      </g>
+      <g id="pata">
+        <ellipse cy="18" rx="19" ry="15"/>
+        <circle cx="-24" cy="-4" r="7"/><circle cx="-9" cy="-19" r="7"/><circle cx="9" cy="-19" r="7"/><circle cx="24" cy="-4" r="7"/>
+      </g>
+      <g id="mira" fill="none" stroke-linecap="round">
+        <circle r="40" stroke-width="5"/>
+        <path d="M-64,0 L-22,0 M22,0 L64,0 M0,-64 L0,-22 M0,22 L0,64" stroke-width="5"/>
+      </g>
+      <g id="aljava">
+        <rect x="-20" y="-50" width="40" height="110" rx="10"/>
+        <path d="M-9,-50 L-9,-96 M2,-50 L2,-104 M13,-50 L13,-92" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M-9,-96 l-6,12 h12z M2,-104 l-6,12 h12z M13,-92 l-6,12 h12z"/>
+      </g>
+    <g id="garra" fill="none" stroke-linecap="round">
+        <path d="M-44,-80 C-34,-30 -24,30 -12,90" stroke-width="7"/>
+        <path d="M0,-90 C8,-30 18,35 28,100" stroke-width="9"/>
+        <path d="M44,-80 C50,-30 58,30 68,88" stroke-width="7"/>
+      </g>
+    </defs>
+    <g fill="#aad372" stroke="#aad372" color="#aad372" opacity=".16">
+      <use href="#pata" transform="translate(90,120) rotate(10) scale(1.2)"/>
+      <use href="#garra" transform="translate(390,170) rotate(25) scale(1)"/>
+      <use href="#mira" transform="translate(240,340) rotate(0) scale(1.3)"/>
+      <use href="#pata" transform="translate(130,570) rotate(-20) scale(1.1)"/>
+      <use href="#garra" transform="translate(400,650) rotate(-20) scale(1.2)"/>
+      <use href="#mira" transform="translate(80,790) rotate(0) scale(0.9)"/>
+      <use href="#aguia" transform="translate(270,830) rotate(-6) scale(0.8)"/>
+      <use href="#pata" transform="translate(440,420) rotate(18) scale(0.9)"/>
+      <use href="#aguia" transform="translate(760,90) rotate(0) scale(1.3)"/>
+      <use href="#pata" transform="translate(560,300) rotate(15) scale(1.1)"/>
+      <use href="#garra" transform="translate(930,260) rotate(30) scale(1)"/>
+      <use href="#mira" transform="translate(930,520) rotate(0) scale(1)"/>
+      <use href="#alvo" transform="translate(640,780) rotate(0) scale(1)"/>
+      <use href="#pata" transform="translate(880,700) rotate(-10) scale(1)"/>
+      <use href="#garra" transform="translate(560,560) rotate(-28) scale(1)"/>
+      <use href="#aguia" transform="translate(1250,110) rotate(0) scale(1)"/>
+      <use href="#pata" transform="translate(1100,330) rotate(-15) scale(1.1)"/>
+      <use href="#mira" transform="translate(1390,310) rotate(0) scale(1.2)"/>
+      <use href="#garra" transform="translate(1190,530) rotate(-25) scale(1.2)"/>
+      <use href="#boneco" transform="translate(1390,720) rotate(0) scale(1.3)"/>
+      <use href="#pata" transform="translate(1090,770) rotate(18) scale(0.9)"/>
+      <use href="#aljava" transform="translate(1250,810) rotate(20) scale(1)"/>
+      <use href="#pata" transform="translate(1420,540) rotate(12) scale(0.9)"/>
+    </g>
+  </svg>
+  <!-- Icon sprite (all artwork original to this app) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f6e2a0"/><stop offset=".45" stop-color="#c9a24b"/><stop offset=".7" stop-color="#8a6526"/><stop offset="1" stop-color="#e8c873"/>
+      </linearGradient>
+      <radialGradient id="g-gem" cx=".35" cy=".35" r=".7">
+        <stop offset="0" stop-color="#eafdda"/><stop offset=".35" stop-color="#b0db8b"/><stop offset="1" stop-color="#314d19"/>
+      </radialGradient>
+      <radialGradient id="g-fel" cx=".5" cy=".6" r=".6">
+        <stop offset="0" stop-color="#e9ffc4"/><stop offset=".4" stop-color="#9ee05a"/><stop offset="1" stop-color="#2f6a12"/>
+      </radialGradient>
+    </defs>
+
+    <symbol id="corner" viewBox="0 0 56 56">
+      <path d="M3 53V16C3 8.8 8.8 3 16 3h37" fill="none" stroke="#2a1d0a" stroke-width="6" stroke-linecap="round"/>
+      <path d="M3 53V16C3 8.8 8.8 3 16 3h37" fill="none" stroke="url(#g-gold)" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M3 30c7-1 9.5-5 10-10.5S16.5 10 22 9.5 30 6.5 31 3" fill="none" stroke="url(#g-gold)" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M9 40c0-6 1-8 4-10M40 9c-6 0-8 1-10 4" fill="none" stroke="#e8c873" stroke-width="1.1" stroke-linecap="round" opacity=".8"/>
+      <circle cx="12" cy="12" r="6.2" fill="#192310" stroke="url(#g-gold)" stroke-width="2"/>
+      <circle cx="12" cy="12" r="3.6" fill="url(#g-gem)"/>
+      <circle cx="10.8" cy="10.8" r="1" fill="#fff" opacity=".85"/>
+    </symbol>
+
+    <symbol id="wing" viewBox="0 0 40 20">
+      <path d="M40 10H18C12 10 8 6 2 4c3 3 4 5 4 6s-1 3-4 6c6-2 10-6 16-6" fill="none" stroke="url(#g-gold)" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="22" cy="10" r="1.6" fill="#e8c873"/>
+    </symbol>
+
+    <symbol id="sigil" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="29" fill="#1b290f" stroke="url(#g-gold)" stroke-width="3"/>
+      <circle cx="32" cy="32" r="23" fill="none" stroke="#c9a24b" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/>
+      <path d="M20 21.5c4-1.6 8-1.6 12 .8 4-2.4 8-2.4 12-.8v21c-4-1.6-8-1.6-12 .8-4-2.4-8-2.4-12-.8z" fill="#2b3e1a" stroke="url(#g-gold)" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M32 22.3v21" stroke="#c9a24b" stroke-width="1.2"/>
+      <path d="M26 27.5l-2.5 4 2.5 4M38 27.5l2.5 4-2.5 4" fill="none" stroke="#d2efb9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="32" cy="15.5" r="2.4" fill="url(#g-fel)"/>
+    </symbol>
+
+    <!-- spec glyphs -->
+    <symbol id="spec-affliction" viewBox="0 0 32 32">
+      <path d="M16 5c5.5 0 10 5.3 11 11-1 5.7-5.5 11-11 11S6 21.7 5 16C6 10.3 10.5 5 16 5z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M16 11.5a4.5 4.5 0 1 1-4.5 4.5c0-2 1.5-3.2 3.2-3.2s2.6 1.2 2.6 2.4-.9 1.8-1.7 1.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M9 25c-1 2-2.5 3-4 3.5M23 25c1 2 2.5 3 4 3.5M16 27v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="spec-demonology" viewBox="0 0 32 32">
+      <path d="M8.5 9C5 7 4 3.5 4.5 2c1.5 3 4.5 4 7 4.5M23.5 9C27 7 28 3.5 27.5 2c-1.5 3-4.5 4-7 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M16 6c6 0 9 4.5 9 10 0 4-2 7-4.5 8.5L19 29h-6l-1.5-4.5C9 23 7 20 7 16c0-5.5 3-10 9-10z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M11 15.5l4 1.5M21 15.5l-4 1.5M14 23h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="spec-destruction" viewBox="0 0 32 32">
+      <path d="M16 3c1 5 7 8.5 7 15a7 7 0 0 1-14 0c0-4 2-6.5 4-8.5.2 3 1.2 4.8 3 5.8-.6-4.5-.7-8.5 0-12.3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M16 18c1.5 1.8 2.5 3 2.5 4.5a2.5 2.5 0 0 1-5 0c0-1.5 1-2.7 2.5-4.5z" fill="currentColor" opacity=".8"/>
+      <path d="M6 27h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- equipment slots -->
+    <g id="slot-defs"></g>
+    <symbol id="slot-head" viewBox="0 0 24 24"><path d="M5 15a7 7 0 0 1 14 0v2.5H5zM9 17.5V21h6v-3.5M12 8V4.5M9.5 15h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-neck" viewBox="0 0 24 24"><path d="M6.5 3c0 5.5 2.8 8.5 5.5 8.5s5.5-3 5.5-8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 12.5l3.5 4-3.5 4.5-3.5-4.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-shoulder" viewBox="0 0 24 24"><path d="M3.5 15.5c0-5.5 3.8-9 8.5-9s8.5 3.5 8.5 9zM7 15.5V19M12 15.5V20M17 15.5V19M8 11c2.5-1.3 5.5-1.3 8 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-back" viewBox="0 0 24 24"><path d="M8 3.5h8l3.5 17-7.5-3-7.5 3zM12 4v13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-chest" viewBox="0 0 24 24"><path d="M9 3l3 2.2L15 3l4.5 3.2-2.2 4V21H6.7V10.2L4.5 6.2zM12 5.2V21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-shirt" viewBox="0 0 24 24"><path d="M8.5 4L4 7l2 3.2 2-1V20h8V9.2l2 1L20 7l-4.5-3c-.5 1.4-1.8 2.2-3.5 2.2S9 5.4 8.5 4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-tabard" viewBox="0 0 24 24"><path d="M6.5 3h11v14L12 21l-5.5-4zM12 7.5v6M9 10.5h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-wrist" viewBox="0 0 24 24"><rect x="6.5" y="5" width="11" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 9.5h11M6.5 14.5h11" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="slot-hands" viewBox="0 0 24 24"><path d="M8 21v-6.5L5.8 11.3a1.4 1.4 0 0 1 2.3-1.6L9 11V5a1.3 1.3 0 0 1 2.6 0v5.5V3.8a1.3 1.3 0 0 1 2.6 0v6.7V5a1.3 1.3 0 0 1 2.6 0v6.5V8a1.2 1.2 0 0 1 2.4 0v7c0 3-1.5 5-3.2 6z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-waist" viewBox="0 0 24 24"><rect x="2.5" y="9" width="19" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="9.5" y="8" width="5" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="slot-legs" viewBox="0 0 24 24"><path d="M7 3h10l-1 18h-3.2L12 10.5 11.2 21H8zM7 6.5h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-feet" viewBox="0 0 24 24"><path d="M8 3h5.5v9.5l5.8 3c.5.3.7.8.7 1.3V20H5.5v-4l2.5-2.5zM8 8h5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-finger" viewBox="0 0 24 24"><circle cx="12" cy="14.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9.8 7.3L12 4l2.2 3.3L12 9.2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-trinket" viewBox="0 0 24 24"><path d="M12 3l7 7-7 11-7-11zM5 10h14M9.5 10L12 21l2.5-11M9.5 10L12 3l2.5 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="slot-mainhand" viewBox="0 0 24 24"><path d="M5.5 21.5L16 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="17.8" cy="5.8" r="2.8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 6.5c-1.5-1-1.7-2.8-1-4M19.5 10c1 1.5 2.8 1.7 4 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></symbol>
+    <symbol id="slot-offhand" viewBox="0 0 24 24"><circle cx="12" cy="9.5" r="5.8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 20.5h7M10.2 15.2L9.5 20.5M13.8 15.2l.7 5.3M10 8a2.5 2.5 0 0 1 2.5-2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="slot-ranged" viewBox="0 0 24 24"><path d="M4.5 19.5L15 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M18 3.5l.9 2.4 2.4.9-2.4.9L18 10l-.9-2.3-2.4-.9 2.4-.9z" fill="currentColor"/></symbol>
+
+    <!-- source marks -->
+    <symbol id="src-blizzard" viewBox="0 0 16 16"><path d="M8 1.5l5.5 2v4.2c0 3.2-2.3 5.8-5.5 6.8-3.2-1-5.5-3.6-5.5-6.8V3.5z" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v5M5.5 7.5h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></symbol>
+    <symbol id="src-warcrafttavern" viewBox="0 0 16 16"><path d="M3 5h7.5v7.5a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 12.5zM10.5 6.5h1.5a1.8 1.8 0 0 1 0 3.6h-1.5M4.5 3.5c.5-1 1.8-1.5 3-1s2.3 0 2.6.8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="src-wowhead" viewBox="0 0 16 16"><path d="M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="8" r="2" fill="currentColor"/></symbol>
+    <symbol id="src-news" viewBox="0 0 16 16"><path d="M3 2.5h8l2 2v9H3zM5.5 6h5M5.5 8.5h5M5.5 11h3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="src-discord" viewBox="0 0 16 16"><path d="M4.2 3.6c1.2-.6 2.4-.9 3.8-.9s2.6.3 3.8.9c1.3 1.9 1.9 3.9 1.8 6.2-1 .8-2.1 1.3-3.3 1.6l-.7-1.1c.5-.2 1-.4 1.4-.7M4.2 3.6C2.9 5.5 2.3 7.5 2.4 9.8c1 .8 2.1 1.3 3.3 1.6l.7-1.1c-.5-.2-1-.4-1.4-.7M5 10.1c1.9.9 4.1.9 6 0" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.2" cy="7.6" r=".95" fill="currentColor"/><circle cx="9.8" cy="7.6" r=".95" fill="currentColor"/></symbol>
+    <symbol id="src-reddit" viewBox="0 0 16 16"><ellipse cx="8" cy="9.6" rx="5.6" ry="3.9" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="12.6" cy="3.4" r="1.1" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 5.7l1-3.3 3.5.9" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="9.2" r=".9" fill="currentColor"/><circle cx="10" cy="9.2" r=".9" fill="currentColor"/><path d="M6.2 11.3c1.1.7 2.5.7 3.6 0" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><circle cx="2.9" cy="7.4" r="1.1" fill="none" stroke="currentColor" stroke-width="1.1"/><circle cx="13.1" cy="7.4" r="1.1" fill="none" stroke="currentColor" stroke-width="1.1"/></symbol>
+    <symbol id="src-community" viewBox="0 0 16 16"><path d="M2 3.5h8v5.5H5.5L3 11V9H2zM10 6h4v5h-1v2l-2.5-2H7.5V9" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+
+    <!-- interface -->
+    <symbol id="i-refresh" viewBox="0 0 20 20"><path d="M16 10a6 6 0 1 1-1.8-4.3M16 3.5v3.7h-3.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cog" viewBox="0 0 20 20"><path d="M8.27 3.53 L8.68 1.20 L11.32 1.20 L11.73 3.53 L13.35 4.20 L15.29 2.85 L17.15 4.71 L15.80 6.65 L16.47 8.27 L18.80 8.68 L18.80 11.32 L16.47 11.73 L15.80 13.35 L17.15 15.29 L15.29 17.15 L13.35 15.80 L11.73 16.47 L11.32 18.80 L8.68 18.80 L8.27 16.47 L6.65 15.80 L4.71 17.15 L2.85 15.29 L4.20 13.35 L3.53 11.73 L1.20 11.32 L1.20 8.68 L3.53 8.27 L4.20 6.65 L2.85 4.71 L4.71 2.85 L6.65 4.20Z" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linejoin="round"/><circle cx="10" cy="10" r="2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 20 20"><rect x="7" y="7" width="10" height="10" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 4.5V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-out" viewBox="0 0 20 20"><path d="M11 3.5h5.5V9M16.5 3.5L9 11M14 12v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 20 20"><path d="M10 2.8l8 14.2H2zM10 8v4.2M10 14.6v.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 20 20"><path d="M10 2.5l1.6 4.4 4.4 1.6-4.4 1.6L10 14.5l-1.6-4.4L4 8.5l4.4-1.6zM15.5 13l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 20 20"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-link" viewBox="0 0 20 20"><path d="M8.5 11.5a3.5 3.5 0 0 0 5 0l2.5-2.5a3.5 3.5 0 0 0-5-5l-1 1M11.5 8.5a3.5 3.5 0 0 0-5 0L4 11a3.5 3.5 0 0 0 5 5l1-1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 20 20"><path d="M7 5.2v9.6l7.6-4.8z" fill="currentColor"/></symbol>
+    <symbol id="i-news" viewBox="0 0 20 20"><path d="M3.5 4.5h10v11h-9a1 1 0 0 1-1-1zM13.5 7.5h3v7a1 1 0 0 1-2 0v-7M6 7.5h5M6 10h5M6 12.5h3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-up" viewBox="0 0 20 20"><path d="M10 16V4.5M5 9.5l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 20 20"><path d="M10 3.5V13M5.5 8.8L10 13.2l4.5-4.4M4 16.5h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 20 20"><path d="M4 4.5h12a1.5 1.5 0 0 1 1.5 1.5v6.5A1.5 1.5 0 0 1 16 14H9.5L6 17v-3H4a1.5 1.5 0 0 1-1.5-1.5V6A1.5 1.5 0 0 1 4 4.5zM6.5 8.2h7M6.5 10.8h4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 20 20"><circle cx="8.6" cy="8.6" r="5.3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.6 12.6l4.4 4.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 20 20"><path d="M10 2.5l2 4.5 4.8.6-3.6 3.2 1 4.8L10 13.2l-4.2 2.4 1-4.8L3.2 7.6 8 7z" fill="currentColor"/></symbol>
+  </svg>
+
+  <div class="app" id="app">
+    <header class="titlebar" id="titlebar">
+      <div class="brand">
+        <svg class="brand-sigil" aria-hidden="true"><use href="#sigil"/></svg>
+        <div class="brand-text">
+          <span class="brand-name">Grimório do Aventureiro</span>
+          <span class="brand-sub">World of Warcraft: Forever</span>
+        </div>
+      </div>
+
+      <div class="countdown" id="countdown" role="timer" aria-live="off">
+        <svg class="wing wing-l" aria-hidden="true"><use href="#wing"/></svg>
+        <div class="countdown-body">
+          <span class="countdown-label" id="cd-label">Abertura do WoW Forever</span>
+          <span class="countdown-value" id="cd-value">—</span>
+          <span class="countdown-detail" id="cd-detail"></span>
+        </div>
+        <svg class="wing wing-r" aria-hidden="true"><use href="#wing"/></svg>
+      </div>
+
+      <div class="titlebar-actions">
+        <button class="update-pill" id="update-pill" type="button" hidden></button>
+        <button class="feed-status" id="feed-status" type="button" title="Ver estado das fontes ao vivo">
+          <span class="dot" id="feed-dot"></span>
+          <span id="feed-status-text">Fontes ao vivo</span>
+        </button>
+        <button class="icon-btn" id="btn-feedback" type="button" aria-label="Mandar dica, ideia ou erro" title="Mandar dica, ideia ou erro para o autor">
+          <svg><use href="#i-chat"/></svg>
+        </button>
+        <button class="icon-btn" id="btn-refresh" type="button" aria-label="Buscar novidades agora" title="Buscar novidades agora">
+          <svg><use href="#i-refresh"/></svg>
+        </button>
+        <button class="icon-btn" id="btn-settings" type="button" aria-label="Ajustes" title="Ajustes">
+          <svg><use href="#i-cog"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="realm">
+      <!-- NEWS: a hidden drawer, opened from the rail on the left -->
+      <button class="news-rail" id="news-rail" type="button" aria-controls="news-drawer" aria-expanded="false" title="Abrir as notícias">
+        <svg aria-hidden="true"><use href="#i-news"/></svg><span>Notícias</span><b class="rail-count" id="rail-count" hidden></b>
+      </button>
+      <!-- CHARACTER -->
+      <section class="frame doll" data-frame aria-labelledby="t-char">
+        <h2 class="plaque" id="t-char">Seu personagem</h2>
+        <div class="doll-body" id="doll-body">
+        <div class="doll-head">
+          <div class="doll-identity">
+            <span class="doll-level" id="doll-level">Nível 1</span>
+            <span class="doll-race">Conecte o Armory em Ajustes</span>
+          </div>
+          <button class="armory-pill" id="armory-pill" type="button"></button>
+        </div>
+        <div class="paperdoll" id="paperdoll">
+          <div class="slots slots-left" id="slots-left"></div>
+          <div class="portrait" id="portrait">
+            <div class="portrait-stage">
+            <svg class="circle" viewBox="0 0 300 300" aria-hidden="true">
+              <defs>
+                <radialGradient id="g-portal" cx=".5" cy=".5" r=".5">
+                  <stop offset="0" stop-color="#3f6022" stop-opacity=".85"/>
+                  <stop offset=".6" stop-color="#1e2c11" stop-opacity=".6"/>
+                  <stop offset="1" stop-color="#0d1209" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <circle cx="150" cy="150" r="146" fill="url(#g-portal)"/>
+              <g class="ring-outer">
+                <circle cx="150" cy="150" r="132" fill="none" stroke="#c9a24b" stroke-width="1.2" opacity=".55"/>
+                <circle cx="150" cy="150" r="104" fill="none" stroke="#c9a24b" stroke-width="1.2" opacity=".55"/>
+                <g class="runes" id="runes"></g>
+              </g>
+              <g class="ring-inner">
+                <circle cx="150" cy="150" r="88" fill="none" stroke="#a3c586" stroke-width="1.4" opacity=".75"/>
+                <path d="M150 62l76.2 132H73.8z" fill="none" stroke="#a3c586" stroke-width="1.6" opacity=".75"/>
+                <circle cx="150" cy="150" r="66" fill="none" stroke="#a3c586" stroke-width="1" stroke-dasharray="3 6" opacity=".6"/>
+                <g fill="#e2c46e" opacity=".85">
+                  <path d="M150 50l4 8-4 8-4-8z"/><path d="M150 234l4 8-4 8-4-8z"/><path d="M50 150l8-4 8 4-8 4z"/><path d="M234 150l8-4 8 4-8 4z"/>
+                </g>
+              </g>
+              <circle class="core" cx="150" cy="150" r="40" fill="#131c0b" stroke="#c9a24b" stroke-width="1.5"/>
+            </svg>
+            <div class="portrait-center">
+              <span class="portrait-glyph" id="portrait-glyph" aria-hidden="true"><svg><use href="#sigil"/></svg></span>
+            </div>
+            <div class="portrait-figure" id="portrait-figure" aria-hidden="true"></div>
+            </div>
+            <p class="portrait-note" id="portrait-note">O modelo do personagem aparece aqui quando o Armory do Forever estiver conectado.</p>
+          </div>
+          <div class="slots slots-right" id="slots-right"></div>
+          <div class="slots slots-bottom" id="slots-bottom"></div>
+        </div>
+
+        <div class="subframe">
+          <div class="tabs tabs-small" role="tablist" id="doll-tabs">
+            <button role="tab" class="tab" data-pane="stats" aria-selected="true">Atributos</button>
+            <button role="tab" class="tab" data-pane="gear" aria-selected="false">Equipamento <span class="count" id="c-gear"></span></button>
+            <button role="tab" class="tab" data-pane="path" aria-selected="false">Rota</button>
+          </div>
+          <div class="scroll pane" id="pane-stats" role="tabpanel"></div>
+          <div class="scroll pane" id="pane-gear" role="tabpanel" hidden></div>
+          <div class="scroll pane" id="pane-path" role="tabpanel" hidden></div>
+        </div>
+        </div>
+      </section>
+
+      <!-- BUILDS -->
+      <section class="frame grimoire" data-frame aria-labelledby="t-builds">
+        <h2 class="plaque" id="t-builds">Guia de leveling<span class="tab-dot" id="guide-dot" hidden></span></h2>
+        <button class="grim-expand icon-btn icon-btn-sm" id="btn-grimoire-full" data-gd="open" title="Abrir o guia completo" aria-label="Abrir o guia completo"><svg><use href="#i-out"/></svg></button>
+        <div class="medallions" role="tablist" id="spec-tabs"></div>
+        <div class="variant-switch" id="variant-switch" role="tablist"></div>
+        <div class="scroll build" id="build"></div>
+      </section>
+    </main>
+
+    <!-- News drawer -->
+    <div class="drawer-backdrop" id="news-backdrop" hidden></div>
+    <section class="frame chronicle news-drawer" id="news-drawer" data-frame aria-labelledby="t-news" hidden>
+      <h2 class="plaque" id="t-news">Notícias</h2>
+      <button class="dialog-close icon-btn" id="news-close" aria-label="Fechar as notícias"><svg><use href="#i-close"/></svg></button>
+      <div class="tabs" role="tablist" id="news-tabs">
+        <button role="tab" class="tab tab-wowhead" data-cat="wowhead" aria-selected="true"><svg aria-hidden="true"><use href="#src-wowhead"/></svg>Wowhead <span class="count" id="c-wowhead"></span></button>
+        <button role="tab" class="tab tab-reddit" data-cat="reddit" aria-selected="false"><svg aria-hidden="true"><use href="#src-reddit"/></svg>Reddit <span class="count" id="c-reddit"></span></button>
+      </div>
+      <div class="scroll news-list" id="news-list" role="tabpanel"></div>
+    </section>
+  </div>
+
+  <!-- News detail: quest-log parchment -->
+  <div class="modal" id="news-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <article class="parchment parchment-news" id="news-parchment" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="nm-title">
+      <div class="nm-progress" aria-hidden="true"><i id="nm-progress"></i></div>
+      <button class="parchment-close" data-close aria-label="Fechar"><svg><use href="#i-close"/></svg></button>
+      <div id="news-modal-body"></div>
+      <button class="nm-top-btn" id="nm-top" type="button" hidden aria-label="Voltar ao início da notícia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Início</button>
+    </article>
+  </div>
+
+  <!-- Leveling guide (Mobalytics), full view -->
+  <div class="modal" id="guide-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <article class="parchment parchment-news" id="guide-parchment" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="gd-title">
+      <div class="nm-progress" aria-hidden="true"><i id="gd-progress"></i></div>
+      <button class="parchment-close" data-close aria-label="Fechar"><svg><use href="#i-close"/></svg></button>
+      <div id="guide-modal-body"></div>
+      <button class="nm-top-btn" id="gd-top" type="button" hidden aria-label="Voltar ao início do guia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Início</button>
+    </article>
+  </div>
+
+  <!-- Settings -->
+  <div class="modal" id="settings-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="frame dialog" data-frame role="dialog" aria-modal="true" aria-labelledby="st-title">
+      <h2 class="plaque" id="st-title">Ajustes</h2>
+      <button class="dialog-close icon-btn" data-close aria-label="Fechar"><svg><use href="#i-close"/></svg></button>
+      <div class="scroll dialog-body" id="settings-body"></div>
+    </div>
+  </div>
+
+  <!-- Tips, ideas and bug reports -->
+  <div class="modal" id="feedback-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="frame dialog dialog-fb" data-frame role="dialog" aria-modal="true" aria-labelledby="fb-title">
+      <h2 class="plaque" id="fb-title">Dicas, ideias e erros</h2>
+      <button class="dialog-close icon-btn" data-close aria-label="Fechar"><svg><use href="#i-close"/></svg></button>
+      <div class="scroll dialog-body" id="feedback-body"></div>
+    </div>
+  </div>
+
+  <!-- What's new after an update -->
+  <div class="modal" id="whatsnew-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="frame dialog dialog-fb" data-frame role="dialog" aria-modal="true" aria-labelledby="wn-title">
+      <h2 class="plaque" id="wn-title">Novidades</h2>
+      <button class="dialog-close icon-btn" data-close aria-label="Fechar"><svg><use href="#i-close"/></svg></button>
+      <div class="scroll dialog-body" id="whatsnew-body"></div>
+    </div>
+  </div>
+
+  <!-- Welcome: a floating window that walks through the app -->
+  <div class="wl-spot" id="wl-spot" hidden></div>
+  <div class="wl-dim" id="wl-dim" hidden></div>
+  <div class="frame wl-card" id="wl-card" data-frame role="dialog" aria-labelledby="wl-title" hidden>
+    <div class="wl-top"><span class="wl-count" id="wl-count"></span><button class="linkish" type="button" data-wl="skip">Pular tutorial</button></div>
+    <h2 class="wl-title" id="wl-title"></h2>
+    <div class="wl-body" id="wl-body"></div>
+    <div class="wl-foot">
+      <div class="wl-dots" id="wl-dots"></div>
+      <div class="wl-nav">
+        <button class="btn btn-quiet btn-sm" type="button" data-wl="back">Voltar</button>
+        <button class="btn btn-sm" type="button" data-wl="next" id="wl-next">Próximo</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <!-- UI message, like the game's error/info line -->
+  <div class="ui-message" id="ui-message" aria-live="polite"></div>
+
+  <script src="app/util.js"></script>
+  <script src="app/sound.js"></script>
+  <script src="app/news.js"></script>
+  <script src="app/community.js"></script>
+  <script src="app/guide.js"></script>
+  <script src="app/gear.js"></script>
+  <script src="app/character.js"></script>
+  <script src="app/settings.js"></script>
+  <script src="app/feedback.js"></script>
+  <script src="app/welcome.js"></script>
+  <script src="app/main.js"></script>
+</body>
+</html>

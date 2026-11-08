@@ -1,0 +1,7 @@
+GRIMORIO HUNTER
+Testar:  npm install   e depois   npm start
+Gerar .exe (instalador):  npm install   e depois   npm run build   (sai na pasta dist)
+
+FONTE GARET (opcional): baixe em https://www.dafont.com/pt/garet.font e copie
+Garet-Book.ttf e Garet-Heavy.ttf para a pasta  src\assets\fonts
+Sem elas, o app usa as fontes originais dele.
