@@ -15,7 +15,7 @@ const { spawn } = require('child_process');
 const updater = require('./updater');
 
 const isWin = process.platform === 'win32';
-const SETUP_RX = /^Grimorio-do-Aventureiro-Setup-(\d+\.\d+\.\d+)\.exe$/i;
+const SETUP_RX = /^Grimorio-(?:do-Aventureiro|Hunter)-Setup-(\d+\.\d+\.\d+)\.exe$/i;
 
 /** The installed Windows app updates itself; anything else (development, a loose .exe) opens the link */
 const managed = () => isWin && app.isPackaged && !process.env.PORTABLE_EXECUTABLE_FILE;
@@ -56,7 +56,7 @@ async function download(check, onProgress) {
   const asset = check.asset;
   if (!asset || !asset.url) throw new Error('a versão nova não tem instalador para Windows');
   if (!/^[0-9a-f]{64}$/i.test(check.sha256 || '')) throw new Error('a versão nova não informou a verificação do arquivo');
-  const name = SETUP_RX.test(asset.name || '') ? asset.name : `Grimorio-do-Aventureiro-Setup-${check.latest}.exe`;
+  const name = SETUP_RX.test(asset.name || '') ? asset.name : `Grimorio-Hunter-Setup-${check.latest}.exe`;
   const dir = path.join(app.getPath('temp'), 'grimorio-atualizacao');
   fs.mkdirSync(dir, { recursive: true });
   const final = path.join(dir, name);

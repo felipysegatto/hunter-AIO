@@ -6,7 +6,7 @@
 //   2. GitHub Releases (GET /repos/<owner>/<repo>/releases/latest), if a release is ever made by hand.
 const { net, app } = require('electron');
 
-const DEFAULT_REPO = 'teixeira-ux/grimorio-do-aventureiro-releases';
+const DEFAULT_REPO = 'felipysegatto/hunter-AIO';
 
 /** "v2.0.1" / "2.0.1-beta" → [2, 0, 1] */
 function parse(v) {
@@ -69,8 +69,6 @@ async function fromManifest(r, current) {
 }
 
 async function check(repo) {
-  // versao Hunter: atualizacao automatica desativada (evita trocar esta versao pela original)
-  return { ok: true, current: app.getVersion(), repo: repo || DEFAULT_REPO, latest: app.getVersion(), available: false, notesList: [], checkedAt: new Date().toISOString() };
   const current = app.getVersion();
   const r = repo || DEFAULT_REPO;
   const manifest = await fromManifest(r, current);
