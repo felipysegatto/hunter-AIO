@@ -1,14 +1,16 @@
 {
-    "version":  "3.0.4",
+    "version":  "3.0.5",
     "date":  "2026-11-09",
-    "file":  "Grimorio-Hunter-Setup-3.0.4.exe",
-    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.0.4/Grimorio-Hunter-Setup-3.0.4.exe",
+    "file":  "Grimorio-Hunter-Setup-3.0.5.exe",
+    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.0.5/Grimorio-Hunter-Setup-3.0.5.exe",
     "page":  "https://github.com/felipysegatto/hunter-AIO",
-    "sha256":  "c5a0eb652efc31ea2c6676789d029d9f2e2217a440e865458918b4258eb557cb",
-    "size":  83401588,
+    "sha256":  "de2cde5de5a9cbcd011ae2de055313368842c4bd0992012c25481d182d0f57a1",
+    "size":  84523489,
     "kind":  "setup",
     "notes":  [
-                  "Novo botao na aba Wowhead para marcar todas as noticias como vistas.",
-                  "Corrigido o corte na barra verde e nos botoes do painel do guia."
+                  "Imagens realistas de cacador no fundo: arranhoes, patas, arcos, flechas e buracos de bala.",
+                  "Links do Reddit agora abrem numa janela, como os do Wowhead.",
+                  "O brilho ao passar o mouse no personagem ficou uma linha fina com brilho leve.",
+                  "O Discord foi removido."
               ]
 }

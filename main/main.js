@@ -243,7 +243,7 @@ async function runRefresh({ silent } = {}) {
 async function runCommunity({ silent } = {}) {
   const content = loadContent();
   const settings = store.getSettings();
-  const r = await community.fetchAll(content.communityFeeds || { sources: [] }, { enabled: false, channels: [] }, '', store.getCommunityCache());
+  const r = await community.fetchAll(content.communityFeeds || { sources: [] }, store.getCommunityCache());
   const apiKey = store.getApiKey();
   const todo = r.items.filter((i) => !i.pt).slice(0, 40);
   let engine = null;

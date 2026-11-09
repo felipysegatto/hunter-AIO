@@ -1,12 +1,7 @@
 'use strict';
 
 // "Comunidade": community conversation about WoW Forever, always shown in Portuguese.
-// Sources:
-//  - Discord, through the user's own bot. Kalamazi's server can't be read directly
-//    (reading another server with a personal account breaks Discord's rules), so the
-//    user follows Kalamazi's announcement channels into a server of their own and the
-//    bot reads those channels with the official API.
-//  - The official WoW Forever forum and Reddit threads about WoW Forever (public RSS).
+// Sources: the official WoW Forever forum and Reddit threads about WoW Forever (public RSS).
 const { net } = require('electron');
 const crypto = require('crypto');
 const { XMLParser } = require('fast-xml-parser');
@@ -14,7 +9,6 @@ const { stripHtml } = require('./feeds');
 
 const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: '@', textNodeName: '#text' });
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140 Safari/537.36 GrimorioDoAventureiro/2.0';
-const DISCORD = 'https://discord.com/api/v10';
 
 const RX_BRUXO = /\b(warlock|lock|affliction|demonology|destruction|demo|destro|aff|succubus|incubus|voidwalker|felhunter|imp|bane|curse|wrack|incinerate|conflagrate|soul ?fire|shadow ?bolt|kalamazi|gnome|eureka)\b/i;
 
@@ -36,63 +30,6 @@ function friendly(err) {
   if (/429/.test(m)) return 'muitas consultas; tento de novo mais tarde';
   if (/ERR_INTERNET_DISCONNECTED|ENOTFOUND|fetch failed|ERR_NAME/i.test(m)) return 'sem conexão';
   return m.slice(0, 70);
-}
-
-/* ---------- Discord ---------- */
-async function discordJson(path, token) {
-  const res = await get(DISCORD + path, { Authorization: 'Bot ' + token, 'User-Agent': 'DiscordBot (https://github.com/bruxomagic/grimorio, 1.1)' });
-  if (!res.ok) throw new Error('HTTP ' + res.status);
-  return res.json();
-}
-
-function discordText(m) {
-  const parts = [];
-  if (m.content) parts.push(m.content);
-  for (const e of m.embeds || []) {
-    if (e.title) parts.push(e.title);
-    if (e.description) parts.push(e.description);
-    for (const f of e.fields || []) parts.push(`${f.name}: ${f.value}`);
-  }
-  return parts.join('\n').replace(/<a?:(\w+):\d+>/g, ':$1:').replace(/<@[!&]?\d+>/g, '@alguém').replace(/<#\d+>/g, '#canal').trim();
-}
-
-async function discordChannel(id, token) {
-  const ch = await discordJson(`/channels/${id}`, token);
-  let guild = '';
-  if (ch.guild_id) {
-    try { guild = (await discordJson(`/guilds/${ch.guild_id}`, token)).name; } catch (_) { /* bot may lack guild read */ }
-  }
-  return { id, name: ch.name, guild, guildId: ch.guild_id || '' };
-}
-
-async function fetchDiscord(cfg, token) {
-  const items = [];
-  const errors = [];
-  for (const ch of cfg.channels || []) {
-    try {
-      const msgs = await discordJson(`/channels/${ch.id}/messages?limit=40`, token);
-      for (const m of msgs) {
-        const text = discordText(m);
-        if (!text) continue;
-        // Crossposts from a followed channel carry the original server and channel in the author name
-        const author = (m.author && (m.author.global_name || m.author.username)) || 'Discord';
-        items.push({
-          id: 'dc-' + m.id,
-          kind: 'discord',
-          channel: ch.label || ch.name || ch.id,
-          author,
-          date: m.timestamp,
-          title: '',
-          text: text.slice(0, 2500),
-          link: ch.guildId ? `https://discord.com/channels/${ch.guildId}/${ch.id}/${m.id}` : '',
-          bruxo: RX_BRUXO.test(text) || /kalamazi/i.test(author + ' ' + (ch.label || ''))
-        });
-      }
-    } catch (err) {
-      errors.push({ source: 'Discord · ' + (ch.label || ch.name || ch.id), message: friendly(err) });
-    }
-  }
-  return { items, errors };
 }
 
 /* ---------- Reddit ---------- */
@@ -149,10 +86,10 @@ async function fetchFeed(src) {
  * Pulls every community source, merges with the cache and returns
  * { items, newItems, errors, status }.
  */
-async function fetchAll(config, discordCfg, token, cache) {
+async function fetchAll(config, cache) {
   const errors = [];
   const fetched = [];
-  const status = { discord: discordCfg && discordCfg.enabled && token && (discordCfg.channels || []).length ? 'on' : 'off' };
+  const status = {};
 
   // One after the other, with a pause: Reddit answers 429 to several searches at once
   const sources = config.sources || [];
@@ -160,12 +97,6 @@ async function fetchAll(config, discordCfg, token, cache) {
     const src = sources[i];
     if (i > 0 && /reddit\.com/i.test(src.url)) await sleep(1500);
     try { fetched.push(...(await fetchFeed(src))); } catch (err) { errors.push({ source: src.name, message: friendly(err) }); }
-  }
-  if (status.discord === 'on') {
-    const d = await fetchDiscord(discordCfg, token);
-    fetched.push(...d.items);
-    errors.push(...d.errors);
-    if (d.errors.length && !d.items.length) status.discord = 'error';
   }
 
   const known = new Map((cache.items || []).map((i) => [i.id, i]));
@@ -183,4 +114,4 @@ async function fetchAll(config, discordCfg, token, cache) {
   return { items, newItems: newItems.filter((n) => items.some((i) => i.id === n.id)), errors, status };
 }
 
-module.exports = { fetchAll, discordChannel, friendly };
+module.exports = { fetchAll, friendly };

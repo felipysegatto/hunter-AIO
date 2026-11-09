@@ -74,13 +74,11 @@
   box-shadow: inset 0 0 0 1px rgba(201, 162, 75, 0.16);
 }
 .msg::before { content: ""; position: absolute; left: 4px; top: 10px; bottom: 10px; width: 3px; border-radius: 2px; background: #ff7a3d; }
-.msg.k-discord::before { background: #c2f991; }
 .msg.k-forum::before { background: #4ea7ff; }
 .msg.is-new { box-shadow: inset 0 0 0 1px rgba(147, 213, 86, 0.35); }
 .msg-head { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-faint); }
 .msg-src { display: inline-flex; align-items: center; gap: 5px; color: var(--text-dim); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .msg-src svg { width: 14px; height: 14px; flex: none; }
-.k-discord .msg-src { color: #d1fbad; }
 .k-forum .msg-src { color: #79b8ff; }
 .k-reddit .msg-src { color: #ff9a6b; }
 .msg-author { color: var(--gold); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 130px; }

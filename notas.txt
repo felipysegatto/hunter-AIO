@@ -1,2 +1,4 @@
-Novo botao na aba Wowhead para marcar todas as noticias como vistas.
-Corrigido o corte na barra verde e nos botoes do painel do guia.
+Imagens realistas de cacador no fundo: arranhoes, patas, arcos, flechas e buracos de bala.
+Links do Reddit agora abrem numa janela, como os do Wowhead.
+O brilho ao passar o mouse no personagem ficou uma linha fina com brilho leve.
+O Discord foi removido.

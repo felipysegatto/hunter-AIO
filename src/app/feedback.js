@@ -51,7 +51,7 @@
         <textarea class="input fb-msg" id="fb-msg" rows="7" maxlength="4000" placeholder="${esc(t[2])}">${esc(LS.get('fb.draft') || '')}</textarea>
       </div>
       <div class="field">
-        <label for="fb-contact">Como te chamar <span class="dim">(opcional: nick no jogo, Discord…)</span></label>
+        <label for="fb-contact">Como te chamar <span class="dim">(opcional: nick no jogo)</span></label>
         <input class="input" id="fb-contact" maxlength="200" value="${esc(LS.get('fb.contact') || '')}" spellcheck="false">
       </div>
       <label class="toggle"><input type="checkbox" id="fb-char" ${include ? 'checked' : ''}> Incluir o personagem e a versão do app (ajuda a achar erros)</label>
