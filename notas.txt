@@ -1,1 +1,1 @@
-O fundo do personagem agora tem uma reticula de sniper dourada no lugar das runas.
+A reticula agora gira devagar, com o anel externo mais fino e um leve brilho dourado.

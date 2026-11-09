@@ -2,6 +2,7 @@ $ErrorActionPreference = 'Stop'
 Set-Location $PSScriptRoot
 $repo = 'felipysegatto/hunter-AIO'
 $v = (Get-Content package.json -Raw | ConvertFrom-Json).version
+if (Test-Path dist) { Remove-Item dist -Recurse -Force -ErrorAction SilentlyContinue }
 Write-Host "Gerando o instalador da versao $v ..."
 npm install
 npm run build
