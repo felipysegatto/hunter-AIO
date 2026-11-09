@@ -133,7 +133,7 @@ function openSplash() {
     fullscreenable: false,
     show: false,
     center: true,
-    backgroundColor: '#0d0912',
+    backgroundColor: '#070a04',
     title: 'Grimório do Aventureiro',
     icon: fs.existsSync(iconPath) ? iconPath : undefined,
     webPreferences: { preload: path.join(__dirname, 'splash-preload.js'), contextIsolation: true, nodeIntegration: false, sandbox: true }

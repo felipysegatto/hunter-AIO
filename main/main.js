@@ -107,6 +107,10 @@ function maybeShow() {
   launcher.closeSplash();
 }
 
+ipcMain.on('win:minimize', () => { if (win) win.minimize(); });
+ipcMain.on('win:toggleMax', () => { if (!win) return; if (win.isMaximized()) win.unmaximize(); else win.maximize(); });
+ipcMain.on('win:close', () => { if (win) win.close(); });
+
 function createWindow() {
   const iconPath = path.join(__dirname, '..', 'build', isWin ? 'icon.ico' : 'icon.png');
   win = new BrowserWindow({
@@ -114,13 +118,12 @@ function createWindow() {
     height: 920,
     minWidth: 1180,
     minHeight: 740,
-    backgroundColor: '#0d0912',
+    backgroundColor: '#070a04',
     title: 'Grimório do Aventureiro',
     icon: fs.existsSync(iconPath) ? iconPath : undefined,
     show: false,
     titleBarStyle: isMac ? 'hiddenInset' : 'hidden',
     trafficLightPosition: isMac ? { x: 16, y: 20 } : undefined,
-    titleBarOverlay: isMac ? false : { color: '#120c18', symbolColor: '#e8cf86', height: 56 },
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -132,6 +135,8 @@ function createWindow() {
     }
   });
 
+  win.on('maximize', () => win.webContents.send('win:state', true));
+  win.on('unmaximize', () => win.webContents.send('win:state', false));
   win.loadFile(path.join(__dirname, '..', 'src', 'index.html'));
   // The window appears when it is ready AND the launcher is done (version check, maybe an update)
   win.once('ready-to-show', () => { mainReady = true; maybeShow(); });

@@ -1,1 +1,1 @@
-A reticula agora gira devagar, com o anel externo mais fino e um leve brilho dourado.
+Os botoes de minimizar, maximizar e fechar agora combinam com o visual dourado do app.

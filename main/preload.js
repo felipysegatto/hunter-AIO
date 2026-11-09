@@ -5,6 +5,10 @@ const { contextBridge, ipcRenderer } = require('electron');
 contextBridge.exposeInMainWorld('grimorio', {
   getContent: () => ipcRenderer.invoke('content:get'),
   appInfo: () => ipcRenderer.invoke('app:info'),
+  winMinimize: () => ipcRenderer.send('win:minimize'),
+  winToggleMax: () => ipcRenderer.send('win:toggleMax'),
+  winClose: () => ipcRenderer.send('win:close'),
+  onWinState: cb => ipcRenderer.on('win:state', (_, v) => cb(v)),
   getFeedCache: () => ipcRenderer.invoke('feeds:cache'),
   refreshFeeds: () => ipcRenderer.invoke('feeds:refresh'),
   getCommunity: () => ipcRenderer.invoke('community:cache'),

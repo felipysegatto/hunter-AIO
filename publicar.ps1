@@ -10,8 +10,8 @@ if ($LASTEXITCODE -ne 0) { throw 'O build falhou.' }
 $file = Get-ChildItem dist -Filter "Grimorio-Hunter-Setup-$v.exe" | Select-Object -First 1
 if (-not $file) { throw "Instalador nao encontrado na pasta dist." }
 $sha = (Get-FileHash $file.FullName -Algorithm SHA256).Hash.ToLower()
-$notas = @()
-if (Test-Path notas.txt) { $notas = @(Get-Content notas.txt -Encoding UTF8 | Where-Object { $_.Trim() }) }
+[string[]]$notas = @()
+if (Test-Path notas.txt) { [string[]]$notas = @(Get-Content notas.txt -Encoding UTF8 | Where-Object { $_.Trim() } | ForEach-Object { "$_".Trim() }) }
 $obj = [ordered]@{
   version  = $v
   date     = (Get-Date -Format 'yyyy-MM-dd')
