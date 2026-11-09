@@ -1,1 +1,1 @@
-Primeira versao do Grimorio Hunter com atualizacao automatica.
+O fundo do personagem agora tem uma reticula de sniper dourada no lugar das runas.
