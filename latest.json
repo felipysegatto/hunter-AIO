@@ -1,13 +1,14 @@
 {
-    "version":  "3.0.3",
+    "version":  "3.0.4",
     "date":  "2026-11-09",
-    "file":  "Grimorio-Hunter-Setup-3.0.3.exe",
-    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.0.3/Grimorio-Hunter-Setup-3.0.3.exe",
+    "file":  "Grimorio-Hunter-Setup-3.0.4.exe",
+    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.0.4/Grimorio-Hunter-Setup-3.0.4.exe",
     "page":  "https://github.com/felipysegatto/hunter-AIO",
-    "sha256":  "4dbf5b50af03f03f6e4331edad821a0de352efcfed197827f8ce25262b725085",
-    "size":  83401033,
+    "sha256":  "c5a0eb652efc31ea2c6676789d029d9f2e2217a440e865458918b4258eb557cb",
+    "size":  83401588,
     "kind":  "setup",
     "notes":  [
-                  "Os botoes de minimizar, maximizar e fechar agora combinam com o visual dourado do app."
+                  "Novo botao na aba Wowhead para marcar todas as noticias como vistas.",
+                  "Corrigido o corte na barra verde e nos botoes do painel do guia."
               ]
 }

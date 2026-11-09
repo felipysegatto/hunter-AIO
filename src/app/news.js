@@ -107,6 +107,15 @@
     if (rail) { rail.textContent = w + r > 99 ? '99+' : String(w + r); rail.hidden = !(w + r); }
   };
 
+  // Marca todas as noticias da aba Wowhead como vistas
+  News.markAllRead = function () {
+    News.all().filter((n) => inCat(n, 'wowhead')).forEach((n) => G.readIds.add(n.id));
+    G.saveUi();
+    News.render();
+  };
+  const markBtn = $('#news-markall');
+  if (markBtn) markBtn.addEventListener('click', () => News.markAllRead());
+
   /* ---------- the drawer ---------- */
   News.openDrawer = function (on) {
     News.drawer = on !== false;
@@ -120,6 +129,7 @@
   News.render = function () {
     News.counts();
     $$('#news-tabs .tab').forEach((t) => t.setAttribute('aria-selected', String(t.dataset.cat === News.cat)));
+    const mk = $('#news-markall'); if (mk) mk.hidden = News.cat !== 'wowhead';
     if (News.cat === 'reddit') { Community.render(); return; }
 
     const all = News.all();

@@ -1,1 +1,2 @@
-Os botoes de minimizar, maximizar e fechar agora combinam com o visual dourado do app.
+Novo botao na aba Wowhead para marcar todas as noticias como vistas.
+Corrigido o corte na barra verde e nos botoes do painel do guia.
