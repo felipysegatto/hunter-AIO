@@ -41,14 +41,32 @@
 .build { padding: 4px 8px 4px 6px; }
 .build-actions { bottom: 0; margin-left: -6px; margin-right: -8px; padding: 10px 8px 8px 6px; }
 
-/* Passar o mouse no personagem: linha fina ao redor + brilho leve */
+/* Passar o mouse no personagem: linha fina dourada + brilho minimo */
 .portrait.has-link .portrait-stage:hover .is-full.is-in {
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.9)) drop-shadow(0 10px 16px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 1px rgba(245, 230, 179, 0.95)) drop-shadow(0 0 4px rgba(245, 230, 179, 0.45));
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.9)) drop-shadow(0 10px 16px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 0.6px rgba(217, 180, 74, 0.95)) drop-shadow(0 0 2px rgba(217, 180, 74, 0.4));
 }
 .portrait.has-link .portrait-stage:hover .is-avatar.is-in {
-  box-shadow: 0 0 0 1px #ffd100, 0 0 0 2px #0d1209, 0 0 8px rgba(245, 230, 179, 0.45), 0 8px 18px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 0 1px #d9b44a, 0 0 0 2px #0d1209, 0 0 4px rgba(217, 180, 74, 0.35), 0 8px 18px rgba(0, 0, 0, 0.7);
 }
 /* Reddit: titulo abre a janela */
 .msg-title[data-open-msg] { cursor: pointer; }
 .msg-title[data-open-msg]:hover { color: var(--gold-hi); }
 .nm-reddit p { margin: 0 0 0.8em; line-height: 1.55; }
+
+/* Janelas de leitura (Wowhead e Reddit) ficam acima da gaveta de noticias */
+#news-modal { z-index: 55; }
+
+/* Abas laterais: noticias recolhem para a esquerda, guia para a direita */
+.realm { grid-template-columns: 34px minmax(520px, 1.2fr) minmax(400px, 1fr) 34px; padding-right: 14px; }
+.news-rail { grid-column: 1; }
+.doll { grid-column: 2; }
+.grimoire { grid-column: 3; animation: grimIn 0.28s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.guide-rail { grid-column: 4; }
+.guide-rail svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s; }
+.guide-rail[aria-expanded="true"] svg { transform: rotate(180deg); }
+.rail-dot { position: absolute; top: -6px; left: -6px; width: 12px; height: 12px; border-radius: 50%; background: var(--gold-hi); box-shadow: 0 0 0 1.5px #000; }
+.realm.guide-collapsed { grid-template-columns: 34px minmax(0, 1fr) 34px; }
+.realm.guide-collapsed .grimoire { display: none; }
+.realm.guide-collapsed .guide-rail { grid-column: 3; }
+.realm.guide-collapsed .doll { justify-self: center; width: min(100%, 1120px); }
+@keyframes grimIn { from { opacity: 0; transform: translateX(26px); } to { opacity: 1; transform: none; } }

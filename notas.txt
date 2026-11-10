@@ -1,4 +1,4 @@
-Imagens realistas de cacador no fundo: arranhoes, patas, arcos, flechas e buracos de bala.
-Links do Reddit agora abrem numa janela, como os do Wowhead.
-O brilho ao passar o mouse no personagem ficou uma linha fina com brilho leve.
-O Discord foi removido.
+O guia agora recolhe para a direita, e o Armory fica centralizado.
+As janelas do Reddit e do Wowhead abrem na frente da gaveta de noticias.
+A reticula ficou mais fina, maior e com aneis dourado e verde.
+O brilho ao passar o mouse no personagem ficou mais fino e dourado.

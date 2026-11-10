@@ -1,16 +1,16 @@
 {
-    "version":  "3.0.5",
+    "version":  "3.0.6",
     "date":  "2026-11-09",
-    "file":  "Grimorio-Hunter-Setup-3.0.5.exe",
-    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.0.5/Grimorio-Hunter-Setup-3.0.5.exe",
+    "file":  "Grimorio-Hunter-Setup-3.0.6.exe",
+    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.0.6/Grimorio-Hunter-Setup-3.0.6.exe",
     "page":  "https://github.com/felipysegatto/hunter-AIO",
-    "sha256":  "82d989f2b0b321dee2ce0c91ad900b19afa59f2552431fe7e76e9980991f5c6e",
-    "size":  84524078,
+    "sha256":  "a7c96cbcadba36b59dcceee53e46ebba1da0f3352d75534c3a67b2ba78a0454a",
+    "size":  85307955,
     "kind":  "setup",
     "notes":  [
-                  "Imagens realistas de cacador no fundo: arranhoes, patas, arcos, flechas e buracos de bala.",
-                  "Links do Reddit agora abrem numa janela, como os do Wowhead.",
-                  "O brilho ao passar o mouse no personagem ficou uma linha fina com brilho leve.",
-                  "O Discord foi removido."
+                  "O guia agora recolhe para a direita, e o Armory fica centralizado.",
+                  "As janelas do Reddit e do Wowhead abrem na frente da gaveta de noticias.",
+                  "A reticula ficou mais fina, maior e com aneis dourado e verde.",
+                  "O brilho ao passar o mouse no personagem ficou mais fino e dourado."
               ]
 }
