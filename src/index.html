@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://wow.zamimg.com https://render.worldofwarcraft.com https://i.ytimg.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://wow.zamimg.com https://render.worldofwarcraft.com https://i.ytimg.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'none'; frame-src https://*.check-pvp.fr; child-src https://*.check-pvp.fr">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Grimório do Aventureiro</title>
   <link rel="stylesheet" href="styles/tokens.css">
@@ -248,10 +248,36 @@
         <div class="variant-switch" id="variant-switch" role="tablist"></div>
         <div class="scroll build" id="build"></div>
       </section>
-      <!-- GUIA: aba lateral que recolhe para a direita -->
-      <button class="news-rail guide-rail" id="guide-rail" type="button" aria-controls="build" aria-expanded="false" title="Abrir o guia">
-        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5"/></svg><span>Guia</span><b class="rail-dot" id="guide-rail-dot" hidden></b>
-      </button>
+      <section class="frame pvp" data-frame aria-labelledby="t-pvp">
+        <h2 class="plaque plaque-pvp" id="t-pvp">PvP · Ranking</h2>
+        <div class="pvp-bar">
+          <button class="icon-btn icon-btn-sm" id="pvp-back" type="button" title="Voltar" aria-label="Voltar" disabled><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5"/></svg></button>
+          <button class="icon-btn icon-btn-sm" id="pvp-reload" type="button" title="Recarregar" aria-label="Recarregar"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.5V5h-2.5"/></svg></button>
+          <button class="btn btn-sm" id="pvp-hunter" type="button" title="Marcar Hunter no filtro de classe">Hunter</button>
+          <span class="pvp-status" id="pvp-status" role="status"></span>
+          <button class="btn btn-sm" id="pvp-armory" type="button" title="Abrir o Armory deste jogador" hidden>Armory</button>
+          <button class="icon-btn icon-btn-sm" id="pvp-window" type="button" title="Abrir em janela" aria-label="Abrir em janela"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="9" rx="1.2"/><path d="M2.5 6.5h11"/></svg></button>
+          <button class="icon-btn icon-btn-sm" id="pvp-browser" type="button" title="Abrir no navegador" aria-label="Abrir no navegador"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M9 3h4v4M13 3L7.5 8.5M11 9.5V12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h2.5"/></svg></button>
+        </div>
+        <div class="pvp-stage"><webview id="pvp-view" partition="persist:pvp" allowpopups></webview></div>
+        <div class="blood" aria-hidden="true">
+          <img class="blood-drip" style="--dur:30s;--delay:0.2s" src="assets/blood/drip1.png" alt="">
+          <img class="blood-drip" style="--dur:40s;--delay:2.5s" src="assets/blood/drip2.png" alt="">
+          <img class="blood-drip" style="--dur:52s;--delay:5s" src="assets/blood/drip3.png" alt="">
+          <img class="blood-splat sp1" src="assets/blood/splat1.png" alt="">
+          <img class="blood-splat sp2" src="assets/blood/splat2.png" alt="">
+          <img class="blood-splat sp3" src="assets/blood/splat3.png" alt="">
+        </div>
+      </section>
+      <!-- Abas laterais da direita: Guia e PvP -->
+      <div class="rail-stack">
+        <button class="news-rail guide-rail" id="guide-rail" type="button" aria-controls="build" aria-expanded="false" title="Abrir o guia">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5"/></svg><span>Guia</span><b class="rail-dot" id="guide-rail-dot" hidden></b>
+        </button>
+        <button class="news-rail pvp-rail" id="pvp-rail" type="button" aria-controls="pvp-view" aria-expanded="false" title="Abrir o ranking PvP">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l8 8M13 3L5 11M9.3 12.9l3.6-3.6M3.1 9.3l3.6 3.6M11 11l2.6 2.6M5 11l-2.6 2.6"/></svg><span>PvP</span><img class="rail-blood" src="assets/blood/drip-rail.png" alt="" aria-hidden="true">
+        </button>
+      </div>
     </main>
 
     <!-- News drawer -->
@@ -353,6 +379,7 @@
   <script src="app/welcome.js"></script>
   <script src="app/main.js"></script>
   <script src="app/window.js"></script>
-  <script src="app/guide-panel.js"></script>
+  <script src="app/pvp-panel.js"></script>
+  <script src="app/panels.js"></script>
 </body>
 </html>

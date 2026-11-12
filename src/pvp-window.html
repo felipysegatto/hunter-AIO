@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'none'; frame-src https://*.check-pvp.fr; child-src https://*.check-pvp.fr">
+  <title>PvP · Jogador</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/frame.css">
+  <link rel="stylesheet" href="styles/features.css">
+  <link rel="stylesheet" href="styles/pvp-window.css">
+</head>
+<body class="pw">
+  <header class="pw-head">
+    <div class="pw-blood" aria-hidden="true">
+      <img class="blood-drip" style="--dur:22s;--delay:0.1s" src="assets/blood/drip1.png" alt="">
+      <img class="blood-drip" style="--dur:30s;--delay:1.5s" src="assets/blood/drip3.png" alt="">
+    </div>
+    <button class="icon-btn icon-btn-sm" id="pw-back" type="button" title="Voltar" aria-label="Voltar" disabled><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5"/></svg></button>
+    <button class="icon-btn icon-btn-sm" id="pw-reload" type="button" title="Recarregar" aria-label="Recarregar"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.6-3.7M13 2.5V5h-2.5"/></svg></button>
+    <h1 class="pw-title" id="pw-title">Jogador</h1>
+    <span class="pw-status" id="pw-status" role="status"></span>
+    <button class="btn btn-sm" id="pw-armory" type="button" title="Abrir o Armory deste jogador" disabled>Armory</button>
+    <button class="btn btn-sm" id="pw-browser" type="button" title="Abrir esta pagina no navegador">Navegador</button>
+    <button class="btn btn-sm" id="pw-close" type="button" title="Fechar esta janela">Fechar</button>
+  </header>
+  <webview id="view" partition="persist:pvp" allowpopups></webview>
+  <script src="app/pvp-window.js"></script>
+</body>
+</html>

@@ -1,16 +1,15 @@
 {
-    "version":  "3.0.6",
-    "date":  "2026-11-09",
-    "file":  "Grimorio-Hunter-Setup-3.0.6.exe",
-    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.0.6/Grimorio-Hunter-Setup-3.0.6.exe",
+    "version":  "3.1.0",
+    "date":  "2026-11-12",
+    "file":  "Grimorio-Hunter-Setup-3.1.0.exe",
+    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.1.0/Grimorio-Hunter-Setup-3.1.0.exe",
     "page":  "https://github.com/felipysegatto/hunter-AIO",
-    "sha256":  "a7c96cbcadba36b59dcceee53e46ebba1da0f3352d75534c3a67b2ba78a0454a",
-    "size":  85307955,
+    "sha256":  "2af5a81203f211b4df20ebda31980fb50783003a08fa68f0eb36ce6f00729013",
+    "size":  86022506,
     "kind":  "setup",
     "notes":  [
-                  "O guia agora recolhe para a direita, e o Armory fica centralizado.",
-                  "As janelas do Reddit e do Wowhead abrem na frente da gaveta de noticias.",
-                  "A reticula ficou mais fina, maior e com aneis dourado e verde.",
-                  "O brilho ao passar o mouse no personagem ficou mais fino e dourado."
+                  "Nova aba PvP: ranking do WoW Forever (check-pvp) dentro do app, com o filtro Hunter marcado.",
+                  "Janelas de jogador e Armory abrem na frente e ficam interativas.",
+                  "Sangue realista no tema da aba, com pingos escorrendo."
               ]
 }

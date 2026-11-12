@@ -1,0 +1,14 @@
+html, body { height: 100%; margin: 0; }
+body.pw { display: flex; flex-direction: column; background: radial-gradient(ellipse at top, #1b2711, #070a04 75%); color: var(--text); font-family: var(--f-body); overflow: hidden; }
+.pw-head { position: relative; flex: none; display: flex; align-items: center; gap: 8px; padding: 14px 16px 12px; min-height: 66px; overflow: hidden;
+  background: linear-gradient(#26371a, #131c0c); border-bottom: 2px solid var(--gold-lo); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.55); }
+.pw-head > * { position: relative; z-index: 2; }
+.pw-head .pw-blood { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.pw-title { margin: 0 6px; font-family: var(--f-display); font-weight: 400; font-size: 22px; color: var(--gold-hi); text-shadow: 0 0 10px rgba(160, 20, 20, 0.6), 0 1px 2px #000; white-space: nowrap; }
+.pw-status { flex: 1; min-width: 0; font-size: 12px; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pw-head .icon-btn svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+#view { display: flex; flex: 1; min-height: 0; width: 100%; background: #0b1007; }
+.blood-drip { position: absolute; left: 0; top: -2px; width: 100%; height: auto; filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.6));
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 30%, transparent 55%); -webkit-mask-size: 100% 320%; -webkit-mask-repeat: no-repeat; -webkit-mask-position: 0 100%;
+  animation: bloodFlow var(--dur, 30s) cubic-bezier(0.25, 0.6, 0.3, 1) var(--delay, 0s) forwards; }
+@keyframes bloodFlow { from { -webkit-mask-position: 0 100%; } to { -webkit-mask-position: 0 0; } }

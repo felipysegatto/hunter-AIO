@@ -1,4 +1,3 @@
-O guia agora recolhe para a direita, e o Armory fica centralizado.
-As janelas do Reddit e do Wowhead abrem na frente da gaveta de noticias.
-A reticula ficou mais fina, maior e com aneis dourado e verde.
-O brilho ao passar o mouse no personagem ficou mais fino e dourado.
+Nova aba PvP: ranking do WoW Forever (check-pvp) dentro do app, com o filtro Hunter marcado.
+Janelas de jogador e Armory abrem na frente e ficam interativas.
+Sangue realista no tema da aba, com pingos escorrendo.

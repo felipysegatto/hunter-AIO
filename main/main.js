@@ -2,6 +2,7 @@
 
 const { app, BrowserWindow, ipcMain, shell, clipboard, nativeTheme, Notification } = require('electron');
 const path = require('path');
+const pvp = require('./pvp');
 const fs = require('fs');
 const store = require('./store');
 const feeds = require('./feeds');
@@ -111,6 +112,8 @@ ipcMain.on('win:minimize', () => { if (win) win.minimize(); });
 ipcMain.on('win:toggleMax', () => { if (!win) return; if (win.isMaximized()) win.unmaximize(); else win.maximize(); });
 ipcMain.on('win:close', () => { if (win) win.close(); });
 
+pvp.init(() => win);
+
 function createWindow() {
   const iconPath = path.join(__dirname, '..', 'build', isWin ? 'icon.ico' : 'icon.png');
   win = new BrowserWindow({
@@ -129,12 +132,14 @@ function createWindow() {
       contextIsolation: true,
       nodeIntegration: false,
       sandbox: true,
+      webviewTag: true,
       spellcheck: false,
       backgroundThrottling: false,
       autoplayPolicy: 'no-user-gesture-required'
     }
   });
 
+  pvp.guardWebview(win.webContents);
   win.on('maximize', () => win.webContents.send('win:state', true));
   win.on('unmaximize', () => win.webContents.send('win:state', false));
   win.loadFile(path.join(__dirname, '..', 'src', 'index.html'));
