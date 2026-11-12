@@ -220,6 +220,8 @@
         <div class="feed-table">${feedRows((G.content.communityFeeds && G.content.communityFeeds.sources) || [], G.community)}</div>
         <p class="set-help" style="margin-top:10px">Guia de leveling (Mobalytics)</p>
         <div class="feed-table"><div><span>${window.Guide && Guide.data && Guide.data.guide ? `${esc(Guide.data.guide.title.replace(/\s*-\s*Talents.*$/i, ''))} · ${esc(Guide.data.guide.author)} · versão ${esc(Guide.data.guide.version || '')}` : 'Guia da sua classe'}</span>${window.Guide && Guide.data && Guide.data.error ? `<span class="bad">${esc(Guide.data.error)}</span>` : window.Guide && Guide.data && Guide.data.checkedAt ? `<span class="ok">ok · conferido às ${esc(U.clock(Guide.data.checkedAt))}</span>` : '<span>ainda não conferido</span>'}</div></div>
+        <p class="set-help" style="margin-top:10px">PvP e Armory de jogadores</p>
+        <div class="feed-table"><div><span>Ranking, filtros e perfis · forever.check-pvp.fr</span><span>${window.PvP ? esc(PvP.sourceText()) : ''}</span></div><div><span>Armory do jogador · worldofwarcraft.blizzard.com</span><span>sob demanda</span></div></div>
         <div class="set-row"><button class="btn btn-quiet btn-sm" id="st-refresh-now">${icon('i-refresh')}Buscar agora</button><button class="btn btn-quiet btn-sm" data-gd="refresh">${icon('i-refresh')}Conferir o guia</button></div>
       </section>
 

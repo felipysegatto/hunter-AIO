@@ -112,6 +112,19 @@ ipcMain.on('win:minimize', () => { if (win) win.minimize(); });
 ipcMain.on('win:toggleMax', () => { if (!win) return; if (win.isMaximized()) win.unmaximize(); else win.maximize(); });
 ipcMain.on('win:close', () => { if (win) win.close(); });
 
+// Armory de outro jogador (aba "Jogador"): mesma leitura do seu personagem, so que sob demanda
+ipcMain.handle('player:read', async (_e, query) => {
+  try {
+    const q = String(query || '').trim();
+    if (!q) return { ok: false, message: 'Digite o nome do jogador.' };
+    const res = await armory.read({ armoryUrl: q }, null);
+    if (res && res.ok && res.media) await figure.annotate(res.media);
+    return res;
+  } catch (e) {
+    return { ok: false, message: 'Erro ao ler o Armory: ' + e.message };
+  }
+});
+
 pvp.init(() => win);
 
 function createWindow() {
@@ -132,14 +145,12 @@ function createWindow() {
       contextIsolation: true,
       nodeIntegration: false,
       sandbox: true,
-      webviewTag: true,
       spellcheck: false,
       backgroundThrottling: false,
       autoplayPolicy: 'no-user-gesture-required'
     }
   });
 
-  pvp.guardWebview(win.webContents);
   win.on('maximize', () => win.webContents.send('win:state', true));
   win.on('unmaximize', () => win.webContents.send('win:state', false));
   win.loadFile(path.join(__dirname, '..', 'src', 'index.html'));
