@@ -1,3 +1,2 @@
-Nova aba PvP: ranking do WoW Forever (check-pvp) dentro do app, com o filtro Hunter marcado.
-Janelas de jogador e Armory abrem na frente e ficam interativas.
-Sangue realista no tema da aba, com pingos escorrendo.
+Sangue da aba PvP refeito: mais irregular, vermelho vivo e translucido, com respingos e pingos naturais.
+A aba PvP nao abre mais janelas novas.

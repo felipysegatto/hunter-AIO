@@ -1,0 +1,9 @@
+GRAVADOR DO PVP
+1. No terminal, dentro da pasta do projeto:   npm run gravar-pvp
+2. Abre uma janela com o ranking. Faca isto, devagar:
+   - espere a lista carregar;
+   - escolha a classe Hunter, depois mude a regiao e a faccao;
+   - mude de pagina na lista (pagina 2);
+   - clique em um jogador e abra a pagina dele (pontos, vitorias etc.).
+3. Feche a janela. Vai aparecer o arquivo  pvp-gravacao.json  na pasta do projeto.
+4. Envie esse arquivo para o Claude (nao tem senha nem dados pessoais; pode abrir e conferir).

@@ -1,15 +1,14 @@
 {
-    "version":  "3.1.0",
+    "version":  "3.1.1",
     "date":  "2026-11-12",
-    "file":  "Grimorio-Hunter-Setup-3.1.0.exe",
-    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.1.0/Grimorio-Hunter-Setup-3.1.0.exe",
+    "file":  "Grimorio-Hunter-Setup-3.1.1.exe",
+    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.1.1/Grimorio-Hunter-Setup-3.1.1.exe",
     "page":  "https://github.com/felipysegatto/hunter-AIO",
-    "sha256":  "2af5a81203f211b4df20ebda31980fb50783003a08fa68f0eb36ce6f00729013",
-    "size":  86022506,
+    "sha256":  "6a69347753abb7c9a58379d4271270a46497c77b1523a66340199f8e4cc50642",
+    "size":  87079526,
     "kind":  "setup",
     "notes":  [
-                  "Nova aba PvP: ranking do WoW Forever (check-pvp) dentro do app, com o filtro Hunter marcado.",
-                  "Janelas de jogador e Armory abrem na frente e ficam interativas.",
-                  "Sangue realista no tema da aba, com pingos escorrendo."
+                  "Sangue da aba PvP refeito: mais irregular, vermelho vivo e translucido, com respingos e pingos naturais.",
+                  "A aba PvP nao abre mais janelas novas."
               ]
 }

@@ -37,8 +37,6 @@ contextBridge.exposeInMainWorld('grimorio', {
   notify: (cat, body) => ipcRenderer.invoke('notify:show', { cat, body }),
   copy: (text) => ipcRenderer.invoke('clipboard:write', text),
   open: (url) => ipcRenderer.invoke('shell:open', url),
-  pvpArmory: (url) => ipcRenderer.invoke('pvp:armory', url),
-  pvpOpenPlayer: (url) => ipcRenderer.invoke('pvp:player', url),
   openFolder: (dir) => ipcRenderer.invoke('shell:folder', dir),
   onFeedsUpdated: (cb) => ipcRenderer.on('feeds:updated', (_e, data) => cb(data)),
   onCommunityUpdated: (cb) => ipcRenderer.on('community:updated', (_e, data) => cb(data)),

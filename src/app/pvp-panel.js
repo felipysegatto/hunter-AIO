@@ -50,7 +50,6 @@
     if (ms) setTimeout(() => { if (el.textContent === t) el.textContent = ''; }, ms);
   };
   const pathOf = () => { try { return new URL(view.getURL()).pathname; } catch (e) { return ''; } };
-  const isPlayer = () => { const seg = pathOf().split('/').filter(Boolean); return seg.length > 0 && !/^ranking$/i.test(seg[0]); };
 
   function injectHunter() {
     clearTimeout(injectTimer);
@@ -67,7 +66,6 @@
   function sync() {
     if (!ready) return;
     try { $('pvp-back').disabled = !view.canGoBack(); } catch (e) { /* ainda carregando */ }
-    $('pvp-armory').hidden = !isPlayer();
     const ranking = /^\/ranking/i.test(pathOf());
     if (ranking && !prevRanking) injectHunter();
     prevRanking = ranking;
@@ -90,11 +88,6 @@
   $('pvp-back').addEventListener('click', () => { if (ready && view.canGoBack()) view.goBack(); });
   $('pvp-reload').addEventListener('click', () => { if (ready) view.reload(); else activate(); });
   $('pvp-hunter').addEventListener('click', () => { if (!ready) return; say('Procurando o filtro de Hunter…'); injectHunter(); });
-  $('pvp-armory').addEventListener('click', async () => {
-    const ok = await window.grimorio.pvpArmory(view.getURL());
-    if (!ok) say('Não consegui descobrir o jogador por este endereço.', 6000);
-  });
-  $('pvp-window').addEventListener('click', () => window.grimorio.pvpOpenPlayer(ready ? view.getURL() : HOME));
   $('pvp-browser').addEventListener('click', () => window.grimorio.open(ready ? view.getURL() : HOME));
 
   window.PvP = { activate };
