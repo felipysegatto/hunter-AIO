@@ -1,3 +1,3 @@
-Aba PvP agora e nativa, no visual do app, com contorno vermelho metalico. O sangue foi retirado por enquanto.
-Nova aba Jogador: Armory de outro jogador com o mesmo visual do seu Armory.
-As fontes do PvP entraram na lista de fontes dos Ajustes.
+Aba PvP agora importa os dados do check-pvp: filtros (regiao, faccao, especializacao), ranking de Hunters e perfil de cada jogador.
+Botao Armory em cada jogador abre a aba Jogador com o visual do seu Armory.
+O site e lido em segundo plano, sem mostrar a pagina e sem anuncios.

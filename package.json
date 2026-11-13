@@ -1,7 +1,7 @@
 {
   "name": "grimorio-hunter",
   "productName": "Grimorio Hunter",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "Grimório do Aventureiro com visual hunter",
   "author": "Grimório do Aventureiro",
   "main": "main/main.js",

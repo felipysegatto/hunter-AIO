@@ -38,6 +38,8 @@ contextBridge.exposeInMainWorld('grimorio', {
   copy: (text) => ipcRenderer.invoke('clipboard:write', text),
   open: (url) => ipcRenderer.invoke('shell:open', url),
   playerRead: (query) => ipcRenderer.invoke('player:read', query),
+  pvpRanking: (params) => ipcRenderer.invoke('pvp:ranking', params),
+  pvpProfile: (params) => ipcRenderer.invoke('pvp:profile', params),
   pvpMap: () => ipcRenderer.invoke('pvp:map'),
   openFolder: (dir) => ipcRenderer.invoke('shell:folder', dir),
   onFeedsUpdated: (cb) => ipcRenderer.on('feeds:updated', (_e, data) => cb(data)),

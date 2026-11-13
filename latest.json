@@ -1,15 +1,15 @@
 {
-    "version":  "3.2.0",
-    "date":  "2026-11-12",
-    "file":  "Grimorio-Hunter-Setup-3.2.0.exe",
-    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.2.0/Grimorio-Hunter-Setup-3.2.0.exe",
+    "version":  "3.3.0",
+    "date":  "2026-11-13",
+    "file":  "Grimorio-Hunter-Setup-3.3.0.exe",
+    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.3.0/Grimorio-Hunter-Setup-3.3.0.exe",
     "page":  "https://github.com/felipysegatto/hunter-AIO",
-    "sha256":  "06fabd65556c4769b4c8eda1889986254f14392f09ff8431a139288d424ca306",
-    "size":  87081032,
+    "sha256":  "2e148457f959daf99cd4200da8fbea39fd79a44f33834c4c021ed51e182ae377",
+    "size":  87085962,
     "kind":  "setup",
     "notes":  [
-                  "Aba PvP agora e nativa, no visual do app, com contorno vermelho metalico. O sangue foi retirado por enquanto.",
-                  "Nova aba Jogador: Armory de outro jogador com o mesmo visual do seu Armory.",
-                  "As fontes do PvP entraram na lista de fontes dos Ajustes."
+                  "Aba PvP agora importa os dados do check-pvp: filtros (regiao, faccao, especializacao), ranking de Hunters e perfil de cada jogador.",
+                  "Botao Armory em cada jogador abre a aba Jogador com o visual do seu Armory.",
+                  "O site e lido em segundo plano, sem mostrar a pagina e sem anuncios."
               ]
 }
