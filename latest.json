@@ -1,14 +1,15 @@
 {
-    "version":  "3.3.1",
+    "version":  "3.4.0",
     "date":  "2026-11-14",
-    "file":  "Grimorio-Hunter-Setup-3.3.1.exe",
-    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.3.1/Grimorio-Hunter-Setup-3.3.1.exe",
+    "file":  "Grimorio-Hunter-Setup-3.4.0.exe",
+    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.4.0/Grimorio-Hunter-Setup-3.4.0.exe",
     "page":  "https://github.com/felipysegatto/hunter-AIO",
-    "sha256":  "54fabf8dd1f5ca4f9863079c3e6498c1341877b227e93cce5b28b4bace35a154",
-    "size":  87087744,
+    "sha256":  "3b26a76917d30bbfb52ed88b75f72ad7d26bfc0fc4e7ae2bc7d3f3ef4b691cfb",
+    "size":  87089947,
     "kind":  "setup",
     "notes":  [
-                  "Ranking PvP limpo: nome, guilda, raca, especializacao, profissoes e numeros com titulos certos, sem textos de codigo.",
-                  "O botao Armory agora usa o link do proprio jogador e acha o personagem mesmo com o nome em outra ordem."
+                  "Ranking PvP enxuto: nome, guilda, raca, nivel, iLvl e especializacao. Seta para ampliar so a linha escolhida e ver patente, vitorias, campos de batalha (com icones) e profissoes.",
+                  "Filtros e regiao no estilo do app, sem o menu branco do sistema.",
+                  "Perfil do jogador organizado, sem a tabela Checks Recentes."
               ]
 }

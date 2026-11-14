@@ -55,7 +55,7 @@ async function rankingScript() {
       guild: guildEl ? clean(T(guildEl)) : '',
       raceId: idOf(raceImg, /\/races\/(\d+)/),
       specId: idOf(specImg, /\/specs\/(\d+)/),
-      profissoes: [...row.querySelectorAll('.profession')].map((s) => ({ nome: ((s.querySelector('img') || {}).alt || '').trim(), valor: clean(T(s)).replace(/[^\d]+/g, ' ').trim() })).filter((x) => x.nome),
+      profissoes: [...row.querySelectorAll('.profession')].map((s) => ({ nome: ((s.querySelector('img') || {}).alt || '').trim(), valor: clean(T(s)).replace(/[^\d]+/g, ' ').trim(), icon: ((s.querySelector('img') || {}).src || '') })).filter((x) => x.nome),
       armoryUrl: armoryA ? (() => { try { return new URL(armoryA.getAttribute('href'), location.href).href; } catch (e) { return ''; } })() : '',
       region: p[0] || '', nome: p[1] || '', sobrenome: p[2] || ''
     };
@@ -65,6 +65,7 @@ async function rankingScript() {
   const table = rowEls[0] && rowEls[0].closest('table');
   const thEls = table ? [...table.querySelectorAll('thead th, thead td')] : [];
   if (table) headers = thEls.map((x) => clean(T(x)));
+  const headerIcons = thEls.map((x) => { const i = x.querySelector('img'); return i ? { alt: (i.getAttribute('alt') || '').trim(), src: i.src || '' } : null; });
   const headerHints = thEls.map((x) => [...x.querySelectorAll('img')].map((i) => (i.getAttribute('alt') || i.getAttribute('title') || (i.getAttribute('src') || '').split('/').pop() || '').trim()).filter(Boolean).join(', '));
   if (!headers.length && parent) {
     const sib = [...parent.children].find((k) => !rowEls.includes(k) && k.children.length >= 3);
@@ -83,7 +84,7 @@ async function rankingScript() {
   const tm = /(?:page|pagina|página)\s+\d+\s*(?:\/|of|de)\s*(\d+)/i.exec(T(document.body));
   if (tm) pages = Math.max(pages || 0, Number(tm[1]));
 
-  return { ok: true, rows, headers, headerHints, pages, debugHeader: thEls[0] ? thEls.map((x) => x.outerHTML).join('').slice(0, 3500) : '', debugHtml: rowEls[0] ? rowEls[0].outerHTML.slice(0, 3000) : '' };
+  return { ok: true, rows, headers, headerHints, headerIcons, pages, debugHeader: thEls[0] ? thEls.map((x) => x.outerHTML).join('').slice(0, 3500) : '', debugHtml: rowEls[0] ? rowEls[0].outerHTML.slice(0, 3000) : '' };
 }
 
 async function profileScript() {
@@ -107,7 +108,7 @@ async function profileScript() {
   }
   if (cur.lines.length) sections.push(cur);
   const h1 = root.querySelector('h1');
-  return { ok: sections.length > 0, titulo: T(h1) || document.title, sections: sections.slice(0, 14), url: location.href };
+  return { ok: lines.length > 0, titulo: T(h1) || document.title, lines, sections: sections.slice(0, 14), url: location.href };
 }
 
 module.exports = {

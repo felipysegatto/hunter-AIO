@@ -257,7 +257,7 @@
         <div class="doll-body">
           <div class="player-search">
             <input id="p-name" type="text" placeholder="Nome do jogador (ex.: Felipy Segatto)" autocomplete="off" spellcheck="false" aria-label="Nome do jogador">
-            <select id="p-region" aria-label="Região"><option value="us">US</option><option value="eu">EU</option><option value="kr">KR</option><option value="tw">TW</option></select>
+            <div id="p-region-dd" class="dd-host"></div><input type="hidden" id="p-region" value="us">
             <button class="btn btn-sm" id="p-go" type="button">Ver Armory</button>
           </div>
           <p class="player-status" id="p-status" role="status"></p>
@@ -406,6 +406,8 @@
   <script src="app/welcome.js"></script>
   <script src="app/main.js"></script>
   <script src="app/window.js"></script>
+  <script src="app/dropdown.js"></script>
+  <script src="app/pvp-parse.js"></script>
   <script src="app/pvp-panel.js"></script>
   <script src="app/player.js"></script>
   <script src="app/panels.js"></script>

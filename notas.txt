@@ -1,2 +1,3 @@
-Ranking PvP limpo: nome, guilda, raca, especializacao, profissoes e numeros com titulos certos, sem textos de codigo.
-O botao Armory agora usa o link do proprio jogador e acha o personagem mesmo com o nome em outra ordem.
+Ranking PvP enxuto: nome, guilda, raca, nivel, iLvl e especializacao. Seta para ampliar so a linha escolhida e ver patente, vitorias, campos de batalha (com icones) e profissoes.
+Filtros e regiao no estilo do app, sem o menu branco do sistema.
+Perfil do jogador organizado, sem a tabela Checks Recentes.
