@@ -1,15 +1,14 @@
 {
-    "version":  "3.3.0",
-    "date":  "2026-11-13",
-    "file":  "Grimorio-Hunter-Setup-3.3.0.exe",
-    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.3.0/Grimorio-Hunter-Setup-3.3.0.exe",
+    "version":  "3.3.1",
+    "date":  "2026-11-14",
+    "file":  "Grimorio-Hunter-Setup-3.3.1.exe",
+    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.3.1/Grimorio-Hunter-Setup-3.3.1.exe",
     "page":  "https://github.com/felipysegatto/hunter-AIO",
-    "sha256":  "2e148457f959daf99cd4200da8fbea39fd79a44f33834c4c021ed51e182ae377",
-    "size":  87085962,
+    "sha256":  "54fabf8dd1f5ca4f9863079c3e6498c1341877b227e93cce5b28b4bace35a154",
+    "size":  87087744,
     "kind":  "setup",
     "notes":  [
-                  "Aba PvP agora importa os dados do check-pvp: filtros (regiao, faccao, especializacao), ranking de Hunters e perfil de cada jogador.",
-                  "Botao Armory em cada jogador abre a aba Jogador com o visual do seu Armory.",
-                  "O site e lido em segundo plano, sem mostrar a pagina e sem anuncios."
+                  "Ranking PvP limpo: nome, guilda, raca, especializacao, profissoes e numeros com titulos certos, sem textos de codigo.",
+                  "O botao Armory agora usa o link do proprio jogador e acha o personagem mesmo com o nome em outra ordem."
               ]
 }

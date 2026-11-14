@@ -42,25 +42,36 @@
   }
 
   /* ---------- lista ---------- */
-  const isRank = (c) => /^#?\d{1,5}$/.test(c);
+  const RACE = { 1: 'Humano', 2: 'Orc', 3: 'Anão', 4: 'Elfo Noturno', 5: 'Morto-vivo', 6: 'Tauren', 7: 'Gnomo', 8: 'Troll', 9: 'Goblin', 10: 'Elfo Sangrento', 11: 'Draenei', 22: 'Worgen' };
+  const SPEC = { 253: 'Domínio das Feras', 254: 'Precisão', 255: 'Sobrevivência' };
+  const SKIP = /^(ranking|nome|name|links?|profiss)/i;
   function rowHtml(r, i) {
-    const name = r.linkText || `${r.nome} ${r.sobrenome}`.trim();
-    const rankIdx = r.cells.findIndex(isRank);
-    const rank = rankIdx >= 0 ? r.cells[rankIdx].replace('#', '') : String((f.page - 1) * 50 + i + 1);
+    const name = r.linkText || `${r.sobrenome} ${r.nome}`.trim();
     const heads = st.result.headers || [];
+    const hints = st.result.headerHints || [];
     const aligned = heads.length === r.cells.length;
-    const chips = r.cells.map((c, idx) => {
-      if (idx === rankIdx || !c || c.length > 28 || c.toLowerCase().includes(name.toLowerCase().slice(0, 6))) return '';
-      const label = aligned && heads[idx] ? heads[idx] : '';
-      return `<span class="pvp-chip">${label ? `<i>${esc(label)}</i>` : ''}${esc(c)}</span>`;
-    }).join('');
-    const tags = (r.tags || []).filter((t) => t.toLowerCase() !== name.toLowerCase()).slice(0, 3).map((t) => `<span class="pvp-tag">${esc(t)}</span>`).join('');
+    const rank = r.cells[0] && /^#?\d{1,5}$/.test(r.cells[0]) ? r.cells[0].replace('#', '') : String((f.page - 1) * 50 + i + 1);
+    const chips = [];
+    const grupo = [];
+    r.cells.forEach((c, idx) => {
+      if (idx === 0 || !c) return;
+      const h = aligned ? heads[idx] : '';
+      if (aligned && SKIP.test(h)) return;
+      if (aligned && !h) { grupo.push({ v: c, hint: hints[idx] || '' }); return; }   // colunas sem titulo (vitorias por campo de batalha)
+      if (!aligned && (c.length > 24 || c.includes(name.slice(0, 5)))) return;
+      chips.push(`<span class="pvp-chip">${h ? `<i>${esc(h)}</i>` : ''}${esc(c)}</span>`);
+    });
+    if (grupo.length) chips.splice(Math.min(3, chips.length), 0, `<span class="pvp-chip" title="Vitórias em campos de batalha"><i>Campos de batalha</i>${grupo.map((g) => esc(g.v)).join(' · ')}</span>`);
+    const tags = [];
+    if (r.raceId) tags.push(RACE[r.raceId] || `Raça ${r.raceId}`);
+    if (r.specId) tags.push(SPEC[r.specId] || `Espec. ${r.specId}`);
+    (r.profissoes || []).forEach((p) => tags.push(`${p.nome}${p.valor ? ' ' + p.valor : ''}`));
     return `
       <div class="pvp-row">
         <span class="pvp-rank">${esc(rank)}</span>
         <div class="pvp-main">
-          <button class="pvp-name" type="button" data-prof="${i}" title="Ver o perfil de ${esc(name)}">${esc(name)}</button>
-          <div class="pvp-meta">${tags}${chips}</div>
+          <div class="pvp-who"><button class="pvp-name" type="button" data-prof="${i}" title="Ver o perfil de ${esc(name)}">${esc(name)}</button>${r.guild ? `<span class="pvp-guild">${esc(r.guild)}</span>` : ''}</div>
+          <div class="pvp-meta">${tags.map((t) => `<span class="pvp-tag">${esc(t)}</span>`).join('')}${chips.join('')}</div>
         </div>
         <button class="btn btn-sm" type="button" data-arm="${i}" title="Abrir o Armory de ${esc(name)}">Armory</button>
       </div>`;
@@ -138,19 +149,21 @@
   }
 
   async function openProfile(row, force) {
+    const shown = row.linkText || `${row.sobrenome} ${row.nome}`.trim();
     st.view = 'profile';
-    st.profile = { loading: true, title: `${row.nome} ${row.sobrenome}`, row };
+    st.profile = { loading: true, title: shown, row };
     paint();
     try {
       const r = await window.grimorio.pvpProfile({ region: row.region || f.region, nome: row.nome, sobrenome: row.sobrenome, force: !!force });
-      st.profile = r && r.ok ? { title: r.titulo || `${row.nome} ${row.sobrenome}`, row, data: r } : { title: `${row.nome} ${row.sobrenome}`, row, error: (r && r.message) || 'Não consegui ler o perfil.' };
+      st.profile = r && r.ok ? { title: shown, row, data: r } : { title: shown, row, error: (r && r.message) || 'Não consegui ler o perfil.' };
     } catch (e) {
-      st.profile = { title: `${row.nome} ${row.sobrenome}`, row, error: 'Erro: ' + e.message };
+      st.profile = { title: shown, row, error: 'Erro: ' + e.message };
     }
     paint();
   }
 
-  const armory = (row) => { if (window.Player) Player.open(`${row.nome} ${row.sobrenome}`.trim(), row.region || f.region); };
+  // Nome como o site mostra (Nome Sobrenome); o endereco do jogador no site vem ao contrario (/regiao/Sobrenome/Nome)
+  const armory = (row) => { if (window.Player) Player.openUrl(row.armoryUrl, row.linkText || `${row.sobrenome} ${row.nome}`.trim(), row.region || f.region); };
 
   PvP.activate = function () {
     shell();

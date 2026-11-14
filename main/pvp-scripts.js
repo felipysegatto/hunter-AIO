@@ -4,6 +4,8 @@
 async function rankingScript() {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
   const T = (el) => String((el && (el.innerText != null ? el.innerText : el.textContent)) || '').replace(/\s+/g, ' ').trim();
+  // O site escreve icones como texto (unfold_more, keyboard_arrow_down...): isso nao e conteudo
+  const clean = (s) => String(s || '').replace(/\b[a-z]+(?:_[a-z]+)+\b/g, ' ').replace(/\s+/g, ' ').trim();
   const PLAYER = /^\/(us|eu|kr|tw|oc)\/[^/?#]+\/[^/?#]+\/?$/i;
   const pathOf = (a) => { try { return new URL(a.getAttribute('href'), location.href).pathname; } catch (e) { return ''; } };
   const isP = (a) => PLAYER.test(pathOf(a));
@@ -40,26 +42,37 @@ async function rankingScript() {
     const kids = [...row.children];
     const cellEls = kids.length > 1 ? kids : [row];
     const link = (row.tagName === 'A' ? row : [...row.querySelectorAll('a[href]')].find(isP));
-    const cells = cellEls.map((k) => T(k));
-    const tags = [];
-    row.querySelectorAll('img[alt], img[title], [title], [aria-label]').forEach((x) => {
-      const v = (x.getAttribute('alt') || x.getAttribute('title') || x.getAttribute('aria-label') || '').trim();
-      if (v && v.length <= 32 && !tags.includes(v)) tags.push(v);
-    });
-    const p = link ? pathOf(link).split('/').filter(Boolean).map((s) => decodeURIComponent(s)) : [];
-    return { cells, tags, linkText: link ? T(link) : '', region: p[0] || '', nome: p[1] || '', sobrenome: p[2] || '' };
+    const cells = cellEls.map((k) => clean(T(k)));
+    const p = link ? pathOf(link).split('/').filter(Boolean).map((x) => decodeURIComponent(x)) : [];
+    const guildEl = row.querySelector('a.link-guild, a[href*="/guild/"]');
+    const raceImg = row.querySelector('img[src*="/races/"]');
+    const specImg = row.querySelector('img[src*="/specs/"]');
+    const armoryA = row.querySelector('a[href*="/armory/character/"]');
+    const idOf = (img, rx) => { const m = img && rx.exec(img.getAttribute('src') || ''); return m ? Number(m[1]) : null; };
+    return {
+      cells,
+      linkText: link ? clean(T(link)) : '',
+      guild: guildEl ? clean(T(guildEl)) : '',
+      raceId: idOf(raceImg, /\/races\/(\d+)/),
+      specId: idOf(specImg, /\/specs\/(\d+)/),
+      profissoes: [...row.querySelectorAll('.profession')].map((s) => ({ nome: ((s.querySelector('img') || {}).alt || '').trim(), valor: clean(T(s)).replace(/[^\d]+/g, ' ').trim() })).filter((x) => x.nome),
+      armoryUrl: armoryA ? (() => { try { return new URL(armoryA.getAttribute('href'), location.href).href; } catch (e) { return ''; } })() : '',
+      region: p[0] || '', nome: p[1] || '', sobrenome: p[2] || ''
+    };
   });
 
   let headers = [];
   const table = rowEls[0] && rowEls[0].closest('table');
-  if (table) headers = [...table.querySelectorAll('thead th, thead td')].map(T);
+  const thEls = table ? [...table.querySelectorAll('thead th, thead td')] : [];
+  if (table) headers = thEls.map((x) => clean(T(x)));
+  const headerHints = thEls.map((x) => [...x.querySelectorAll('img')].map((i) => (i.getAttribute('alt') || i.getAttribute('title') || (i.getAttribute('src') || '').split('/').pop() || '').trim()).filter(Boolean).join(', '));
   if (!headers.length && parent) {
     const sib = [...parent.children].find((k) => !rowEls.includes(k) && k.children.length >= 3);
-    if (sib) headers = [...sib.children].map(T);
+    if (sib) headers = [...sib.children].map((x) => clean(T(x)));
   }
   if (!headers.length && parent) {
     const prev = parent.previousElementSibling;
-    if (prev && prev.children.length >= 3) headers = [...prev.children].map(T);
+    if (prev && prev.children.length >= 3) headers = [...prev.children].map((x) => clean(T(x)));
   }
 
   let pages = null;
@@ -70,7 +83,7 @@ async function rankingScript() {
   const tm = /(?:page|pagina|página)\s+\d+\s*(?:\/|of|de)\s*(\d+)/i.exec(T(document.body));
   if (tm) pages = Math.max(pages || 0, Number(tm[1]));
 
-  return { ok: true, rows, headers, pages, debugHtml: rowEls[0] ? rowEls[0].outerHTML.slice(0, 3000) : '' };
+  return { ok: true, rows, headers, headerHints, pages, debugHeader: thEls[0] ? thEls.map((x) => x.outerHTML).join('').slice(0, 3500) : '', debugHtml: rowEls[0] ? rowEls[0].outerHTML.slice(0, 3000) : '' };
 }
 
 async function profileScript() {

@@ -16,17 +16,30 @@
 
   Player.urlFor = (name, region) => `https://worldofwarcraft.blizzard.com/pt-br/forever/${region || 'us'}/armory/character/${encodeURIComponent(slug(name))}`;
 
-  Player.load = async function () {
+  // Tenta o link direto (quando vem do ranking) e depois "Nome Sobrenome" nas duas ordens
+  Player.load = async function (directUrl) {
     Player.ensure();
     const name = $('#p-name').value.trim();
-    if (!name) { say('Digite o nome do jogador.'); return; }
+    if (!name && !directUrl) { say('Digite o nome do jogador.'); return; }
+    const region = $('#p-region').value;
+    const parts = name.split(/\s+/).filter(Boolean);
+    const urls = [];
+    if (directUrl) urls.push(String(directUrl).replace(/\/[a-z]{2}-[a-z]{2}\/forever\//i, '/pt-br/forever/'));
+    if (parts.length >= 2) { urls.push(Player.urlFor(parts.join(' '), region)); urls.push(Player.urlFor(parts.slice().reverse().join(' '), region)); }
+    else if (name) urls.push(Player.urlFor(name, region));
     const go = $('#p-go');
     go.disabled = true;
     say('Lendo o Armory…');
+    let last = null;
     try {
-      const res = await window.grimorio.playerRead(Player.urlFor(name, $('#p-region').value));
-      if (!res || !res.ok) { Player.data = null; render(); say((res && res.message) || 'Não achei este jogador no Armory. Confira o nome e a região.'); }
-      else { Player.data = res; render(); say(''); }
+      for (const u of [...new Set(urls)]) {
+        const res = await window.grimorio.playerRead(u);
+        if (res && res.ok) { Player.data = res; render(); say(''); go.disabled = false; return; }
+        last = res;
+      }
+      Player.data = null; render();
+      say((last && last.message) || 'Não achei este jogador no Armory.');
+      if (parts.length >= 2) say('Não achei este jogador no Armory. Confira o nome (o formato é "Nome Sobrenome") e a região.');
     } catch (e) {
       say('Erro: ' + e.message);
     }
@@ -34,12 +47,13 @@
   };
 
   // Abre a aba e ja carrega o jogador (usado pela lista do ranking)
-  Player.open = function (name, region) {
+  Player.openUrl = function (url, displayName, region) {
     if (window.Panels) Panels.open('player');
-    $('#p-name').value = name || '';
+    $('#p-name').value = displayName || '';
     if (region) $('#p-region').value = region;
-    if (name) Player.load();
+    Player.load(url);
   };
+  Player.open = function (name, region) { Player.openUrl('', name, region); };
 
   /* ---------- foto (mesma logica do seu Armory) ---------- */
   function fitFigure(box) {

@@ -1,3 +1,2 @@
-Aba PvP agora importa os dados do check-pvp: filtros (regiao, faccao, especializacao), ranking de Hunters e perfil de cada jogador.
-Botao Armory em cada jogador abre a aba Jogador com o visual do seu Armory.
-O site e lido em segundo plano, sem mostrar a pagina e sem anuncios.
+Ranking PvP limpo: nome, guilda, raca, especializacao, profissoes e numeros com titulos certos, sem textos de codigo.
+O botao Armory agora usa o link do proprio jogador e acha o personagem mesmo com o nome em outra ordem.
