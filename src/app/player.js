@@ -50,7 +50,7 @@
   Player.openUrl = function (url, displayName, region) {
     if (window.Panels) Panels.open('player');
     $('#p-name').value = displayName || '';
-    if (region) { $('#p-region').value = region; if (Player.regionDd) Player.regionDd.set(region); }
+    if (region) $('#p-region').value = region;
     Player.load(url);
   };
   Player.open = function (name, region) { Player.openUrl('', name, region); };
@@ -185,9 +185,5 @@
     setPane('stats');
   };
 
-  Player.regionDd = UIDropdown.create($('#p-region-dd'), {
-    options: [['us', 'US'], ['eu', 'EU'], ['kr', 'KR'], ['tw', 'TW']], value: 'us', label: 'Região',
-    onChange: (v) => { $('#p-region').value = v; }
-  });
   bind();
 })();
