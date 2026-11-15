@@ -1,9 +1,9 @@
 {
   "name": "grimorio-hunter",
-  "productName": "Grimorio Hunter",
-  "version": "3.3.1",
-  "description": "Grimório do Aventureiro com visual hunter",
-  "author": "Grimório do Aventureiro",
+  "productName": "Cabana do Cacador",
+  "version": "3.5.0",
+  "description": "Cabana do Caçador: companheiro de leveling e PvP do caçador no WoW Forever",
+  "author": "Cabana do Caçador",
   "main": "main/main.js",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
   },
   "build": {
     "appId": "com.felipy.grimoriohunter",
-    "productName": "Grimorio Hunter",
+    "productName": "Cabana do Cacador",
     "win": {
       "target": "nsis"
     },
@@ -36,7 +36,9 @@
     "nsis": {
       "oneClick": true,
       "perMachine": false,
-      "artifactName": "Grimorio-Hunter-Setup-${version}.exe"
+      "artifactName": "Grimorio-Hunter-Setup-${version}.exe",
+      "shortcutName": "Cabana do Caçador",
+      "uninstallDisplayName": "Cabana do Caçador"
     }
   }
 }
