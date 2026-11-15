@@ -135,7 +135,7 @@ function createWindow() {
     minWidth: 1180,
     minHeight: 740,
     backgroundColor: '#070a04',
-    title: 'Grimório do Aventureiro',
+    title: 'Cabana do Caçador',
     icon: fs.existsSync(iconPath) ? iconPath : undefined,
     show: false,
     titleBarStyle: isMac ? 'hiddenInset' : 'hidden',

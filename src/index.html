@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://wow.zamimg.com https://render.worldofwarcraft.com https://i.ytimg.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grimório do Aventureiro</title>
+  <title>Cabana do Caçador</title>
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/frame.css">
   <link rel="stylesheet" href="styles/app.css">
@@ -70,14 +70,27 @@
       <circle cx="22" cy="10" r="1.6" fill="#e8c873"/>
     </symbol>
 
-    <symbol id="sigil" viewBox="0 0 64 64">
-      <circle cx="32" cy="32" r="29" fill="#1b290f" stroke="url(#g-gold)" stroke-width="3"/>
-      <circle cx="32" cy="32" r="23" fill="none" stroke="#c9a24b" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/>
-      <path d="M20 21.5c4-1.6 8-1.6 12 .8 4-2.4 8-2.4 12-.8v21c-4-1.6-8-1.6-12 .8-4-2.4-8-2.4-12-.8z" fill="#2b3e1a" stroke="url(#g-gold)" stroke-width="1.6" stroke-linejoin="round"/>
-      <path d="M32 22.3v21" stroke="#c9a24b" stroke-width="1.2"/>
-      <path d="M26 27.5l-2.5 4 2.5 4M38 27.5l2.5 4-2.5 4" fill="none" stroke="#d2efb9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="32" cy="15.5" r="2.4" fill="url(#g-fel)"/>
-    </symbol>
+    <symbol id="sigil" viewBox="0 0 64 64"><defs>
+<linearGradient id="ec-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e2a0"/><stop offset=".5" stop-color="#c9a24b"/><stop offset="1" stop-color="#8a6a28"/></linearGradient>
+<radialGradient id="ec-disc" cx=".5" cy=".38" r=".75"><stop offset="0" stop-color="#2f4d1d"/><stop offset="1" stop-color="#0f180a"/></radialGradient>
+<linearGradient id="ec-face" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3f6bd"/><stop offset=".55" stop-color="#9ccf62"/><stop offset="1" stop-color="#5e9632"/></linearGradient>
+<linearGradient id="ec-hood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#63a03a"/><stop offset="1" stop-color="#2a4a18"/></linearGradient>
+<clipPath id="ec-clip"><circle cx="32" cy="32" r="26.6"/></clipPath>
+</defs><circle cx="32" cy="32" r="29" fill="url(#ec-disc)" stroke="url(#ec-gold)" stroke-width="3"/>
+<circle cx="32" cy="32" r="23.8" fill="none" stroke="#c9a24b" stroke-width="1" stroke-dasharray="2 3" opacity=".7"/>
+<g stroke-linejoin="round" stroke-linecap="round" clip-path="url(#ec-clip)">
+  <path d="M14.200 52C14.200 46 18 43 23 41c-1-4-2-8-1-12 1-7 6-11.500 13-11.500 5 0 8 3.500 8.200 7.500l.6 2.200 2.800 4.600-2.400 1.400.4 1.600-1.200 1 .8 1.400-1.800 2.800c-2.400 2-4.400 2.500-5.400 3l.5 5c4.500 1.500 8.500 3 10.500 4z" fill="url(#ec-face)" stroke="#0d1209" stroke-width="1.100"/>
+  <path d="M23 41c-1-4-2-8-1-12 1-7 6-11.500 13-11.500 5 0 8 3.500 8.200 7.500-2.200-1.200-4.700-.5-6.700 2-2 2.500-5.500 4-8 9-1.500 3-3.500 4.500-5.500 5z" fill="url(#ec-hood)" stroke="#0d1209" stroke-width="1"/>
+  <path d="M22.500 31 14.800 35.200l8.700 2.400z" fill="url(#ec-hood)" stroke="#0d1209" stroke-width=".9"/>
+  <path d="M31.500 18.800C28.500 12.200 21.800 10.600 17.200 13.400c4 .5 7.400 3 9.600 7.800z" fill="#d9b44a" stroke="#0d1209" stroke-width=".9"/>
+  <path d="M17.800 13.700c3.800 1.800 6.700 4.700 8.700 8.200" fill="none" stroke="#7d5a20" stroke-width=".6"/>
+  <path d="M43.200 25c-2.200-1.200-4.700-.5-6.700 2-2 2.500-5.500 4-8 9-1.500 3-3.500 4.500-5.500 5" fill="none" stroke="#c9a24b" stroke-width=".9" opacity=".95"/>
+  <path d="M38.600 28.600q2.100-1.600 4.500-.3-2.200 1.800-4.500.3z" fill="#0f180a" stroke="none"/>
+  <circle cx="41.100" cy="28.300" r=".6" fill="#d2efb9" stroke="none"/>
+  <path d="M37.600 26.600q3-1.500 6-.3" fill="none" stroke="#2a4a18" stroke-width=".9"/>
+  <path d="M14.200 52C14.200 46 18 43 23 41" fill="none" stroke="#c9a24b" stroke-width=".9" opacity=".9"/>
+</g>
+</symbol>
 
     <!-- spec glyphs -->
     <symbol id="spec-affliction" viewBox="0 0 32 32">
@@ -148,7 +161,7 @@
       <div class="brand">
         <svg class="brand-sigil" aria-hidden="true"><use href="#sigil"/></svg>
         <div class="brand-text">
-          <span class="brand-name">Grimório do Aventureiro</span>
+          <span class="brand-name">Cabana do Caçador</span>
           <span class="brand-sub">World of Warcraft: Forever</span>
         </div>
       </div>
@@ -257,7 +270,7 @@
         <div class="doll-body">
           <div class="player-search">
             <input id="p-name" type="text" placeholder="Nome do jogador (ex.: Felipy Segatto)" autocomplete="off" spellcheck="false" aria-label="Nome do jogador">
-            <select id="p-region" aria-label="Região"><option value="us">US</option><option value="eu">EU</option><option value="kr">KR</option><option value="tw">TW</option></select>
+            <div id="p-region-dd" class="dd-host"></div><input type="hidden" id="p-region" value="us">
             <button class="btn btn-sm" id="p-go" type="button">Ver Armory</button>
           </div>
           <p class="player-status" id="p-status" role="status"></p>
@@ -406,6 +419,8 @@
   <script src="app/welcome.js"></script>
   <script src="app/main.js"></script>
   <script src="app/window.js"></script>
+  <script src="app/dropdown.js"></script>
+  <script src="app/pvp-parse.js"></script>
   <script src="app/pvp-panel.js"></script>
   <script src="app/player.js"></script>
   <script src="app/panels.js"></script>

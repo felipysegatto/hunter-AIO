@@ -15,7 +15,7 @@ const { spawn } = require('child_process');
 const updater = require('./updater');
 
 const isWin = process.platform === 'win32';
-const SETUP_RX = /^Grimorio-(?:do-Aventureiro|Hunter)-Setup-(\d+\.\d+\.\d+)\.exe$/i;
+const SETUP_RX = /^(?:Grimorio-(?:do-Aventureiro|Hunter)|Cabana-do-Cacador)-Setup-(\d+\.\d+\.\d+)\.exe$/i;
 
 /** The installed Windows app updates itself; anything else (development, a loose .exe) opens the link */
 const managed = () => isWin && app.isPackaged && !process.env.PORTABLE_EXECUTABLE_FILE;
@@ -134,7 +134,7 @@ function openSplash() {
     show: false,
     center: true,
     backgroundColor: '#070a04',
-    title: 'Grimório do Aventureiro',
+    title: 'Cabana do Caçador',
     icon: fs.existsSync(iconPath) ? iconPath : undefined,
     webPreferences: { preload: path.join(__dirname, 'splash-preload.js'), contextIsolation: true, nodeIntegration: false, sandbox: true }
   });

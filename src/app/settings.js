@@ -227,7 +227,7 @@
 
       <section class="set-group" id="sg-about">
         <h3>Versão, atualizações e inicialização</h3>
-        <p class="set-help">Grimório do Aventureiro ${esc(info.version || '')} · conteúdo de ${esc(U.fullDate(G.content.meta.contentDate))}. Seus dados e chaves ficam só neste computador. O app confere no GitHub se há versão nova toda vez que abre (na janelinha inicial) e a cada 6 horas; quando há, mostra as novidades e atualiza com um clique.</p>
+        <p class="set-help">Cabana do Caçador ${esc(info.version || '')} · conteúdo de ${esc(U.fullDate(G.content.meta.contentDate))}. Seus dados e chaves ficam só neste computador. O app confere no GitHub se há versão nova toda vez que abre (na janelinha inicial) e a cada 6 horas; quando há, mostra as novidades e atualiza com um clique.</p>
         <div class="set-row">
           <button class="btn btn-quiet btn-sm" id="st-update">${icon('i-refresh')}Procurar atualização</button>
           <span class="set-status ${App.update && App.update.ok ? (App.update.available ? 'ok' : '') : App.update ? 'bad' : ''}" id="st-update-status">${esc(App.updateText ? App.updateText() : '')}</span>

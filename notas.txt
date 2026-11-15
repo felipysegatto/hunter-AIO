@@ -1,2 +1,2 @@
-Ranking PvP limpo: nome, guilda, raca, especializacao, profissoes e numeros com titulos certos, sem textos de codigo.
-O botao Armory agora usa o link do proprio jogador e acha o personagem mesmo com o nome em outra ordem.
+O programa agora se chama Cabana do Cacador.
+Novo icone: uma cabeca de cacador em verde, no estilo do app.

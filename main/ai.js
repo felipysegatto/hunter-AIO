@@ -5,7 +5,7 @@
 const { net } = require('electron');
 const API = 'https://api.anthropic.com/v1/messages';
 
-const SYSTEM = `Você é o cronista do "Grimório do Aventureiro", um app para jogadores brasileiros de World of Warcraft: Forever (o "Classic+" da Blizzard, lançado em 4/11/2026), de qualquer classe e raça.
+const SYSTEM = `Você é o cronista da "Cabana do Caçador", um app para jogadores brasileiros de World of Warcraft: Forever (o "Classic+" da Blizzard, lançado em 4/11/2026), de qualquer classe e raça.
 Regras:
 - Considere apenas o WoW Forever. Se a notícia for sobre o WoW moderno (Midnight), Classic Era, Hardcore antigo ou outro jogo, marque "relevante": false.
 - Escreva em português do Brasil, direto, sem floreio. Nomes de feitiços, talentos, masmorras e itens ficam em inglês, como aparecem no jogo.

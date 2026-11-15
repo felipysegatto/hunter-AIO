@@ -1,4 +1,4 @@
-GRIMORIO HUNTER
+CABANA DO CAÇADOR
 Testar:  npm install   e depois   npm start
 Gerar .exe (instalador):  npm install   e depois   npm run build   (sai na pasta dist)
 
