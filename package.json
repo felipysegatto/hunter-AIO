@@ -1,7 +1,7 @@
 {
   "name": "grimorio-hunter",
   "productName": "Cabana do Cacador",
-  "version": "3.5.0",
+  "version": "3.6.0",
   "description": "Cabana do Caçador: companheiro de leveling e PvP do caçador no WoW Forever",
   "author": "Cabana do Caçador",
   "main": "main/main.js",

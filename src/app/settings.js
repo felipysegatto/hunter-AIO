@@ -239,7 +239,7 @@
         </div>
         <div class="set-row">
           <button class="btn btn-quiet btn-sm" id="st-tour">${icon('i-spark')}Ver o tutorial de novo</button>
-          <button class="btn btn-quiet btn-sm" data-whatsnew>${icon('i-check')}Novidades desta versão</button>
+          <button class="btn btn-quiet btn-sm" id="st-changelog">${icon('i-spark')}Ver todas as novidades</button>
           ${G.content.meta.updates && G.content.meta.updates.page ? `<button class="btn btn-quiet btn-sm" id="st-share">${icon('i-link')}Copiar link para os amigos</button>` : ''}
         </div>
         <div class="set-row">
@@ -248,7 +248,6 @@
           <span class="set-help">vai direto para o autor, sem conta nem e-mail</span>
         </div>
         <p class="set-help">Créditos: banco de itens do <button class="linkish" data-url="https://github.com/wowsims/forever">WoWSims Forever</button> (licença MIT, aviso incluído no app); guias da <button class="linkish" data-url="https://mobalytics.gg/wow-forever/leveling-guides">Mobalytics</button>, com crédito a cada autor; personagem pelo Armory da Blizzard; ícones do Wowhead. World of Warcraft é marca da Blizzard Entertainment; este app não é afiliado à Blizzard.</p>
-        <div class="changelog">${(G.content.changelog || []).map((c) => `<div><b>${esc(c.version)}</b> (${esc(U.fullDate(c.date))})<ul>${c.notes.map((n) => `<li>${esc(n)}</li>`).join('')}</ul></div>`).join('')}</div>
       </section>`;
   };
 
@@ -355,6 +354,8 @@
       } else if (id === 'st-refresh-now') {
         await Promise.all([App.refresh(), Community.refresh(false)]);
         Settings.render();
+      } else if (id === 'st-changelog') {
+        Changelog.open();
       } else if (id === 'st-share') {
         U.copy(G.content.meta.updates.page, 'Link de download copiado: é só mandar para os amigos');
       } else if (id === 'st-update-apply') {

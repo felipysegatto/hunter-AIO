@@ -1,2 +1,2 @@
-O programa agora se chama Cabana do Cacador.
-Novo icone: uma cabeca de cacador em verde, no estilo do app.
+Novo icone: a cabeca de um lobo, companheiro do cacador.
+Historico de novidades completo em um pergaminho (Ajustes, Ver todas as novidades).

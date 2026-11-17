@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.2.3",
-    "contentDate": "2026-11-07",
+    "version": "3.6.0",
+    "contentDate": "2026-11-16",
     "curator": "Resumos gerados por IA (Claude) a partir das fontes citadas em cada item",
     "updates": {
       "repo": "felipysegatto/hunter-AIO",
@@ -589,6 +589,137 @@
     ]
   },
   "changelog": [
+    {
+      "version": "3.6.0",
+      "date": "2026-11-16",
+      "notes": [
+        "Ícone refeito: a cabeça de um lobo, o companheiro do caçador, em verde com o anel dourado do app. Aparece na barra do topo, na tela de abertura, no centro do Armory sem foto e no ícone do programa.",
+        "Todas as novidades do app agora ficam num pergaminho: em Ajustes, toque em “Ver todas as novidades”. A lista deixou de ocupar espaço nas configurações.",
+        "Histórico completo atualizado, de 3.0.0 até esta versão."
+      ]
+    },
+    {
+      "version": "3.5.0",
+      "date": "2026-11-15",
+      "notes": [
+        "O programa passou a se chamar Cabana do Caçador (barra do topo, título da janela, tela de abertura, Ajustes e atalho do Windows).",
+        "Primeiro ícone novo, com a cabeça de um caçador, no lugar do livro do Grimório.",
+        "Os nomes internos (pasta de dados, iniciar com o Windows e arquivo do instalador) foram mantidos para você não perder personagem e ajustes e para as atualizações continuarem funcionando."
+      ]
+    },
+    {
+      "version": "3.4.0",
+      "date": "2026-11-14",
+      "notes": [
+        "Ranking PvP enxuto: cada linha mostra só nome, guilda, raça, nível, iLvl e especialização.",
+        "Uma seta em cada linha amplia só aquele jogador e mostra patente PvP, vitórias honrosas, visualizações, vitórias por campo de batalha (Ravina Brado Guerreiro, Bacia Arathi, Ilhas Lançanegra e Vale Alterac, com os ícones) e as profissões com o nível.",
+        "Listas de região, facção e especialização refeitas no estilo do app, no lugar do menu branco do sistema. A região da aba Jogador também.",
+        "Perfil do jogador organizado em cartões (patente, vitórias, campos de batalha, profissões). A tabela “Checks Recentes” não é importada."
+      ]
+    },
+    {
+      "version": "3.3.1",
+      "date": "2026-11-14",
+      "notes": [
+        "Ranking sem textos de código: o app limpa os ícones-texto do site e lê cada coluna pelo nome certo.",
+        "O botão Armory usa o link do próprio jogador, que vem na linha do ranking, e a busca por nome tenta “Nome Sobrenome” nas duas ordens.",
+        "Cada linha mostra guilda, raça, especialização e profissões com o nível."
+      ]
+    },
+    {
+      "version": "3.3.0",
+      "date": "2026-11-13",
+      "notes": [
+        "A aba PvP importa os dados do check-pvp.fr: filtros de região, facção e especialização (classe fixa em Caçador), ranking paginado e perfil do jogador.",
+        "O site é lido em segundo plano, numa janela invisível e sem anúncios. Os dados ficam guardados por 10 minutos para não sobrecarregar o site.",
+        "Botão Armory em cada jogador, que abre a aba Jogador."
+      ]
+    },
+    {
+      "version": "3.2.0",
+      "date": "2026-11-12",
+      "notes": [
+        "Aba PvP nativa, no estilo do Guia de Caçador, com contorno vermelho metálico (o sangue foi retirado por enquanto).",
+        "Nova aba Jogador: o Armory de outro jogador com o mesmo visual do seu Armory, com foto, equipamentos com dica de cada item, atributos e lista de equipamento.",
+        "O check-pvp.fr e o Armory de jogadores entraram na lista de fontes, em Ajustes (Fontes ao vivo).",
+        "Ferramenta “mapear o site” (diagnóstico) dentro da aba PvP."
+      ]
+    },
+    {
+      "version": "3.1.1",
+      "date": "2026-11-12",
+      "notes": [
+        "Sangue da aba PvP refeito: mais irregular, vermelho vivo e translúcido, com respingos e pingos naturais.",
+        "A aba PvP deixou de abrir janelas novas.",
+        "Gravador de rede para mapear o site do PvP (npm run gravar-pvp)."
+      ]
+    },
+    {
+      "version": "3.1.0",
+      "date": "2026-11-12",
+      "notes": [
+        "Primeira versão da aba PvP, ao lado do Guia, com o ranking do check-pvp (provisório, com o site embutido) e o filtro Hunter marcado.",
+        "Abas laterais da direita: Guia e PvP, uma aberta por vez."
+      ]
+    },
+    {
+      "version": "3.0.6",
+      "date": "2026-11-10",
+      "notes": [
+        "O guia recolhe para a direita, como as notícias recolhem para a esquerda. Com o guia recolhido, o Armory fica centralizado. A bolinha de “guia atualizado” aparece também na aba lateral.",
+        "As janelas de leitura do Reddit e do Wowhead abrem na frente da gaveta de notícias.",
+        "Retícula refeita: anel externo dourado metálico, interior verde-claro, mais fina e um pouco maior.",
+        "Ao passar o mouse no personagem, uma linha fina dourada com brilho mínimo."
+      ]
+    },
+    {
+      "version": "3.0.5",
+      "date": "2026-11-09",
+      "notes": [
+        "Fundo com imagens realistas de caçador (arranhões, patas, buracos de bala, arcos e flechas), recoloridas em verde.",
+        "Links do Reddit abrem numa janela dentro do app, como os do Wowhead.",
+        "O Discord foi removido.",
+        "Brilho do mouse no personagem mais fino."
+      ]
+    },
+    {
+      "version": "3.0.4",
+      "date": "2026-11-09",
+      "notes": [
+        "Novo botão “marcar todas como vistas” na aba Wowhead.",
+        "Corrigido o corte da barra verde e dos botões do painel do guia."
+      ]
+    },
+    {
+      "version": "3.0.3",
+      "date": "2026-11-09",
+      "notes": [
+        "Botões de minimizar, maximizar/restaurar e fechar no estilo dourado do app, no lugar dos botões do Windows."
+      ]
+    },
+    {
+      "version": "3.0.2",
+      "date": "2026-11-09",
+      "notes": [
+        "A retícula de sniper gira devagar, com o anel externo mais fino e um brilho dourado leve que pulsa."
+      ]
+    },
+    {
+      "version": "3.0.1",
+      "date": "2026-11-09",
+      "notes": [
+        "Retícula de sniper dourada no lugar das runas atrás do personagem."
+      ]
+    },
+    {
+      "version": "3.0.0",
+      "date": "2026-11-08",
+      "notes": [
+        "Primeira versão para caçador, criada a partir do Grimório do Aventureiro: visual em verde escuro e dourado, fonte Garet, fundo com marcas de caçador e abas laterais.",
+        "Armory do seu personagem do WoW Forever, guia de leveling de caçador do Mobalytics como padrão, notícias do Wowhead e conversas do Reddit.",
+        "Atualizador próprio pelo GitHub, para receber as novas versões direto no app."
+      ]
+    },
     {
       "version": "2.2.3",
       "date": "2026-11-07",
