@@ -3,6 +3,11 @@ Set-Location $PSScriptRoot
 $repo = 'felipysegatto/hunter-AIO'
 $v = (Get-Content package.json -Raw | ConvertFrom-Json).version
 if (Test-Path dist) { Remove-Item dist -Recurse -Force -ErrorAction SilentlyContinue }
+if (Get-Command git -ErrorAction SilentlyContinue) {
+  git fetch --quiet 2>$null
+  $st = (git status -sb 2>$null | Select-Object -First 1)
+  if ($st -match 'behind') { throw "Seu repositorio esta ATRASADO em relacao ao GitHub ($st). Faca 'Fetch origin' e 'Pull origin' no GitHub Desktop antes de publicar." }
+}
 Write-Host "Gerando o instalador da versao $v ..."
 npm install
 npm run build

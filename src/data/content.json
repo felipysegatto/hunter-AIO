@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "3.6.0",
-    "contentDate": "2026-11-16",
+    "version": "3.6.1",
+    "contentDate": "2026-11-17",
     "curator": "Resumos gerados por IA (Claude) a partir das fontes citadas em cada item",
     "updates": {
       "repo": "felipysegatto/hunter-AIO",
@@ -589,6 +589,15 @@
     ]
   },
   "changelog": [
+    {
+      "version": "3.6.1",
+      "date": "2026-11-17",
+      "notes": [
+        "Restauração completa dos arquivos: o ranking PvP com a seta que amplia só a linha escolhida, os ícones dos campos de batalha e as listas de região, facção e especialização no estilo do app tinham voltado ao visual antigo por um erro no controle de versões (Git).",
+        "Nenhuma funcionalidade nova: é a mesma versão 3.6.0, com o lobo no ícone e o pergaminho de novidades, só que com todos os arquivos corretos.",
+        "O publicar.bat agora avisa se o seu repositório está atrasado em relação ao GitHub, para evitar publicar arquivos antigos."
+      ]
+    },
     {
       "version": "3.6.0",
       "date": "2026-11-16",
