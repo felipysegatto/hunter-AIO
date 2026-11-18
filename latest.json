@@ -1,14 +1,13 @@
 {
-    "version":  "3.6.1",
-    "date":  "2026-11-17",
-    "file":  "Grimorio-Hunter-Setup-3.6.1.exe",
-    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.6.1/Grimorio-Hunter-Setup-3.6.1.exe",
+    "version":  "3.7.0",
+    "date":  "2026-11-18",
+    "file":  "Grimorio-Hunter-Setup-3.7.0.exe",
+    "download":  "https://github.com/felipysegatto/hunter-AIO/releases/download/v3.7.0/Grimorio-Hunter-Setup-3.7.0.exe",
     "page":  "https://github.com/felipysegatto/hunter-AIO",
-    "sha256":  "e3f4cfdc8e5c49743d4b40b47ae1f81f23aad91b776b75ef67ced27fab26d544",
-    "size":  86470652,
+    "sha256":  "51d686b774a17227b699aa842be854bceb0b603d8f086ca0693b6603fb8b4a78",
+    "size":  85917906,
     "kind":  "setup",
     "notes":  [
-                  "Restauracao dos arquivos corretos: ranking PvP com seta que amplia a linha e filtros no estilo do app.",
-                  "O publicar.bat agora avisa se o repositorio estiver atrasado em relacao ao GitHub."
+                  "Icone em pixel art: o lobo desenhado em grade de 32x32 pixels, em todo o app e no icone do programa."
               ]
 }

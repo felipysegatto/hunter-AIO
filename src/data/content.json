@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "3.6.1",
+    "version": "3.7.0",
     "contentDate": "2026-11-17",
     "curator": "Resumos gerados por IA (Claude) a partir das fontes citadas em cada item",
     "updates": {
@@ -589,6 +589,14 @@
     ]
   },
   "changelog": [
+    {
+      "version": "3.7.0",
+      "date": "2026-11-17",
+      "notes": [
+        "Ícone em pixel art: o lobo agora é desenhado em uma grade de 32 por 32 pixels, com poucas cores, em todo o app (barra do topo, tela de abertura, centro do Armory sem foto e ícone do programa no Windows).",
+        "Cada tamanho do ícone do Windows é gerado sem borrar, para os pixels ficarem nítidos na barra de tarefas."
+      ]
+    },
     {
       "version": "3.6.1",
       "date": "2026-11-17",

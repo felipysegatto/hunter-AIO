@@ -1,2 +1,1 @@
-Restauracao dos arquivos corretos: ranking PvP com seta que amplia a linha e filtros no estilo do app.
-O publicar.bat agora avisa se o repositorio estiver atrasado em relacao ao GitHub.
+Icone em pixel art: o lobo desenhado em grade de 32x32 pixels, em todo o app e no icone do programa.
